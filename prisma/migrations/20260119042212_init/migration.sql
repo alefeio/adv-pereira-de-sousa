@@ -95,6 +95,7 @@ CREATE TABLE "Testimonial" (
     "name" TEXT NOT NULL,
     "type" TEXT NOT NULL,
     "content" TEXT NOT NULL,
+    "avatarUrl" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "deletedAt" TIMESTAMP(3),
@@ -275,6 +276,33 @@ CREATE TABLE "Contact" (
 );
 
 -- CreateTable
+CREATE TABLE "Blog" (
+    "id" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "slug" TEXT,
+    "subtitle" TEXT,
+    "description" TEXT,
+    "order" INTEGER NOT NULL DEFAULT 0,
+    "publico" BOOLEAN NOT NULL DEFAULT true,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Blog_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "BlogFoto" (
+    "id" TEXT NOT NULL,
+    "detalhes" TEXT,
+    "img" TEXT NOT NULL,
+    "blogId" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "BlogFoto_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "_FileAccess" (
     "A" TEXT NOT NULL,
     "B" TEXT NOT NULL,
@@ -305,6 +333,9 @@ CREATE UNIQUE INDEX "Site_userId_key" ON "Site"("userId");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Subscriber_email_key" ON "Subscriber"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Blog_slug_key" ON "Blog"("slug");
 
 -- CreateIndex
 CREATE INDEX "_FileAccess_B_index" ON "_FileAccess"("B");
@@ -350,6 +381,9 @@ ALTER TABLE "Message" ADD CONSTRAINT "Message_senderId_fkey" FOREIGN KEY ("sende
 
 -- AddForeignKey
 ALTER TABLE "ProjetoFoto" ADD CONSTRAINT "ProjetoFoto_projetoId_fkey" FOREIGN KEY ("projetoId") REFERENCES "Projetos"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "BlogFoto" ADD CONSTRAINT "BlogFoto_blogId_fkey" FOREIGN KEY ("blogId") REFERENCES "Blog"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "_FileAccess" ADD CONSTRAINT "_FileAccess_A_fkey" FOREIGN KEY ("A") REFERENCES "File"("id") ON DELETE CASCADE ON UPDATE CASCADE;
