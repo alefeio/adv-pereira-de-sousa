@@ -137,29 +137,28 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
 
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "LegalService", // Alterado de LocalBusiness para LegalService (ou Lawyer)
-        "name": "Machado Advogados Associados",
-        "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png", // Manter ou alterar a URL da imagem se precisar
+        "@type": "LegalService",
+        "name": "Pereira de Sousa Advocacia",
+        "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png",
+        "url": "https://www.pereiradesousa.adv.br/",
+        "telephone": "+5591992047151",
+        "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Ed. Angra - Travessa São Pedro, 842, sala 301 - Batista Campos", // Endereço atualizado
+            "streetAddress": "Travessa São Pedro, 842, sala 301 – Batista Campos",
             "addressLocality": "Belém",
             "addressRegion": "PA",
-            "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.
+            "postalCode": "66030-465",
             "addressCountry": "BR"
         },
-        "url": "https://pereiradesousa.vercel.app/",
-        "telephone": "+5591992047151", // Telefone atualizado
         "areaServed": [
             { "@type": "City", "name": "Belém" },
             { "@type": "State", "name": "Pará" }
         ],
-        "priceRange": "$$", // Exemplo: indicando uma faixa de preço
         "sameAs": [
-            "https://www.instagram.com/alansousainss/", // Sugestão baseada em busca, verificar a URL exata
-            // "https://www.linkedin.com/company/machadoadvogadosassociados"
+            "https://www.instagram.com/alansousainss/"
         ],
-        "description": "Escritório de advocacia em Belém, PA. Especializado em Direito do Consumidor, Direito Trabalhista e Assessoria Jurídica Empresarial."
+        "description": "A Pereira de Sousa Advocacia é um escritório de advocacia em Belém-PA com atuação estratégica em Direito Empresarial, Civil, Família e Sucessões, Previdenciário, Trabalhista, Penal, Bancário, Digital, Agrário, Saúde e defesa das pessoas com TEA."
     };
 
     const [showExitModal, setShowExitModal] = useState(false);
@@ -167,42 +166,42 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
     return (
         <>
             <Head>
-                {/* Title SEO */}
+                {/* Title */}
                 <title>
-                    Machado Advogados Associados | Escritório de Advocacia em Belém-PA
+                    Pereira de Sousa Advocacia | Escritório de Advocacia em Belém-PA
                 </title>
 
-                {/* Meta Description – AJUSTADA */}
+                {/* Description */}
                 <meta
                     name="description"
-                    content="A Machado Advogados Associados oferece assessoria jurídica moderna, estratégica e segura em Belém-PA. Atuação em Direito Civil e Contratual, Direito do Consumidor, Empresarial, Imobiliário, Registral, Urbanístico e defesa dos Médicos Residentes."
+                    content="Pereira de Sousa Advocacia é um escritório de advocacia em Belém-PA, com atuação estratégica e humanizada em Direito Empresarial, Civil, Família e Sucessões, Previdenciário, Trabalhista, Penal, Bancário, Digital, Agrário, Saúde e Direito das Pessoas com TEA."
                 />
 
                 {/* Robots */}
                 <meta name="robots" content="index, follow, max-image-preview:large" />
 
                 {/* Canonical */}
-                <link
-                    rel="canonical"
-                    href="https://www.pereiradesousa.adv.br/"
-                />
+                <link rel="canonical" href="https://www.pereiradesousa.adv.br/" />
 
-                {/* Keywords – apoio semântico */}
+                {/* Keywords (apoio semântico) */}
                 <meta
                     name="keywords"
                     content="
-                        Machado Advogados Associados,
-                        escritório de advocacia em Belém,
-                        advogado Belém PA,
-                        direito civil e contratual,
-                        direito do consumidor,
-                        direito empresarial,
-                        direito imobiliário,
-                        direito registral,
-                        direito urbanístico,
-                        regularização fundiária,
-                        médicos residentes
-                        "
+      Pereira de Sousa Advocacia,
+      escritório de advocacia em Belém,
+      advogado Belém PA,
+      direito empresarial,
+      direito civil,
+      direito de família e sucessões,
+      direito previdenciário,
+      direito trabalhista,
+      direito penal,
+      direito bancário,
+      direito digital,
+      direito agrário,
+      direito da saúde,
+      direito TEA
+    "
                 />
 
                 {/* Open Graph */}
@@ -210,11 +209,11 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
-                    content="Machado Advogados Associados | Soluções Jurídicas Modernas e Estratégicas"
+                    content="Pereira de Sousa Advocacia | Soluções Jurídicas Estratégicas"
                 />
                 <meta
                     property="og:description"
-                    content="Escritório de advocacia com atuação estratégica e personalizada, pautado na ética, excelência técnica e inovação. Soluções jurídicas eficientes para pessoas e empresas."
+                    content="Escritório de advocacia em Belém-PA com atuação estratégica, ética e humanizada. Soluções jurídicas completas para pessoas e empresas."
                 />
                 <meta
                     property="og:url"
@@ -224,17 +223,17 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                     property="og:image"
                     content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png"
                 />
-                <meta property="og:image:alt" content="Machado Advogados Associados" />
+                <meta property="og:image:alt" content="Pereira de Sousa Advocacia" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta
                     name="twitter:title"
-                    content="Machado Advogados Associados"
+                    content="Pereira de Sousa Advocacia"
                 />
                 <meta
                     name="twitter:description"
-                    content="Assessoria jurídica moderna e estratégica em Direito Civil, Consumidor, Empresarial e Imobiliário em Belém-PA."
+                    content="Escritório de advocacia em Belém-PA com atuação estratégica em Direito Empresarial, Civil, Família, Previdenciário, Trabalhista e mais."
                 />
                 <meta
                     name="twitter:image"
@@ -252,6 +251,12 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                 <link
                     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap"
                     rel="stylesheet"
+                />
+
+                {/* Structured Data */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </Head>
 
