@@ -233,7 +233,7 @@ export default function BlogPage({ post, menu }: BlogPageProps) {
                             className="opacity-90"
                         />
                             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end">
-                                    <div className="max-w-4xl mx-auto px-4 md:px-8 py-8 w-full">
+                                    <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
                                         <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight font-display mb-3">
                                             {post.title}
                                         </h1>
@@ -252,7 +252,7 @@ export default function BlogPage({ post, menu }: BlogPageProps) {
                     </div>
                     
                     {/* Conteúdo do Artigo */}
-                    <article className="max-w-4xl mx-auto px-4 md:px-8 py-12">
+                    <article className="max-w-7xl mx-auto px-4 md:px-8 py-12">
                         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                             {/* Renderiza o HTML do Rich Text Editor */}
                             <div dangerouslySetInnerHTML={{ __html: post.content }} />

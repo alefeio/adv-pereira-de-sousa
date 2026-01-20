@@ -25,6 +25,14 @@ import Footer from 'components/Footer';
 import Projetos from 'components/Projetos';
 import Equipe from 'components/Equipe';
 import Structure from 'components/Structure';
+import StructureSection from 'components/StructureSection';
+import Cases from 'components/Cases';
+import HeroSliderAreas from 'components/HeroSliderAreas';
+import HeroSliderSobre from 'components/HeroSliderSobre';
+import Blog from 'components/Blog';
+import Contato from 'components/Contato';
+import { MdEmail } from 'react-icons/md';
+import { FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 
 // FUNÇÃO SLUGIFY
 function slugify(text: string): string {
@@ -122,6 +130,11 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
 };
 
 export default function Home({ banners, menu, testimonials, faqs, colecoes }: HomePageProps) {
+
+    const address = "Ed. Angra dos reis, Travessa São Pedro, 842, sala 301 Batista Campos - Belém - PA";
+
+    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.59968470487!2d-48.48705352528751!3d-1.4552427985449557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a488e36783856d%3A0x8e8e7b7f193c727d!2sTravessa%20S%C3%A3o%20Pedro%2C%20842%20-%20Batista%20Campos%2C%20Bel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr";
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "LegalService", // Alterado de LocalBusiness para LegalService (ou Lawyer)
@@ -135,15 +148,15 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
             "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.
             "addressCountry": "BR"
         },
-        "url": "https://machadoeassociados.vercel.app/",
-        "telephone": "+5591980354730", // Telefone atualizado
+        "url": "https://pereiradesousa.vercel.app/",
+        "telephone": "+5591992047151", // Telefone atualizado
         "areaServed": [
             { "@type": "City", "name": "Belém" },
             { "@type": "State", "name": "Pará" }
         ],
         "priceRange": "$$", // Exemplo: indicando uma faixa de preço
         "sameAs": [
-            "https://www.instagram.com/machadoadvassociados/", // Sugestão baseada em busca, verificar a URL exata
+            "https://www.instagram.com/alansousainss/", // Sugestão baseada em busca, verificar a URL exata
             // "https://www.linkedin.com/company/machadoadvogadosassociados"
         ],
         "description": "Escritório de advocacia em Belém, PA. Especializado em Direito do Consumidor, Direito Trabalhista e Assessoria Jurídica Empresarial."
@@ -171,7 +184,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                 {/* Canonical */}
                 <link
                     rel="canonical"
-                    href="https://www.machadoeassociados.adv.br/"
+                    href="https://www.pereiradesousa.adv.br/"
                 />
 
                 {/* Keywords – apoio semântico */}
@@ -205,7 +218,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                 />
                 <meta
                     property="og:url"
-                    content="https://www.machadoeassociados.adv.br/"
+                    content="https://www.pereiradesousa.adv.br/"
                 />
                 <meta
                     property="og:image"
@@ -249,7 +262,130 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                 <HeroSlider banners={banners} />
                 <main className="max-w-full mx-auto">
                     <Hero />
+                    <span id="sobre"></span>
+                    <HeroSliderSobre />
+                    <span id="atuacao"></span>
+                    <HeroSliderAreas />
+                    <span id="blog"></span>
+                    <Blog />
+                    {/* <Cases /> */}
                     <Testimonials testimonials={testimonials} />
+                    <span id="fale"></span>
+                    <Contato />
+                    <span id="faq"></span>
+                    <FAQ faqs={faqs} />
+                    <div className="bg-black py-16 md:py-24 relative overflow-hidden text-white"
+                        style={{
+                            // Estilo para simular o fundo da imagem, ajuste conforme necessário
+                            backgroundImage: 'url(/images/bg-redes.jpg)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                    >
+                        <div className="max-w-7xl mx-auto px-4 md:px-8">
+                            {/* GRID PARA ALINHAR Contato e Redes Sociais */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 text-center md:text-left">
+
+                                {/* Contato */}
+                                <div className="flex flex-col items-center md:items-end md:border-r md:border-gray-600/50 pr-12">
+                                    <h3 className="text-[#bc9e77] text-xl md:text-2xl mb-6 tracking-wide">
+                                        Contato
+                                    </h3>
+                                    <div className="space-y-4">
+                                        {/* Email */}
+                                        <a
+                                            href="mailto:escritório@pereiradesousa.adv.br"
+                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
+                                            aria-label="Enviar email para escritório@pereiradesousa.adv.br"
+                                        >
+                                            <MdEmail size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
+                                            escritório@pereiradesousa.adv.br
+                                        </a>
+
+                                        {/* WhatsApp */}
+                                        <a
+                                            href="https://wa.me/5591992047151"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
+                                            aria-label="Enviar mensagem WhatsApp para +55 91 99204-7151"
+                                        >
+                                            <FaWhatsapp size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
+                                            +55 91 99204-7151
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Redes Sociais */}
+                                <div className="flex flex-col items-center md:items-start md:pl-4">
+                                    <h3 className="text-[#bc9e77] text-xl md:text-2xl mb-6 tracking-wide">
+                                        Redes Sociais
+                                    </h3>
+                                    <div className="space-y-4">
+                                        {/* Instagram */}
+                                        <a
+                                            href="https://www.instagram.com/alansousainss"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center md:justify-start text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
+                                            aria-label="Acessar Instagram @alansousainss"
+                                        >
+                                            <FaInstagram size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
+                                            @alansousainss
+                                        </a>
+
+                                        {/* Espaço reservado para outra rede social (se necessário) */}
+                                        {/* <a className="flex items-center text-white text-base md:text-lg">
+                                                    <FaLinkedin size={20} className="text-[#bc9e77] mr-2" />
+                                                    /MachadoAdvogados
+                                                </a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="localizacao"></span>
+                    <section className="bg-white py-20 md:py-24 bg-black/30">
+                        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+
+                            {/* Ícone de Localização */}
+                            <div className="flex justify-center mb-4">
+                                {/* FaMapMarkerAlt simula o pino de localização */}
+                                <FaMapMarkerAlt size={32} className="text-[#333] mb-2" />
+                            </div>
+
+                            {/* Título Principal */}
+                            <h2 className="text-gray-800 text-3xl md:text-4xl font-bold mb-4">
+                                Nossa Localização
+                            </h2>
+
+                            {/* Endereço */}
+                            {/* <p className="text-gray-600 text-lg mb-10">
+                                {address}
+                            </p> */}
+
+                            {/* Container do Mapa */}
+                            <div className="relative w-full max-w-4xl mx-auto shadow-xl rounded-3xl overflow-hidden border border-gray-200">
+                                <div className="w-full" style={{ paddingBottom: '56.25%' }}> {/* Proporção 16:9 para o mapa */}
+                                    <iframe
+                                        title="Localização do Escritório Machado Advogados Associados"
+                                        src={mapEmbedUrl}
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                                {/* Botão de maximizar/detalhes que aparece no embed */}
+                                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer text-gray-700 hover:text-[#bc9e77] transition-colors">
+                                    {/* Ícone ou botão "Ver mapa ampliado" pode ser simulado aqui se não for um iframe */}
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
                     <Footer menuData={menu} />
                 </main>
                 <WhatsAppButton />

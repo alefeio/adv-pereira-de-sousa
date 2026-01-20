@@ -127,15 +127,15 @@ export default function Atuacao({ menu }: HomePageProps) {
             "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.
             "addressCountry": "BR"
         },
-        "url": "https://machadoeassociados.vercel.app/",
-        "telephone": "+5591980354730", // Telefone atualizado
+        "url": "https://pereiradesousa.vercel.app/",
+        "telephone": "+5591992047151", // Telefone atualizado
         "areaServed": [
             { "@type": "City", "name": "Belém" },
             { "@type": "State", "name": "Pará" }
         ],
         "priceRange": "$$", // Exemplo: indicando uma faixa de preço
         "sameAs": [
-            "https://www.instagram.com/machadoadvassociados/", // Sugestão baseada em busca, verificar a URL exata
+            "https://www.instagram.com/alansousainss/", // Sugestão baseada em busca, verificar a URL exata
             // "https://www.linkedin.com/company/machadoadvogadosassociados"
         ],
         "description": "Escritório de advocacia em Belém, PA. Especializado em Direito do Consumidor, Direito Trabalhista e Assessoria Jurídica Empresarial."
@@ -159,7 +159,7 @@ export default function Atuacao({ menu }: HomePageProps) {
                 <meta property="og:title" content="Machado Advogados Associados | Compromisso com Seus Direitos" />
                 <meta property="og:description" content="Da escuta ao resultado, oferecemos soluções jurídicas completas e personalizadas. Transparência, experiência e relacionamento próximo para sua segurança jurídica." />
                 <meta property="og:image" content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png" /> {/* Use o logo ou uma imagem institucional relevante */}
-                <meta property="og:url" content="https://machadoeassociados.vercel.app/" />
+                <meta property="og:url" content="https://pereiradesousa.vercel.app/" />
                 <meta property="og:type" content="website" />
 
                 {/* Metas para Twitter */}

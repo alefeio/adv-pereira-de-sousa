@@ -4,91 +4,93 @@ import { FaPlus, FaMinus } from "react-icons/fa"
 const servicesList = [
   {
     title: "Missão",
-    description: `Garantir soluções jurídicas
-      de alto nível, protegendo os
-      interesses de nossos clientes
-      com responsabilidade,
-      estratégia e inovação.`,
+    description: `Oferecer soluções jurídicas
+      seguras e eficientes, protegendo
+      os direitos e interesses de nossos
+      clientes com ética, responsabilidade
+      e excelência técnica.`,
   },
   {
     title: "Visão",
-    description: `Ser referência nacional
-      em advocacia consultiva e
-      contenciosa, reconhecida
-      pela excelência, solidez e
-      resultados consistentes.`,
+    description: `Ser reconhecido como um
+      escritório de advocacia sólido
+      e confiável, referência pela
+      qualidade do atendimento,
+      resultados consistentes e
+      atuação ética.`,
   },
   {
-    title: "Atendimento Personalizado",
+    title: "Atendimento Humanizado",
     description:
-      "Entendemos que o diferencial está no relacionamento, por isso nossos clientes se sentem mais seguros e tranquilos",
+      "Cada cliente é atendido de forma individualizada, com escuta ativa, clareza na comunicação e total comprometimento com sua realidade jurídica.",
   },
   {
     title: "Transparência e Ética",
     description:
-      "Agimos com clareza e responsabilidade em todas as etapas do processo jurídico. Mantemos nossos clientes sempre informados, com uma comunicação aberta e decisões baseadas na verdade e no respeito aos princípios éticos da advocacia.",
+      "Atuamos com absoluta transparência em todas as etapas do processo. Nossos clientes são sempre informados com clareza sobre estratégias, riscos e possibilidades, respeitando rigorosamente os princípios éticos da advocacia.",
   },
   {
-    title: "Especialização Profissional",
+    title: "Atuação Técnica e Estratégica",
     description:
-      "Nossa equipe é formada por profissionais experientes, com sólida formação jurídica e atuação em diversas áreas do direito. Combinamos conhecimento técnico, visão estratégica e sensibilidade humana para oferecer soluções eficazes e personalizadas.",
+      "O escritório Pereira de Sousa atua com elevado rigor técnico e visão estratégica, aliando conhecimento jurídico atualizado à experiência prática para oferecer soluções eficazes e seguras.",
   },
 ]
 
 const stats = [
-  { value: "Ética", label: "Transparência em todas as relações" },
-  { value: "Compromisso", label: "Absoluto com os clientes" },
-  { value: "Excelência", label: "Técnica e atualização constante" },
-  { value: " Inovação", label: "Uso estratégico da tecnologia" },
-  { value: " Respeito", label: "Às pessoas e à sociedade" },
+  { value: "Ética", label: "Atuação responsável e transparente" },
+  { value: "Compromisso", label: "Defesa firme dos interesses do cliente" },
+  { value: "Excelência", label: "Qualidade técnica e atualização constante" },
+  { value: "Inovação", label: "Uso estratégico da tecnologia jurídica" },
+  { value: "Respeito", label: "Às pessoas, à lei e à sociedade" },
 ]
 
 export default function Header() {
-  // Agora open é um array com índices dos colapses abertos
   const [open, setOpen] = useState<number[]>([0])
 
   const toggleOpen = (index: number) => {
     setOpen((prev) =>
       prev.includes(index)
-        ? prev.filter((i) => i !== index) // Fecha se já estiver aberto
-        : [...prev, index] // Abre e mantém os outros abertos
+        ? prev.filter((i) => i !== index)
+        : [...prev, index]
     )
   }
 
   return (
     <>
-      <span id="sobre" className='my-16'></span>
+      <span id="sobre" className="my-16"></span>
+
       <div className="bg-[#0c1a25]">
         <section className="py-16 md:py-28">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
-              {/* Coluna da esquerda */}
+
+              {/* Coluna esquerda */}
               <div className="flex flex-col gap-5">
-                <h2 className="w-full text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#ba9a71] leading-tight max-w-2xl mx-auto md:mx-0 text-left">
-                  Sobre a Machado
+                <h2 className="w-full text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#ba9a71] leading-tight max-w-2xl mx-auto md:mx-0">
+                  Sobre o Pereira de Sousa
                   <br />
                   <small className="text-[#ba9a71] font-medium">
-                    – Advogados Associados
+                    – Advocacia
                   </small>
                 </h2>
 
-                <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-left">
-                  A Machado – Advogados Associados nasceu com o propósito de oferecer soluções jurídicas modernas,
-                  eficientes e seguras, sempre pautadas na ética e no compromisso com resultados concretos.
+                <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                  O Pereira de Sousa Advocacia atua com foco na proteção dos direitos de seus clientes,
+                  oferecendo assessoria jurídica segura, ética e alinhada às exigências do ordenamento jurídico.
                 </p>
 
-                <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-left">
-                  Com uma equipe altamente qualificada e estrutura robusta, atuamos de forma estratégica para atender
-                  empresas e clientes que buscam confiança, agilidade e inovação no ambiente jurídico.
+                <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                  Nosso trabalho é pautado pela análise criteriosa de cada caso, com atuação estratégica
+                  nas áreas do Direito do Consumidor, Bancário, Previdenciário e Direito de Família.
                 </p>
 
-                <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-left">
-                  Nosso diferencial está na combinação entre tradição e visão de futuro: entregamos assessoria jurídica
-                  de excelência, com linguagem clara, objetiva e personalizada.
+                <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                  Valorizamos o atendimento próximo e transparente, acreditando que a confiança e a clareza
+                  são essenciais para uma relação jurídica sólida e eficaz.
                 </p>
               </div>
 
-              {/* Coluna da direita: acordeões */}
+              {/* Coluna direita – Acordeões */}
               <div className="flex flex-col gap-4 mt-8 md:mt-0 max-w-xl mx-auto md:mx-0">
                 {servicesList.map((service, index) => (
                   <div
@@ -99,16 +101,20 @@ export default function Header() {
                       className="w-full text-left p-6 bg-[#1a3045] hover:bg-gray-600 transition-colors flex justify-between items-center text-white"
                       onClick={() => toggleOpen(index)}
                     >
-                      <span className="text-lg md:text-xl font-semibold">{service.title}</span>
+                      <span className="text-lg md:text-xl font-semibold">
+                        {service.title}
+                      </span>
                       <span className="text-2xl font-bold text-[#ba9a71]">
                         {open.includes(index) ? <FaMinus /> : <FaPlus />}
                       </span>
                     </button>
+
                     <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${open.includes(index)
-                        ? "max-h-96 opacity-100 p-6 pt-0 bg-[#1a3045]"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                        open.includes(index)
+                          ? "max-h-96 opacity-100 p-6 pt-0 bg-[#1a3045]"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <p className="text-gray-300">{service.description}</p>
                     </div>
@@ -117,21 +123,26 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="mt-16 md:mt-0 flex flex-col gap-6 w-full mx-auto md:mx-0">
-
-              <p className="text-[#ba9a71] text-3xl font-bold leading-relaxed max-w-xl mx-auto md:mx-0 text-left">
-                Nossos Valores:
+            {/* Valores */}
+            <div className="mt-16 flex flex-col gap-6 w-full mx-auto md:mx-0">
+              <p className="text-[#ba9a71] text-3xl font-bold leading-relaxed max-w-xl mx-auto md:mx-0">
+                Nossos Valores
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-8 sm:gap-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="flex flex-col items-center sm:items-start text-left">
-                    <span className="text-2xl font-bold text-gray-500">{stat.value}</span>
-                    <span className="text-white text-lg font-medium">{stat.label}</span>
+                    <span className="text-2xl font-bold text-gray-500">
+                      {stat.value}
+                    </span>
+                    <span className="text-white text-lg font-medium">
+                      {stat.label}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
         </section>
       </div>

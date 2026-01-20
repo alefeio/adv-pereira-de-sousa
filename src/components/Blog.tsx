@@ -27,20 +27,11 @@ export default function Blog() {
     const slide = STATIC_SLIDES[0];
 
     return (
-        <div className="relative w-full" id="inicio">
-            {/* Imagem de Fundo */}
-            <div className="absolute inset-0 opacity-100 z-10">
-                <img
-                    src={slide.url}
-                    alt={slide.title || 'Banner Sobre'}
-                    className="object-cover object-[center_70%] md:object-[center_top] w-full h-full"
-                />
-            </div>
-
+        <div className="relative w-full bg-black/95" id="inicio">
             {/* Conteúdo */}
-            <div className="relative z-20 flex flex-col justify-start pt-60 w-full">
+            <div className="relative z-20 flex flex-col justify-start pt-40 w-full">
                 <div className="container flex flex-col items-center w-full max-w-4xl mx-auto">
-                    <div className="flex-1 py-12">
+                    <div className="flex-1">
                         {slide.title && (
                             <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight max-w-md">
                                 {slide.title}

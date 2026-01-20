@@ -120,7 +120,7 @@ const Footer = ({ menuData }: MenuProps) => {
 
     return (
         // Fundo escuro conforme a imagem: #0c1a25
-        <footer className="bg-[#0c1a25] text-gray-300 py-12 md:py-24">
+        <footer className="bg-black text-gray-300 py-12 md:py-24">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
 
                 {/* GRID PRINCIPAL (4 COLUNAS NO DESKTOP) */}
@@ -142,7 +142,7 @@ const Footer = ({ menuData }: MenuProps) => {
 
                         {/* Texto descritivo (Slogan da Home) */}
                         <p className="text-sm text-gray-400 max-w-xs">
-                            Ajudamos pessoas a identificarem e resolverem seus problemas, fazendo com que sua experiência seja cada vez mais segura através de uma abordagem eficiente e próxima.
+                            Atuamos de forma ética, técnica e humanizada para orientar pessoas na identificação e na resolução de suas demandas jurídicas, oferecendo segurança, clareza e acompanhamento responsável em cada etapa do processo.
                         </p>
 
                         {/* Direitos Autorais na Coluna 1 (como na imagem) */}
@@ -165,33 +165,33 @@ const Footer = ({ menuData }: MenuProps) => {
                         <div className="space-y-3">
                             {/* Instagram */}
                             <a
-                                href="https://www.instagram.com/machadoadvassociados"
+                                href="https://www.instagram.com/alansousainss"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center text-white hover:text-[#bc9e77] transition-colors text-sm"
                             >
                                 <FaInstagram size={16} className="text-[#bc9e77] mr-3 flex-shrink-0" />
-                                @machadoadvassociados
+                                @alansousainss
                             </a>
 
                             {/* WhatsApp */}
                             <a
-                                href="https://wa.me/5591980354730"
+                                href="https://wa.me/5591992047151"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center text-white hover:text-[#bc9e77] transition-colors text-sm"
                             >
                                 <FaWhatsapp size={16} className="text-[#bc9e77] mr-3 flex-shrink-0" />
-                                +55 91 98035 4730
+                                +55 91 99204-7151
                             </a>
 
                             {/* Email */}
                             <a
-                                href="mailto:escritório@machadoeassociados.adv.br"
+                                href="mailto:escritório@pereiradesousa.adv.br"
                                 className="flex items-center text-white hover:text-[#bc9e77] transition-colors text-sm"
                             >
                                 <MdEmail size={16} className="text-[#bc9e77] mr-3 flex-shrink-0" />
-                                escritório@machadoeassociados.adv.br
+                                escritório@pereiradesousa.adv.br
                             </a>
                         </div>
                     </div>

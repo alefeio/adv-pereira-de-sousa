@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
         setStatus('submitting');
 
         try {
-            const res = await fetch('/api/contact', { 
+            const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -48,12 +48,12 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto mb-[-3rem]"> 
+        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto mb-[-3rem]">
             <div className="text-center mb-8 md:mb-10">
-                <h2 className="text-[#0c1a25] text-3xl md:text-4xl font-extrabold leading-tight"> 
+                <h2 className="text-[#0c1a25] text-3xl md:text-4xl font-extrabold leading-tight">
                     Entre em contato Conosco
                 </h2>
-                <p className="text-lg text-gray-700 mt-4 leading-relaxed"> 
+                <p className="text-lg text-gray-700 mt-4 leading-relaxed">
                     Compartilhe suas ideias e necessidades. Nossa equipe está pronta para lhe ajudar e lhe acolher, para que você se sinta seguro e tranquilo, pois nosso diferencial está no relacionamento.
                 </p>
             </div>
@@ -65,9 +65,9 @@ const ContactForm: React.FC = () => {
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            placeholder="Seu Nome Completo" 
+                            placeholder="Seu Nome Completo"
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ba9a71] bg-gray-50 text-gray-900 placeholder-gray-500" 
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ba9a71] bg-gray-50 text-gray-900 placeholder-gray-500"
                         />
                     </div>
                     {/* Input para o Email */}
@@ -76,7 +76,7 @@ const ContactForm: React.FC = () => {
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Seu Melhor E-mail" 
+                            placeholder="Seu Melhor E-mail"
                             required
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ba9a71] bg-gray-50 text-gray-900 placeholder-gray-500"
                         />
@@ -87,7 +87,7 @@ const ContactForm: React.FC = () => {
                             type="text"
                             value={phone}
                             onChange={handlePhoneChange}
-                            placeholder="Seu Telefone/WhatsApp (Opcional)" 
+                            placeholder="Seu Telefone/WhatsApp (Opcional)"
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ba9a71] bg-gray-50 text-gray-900 placeholder-gray-500"
                         />
                     </div>
@@ -98,26 +98,34 @@ const ContactForm: React.FC = () => {
                     onChange={(e) => setServiceOfInterest(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ba9a71] bg-gray-50 text-gray-900 placeholder-gray-500"
                 >
-                    <option value="">Selecione a área (Opcional)</option>
-                    <option value="DireitoCivilContratual">Direito Civil e Contratual</option>
-                    <option value="DireitoConsumidor">Direito do Consumidor</option>
-                    <option value="DireitoImobiliario">Direito Imobiliário</option>
+                    <option value="">Selecione a área de atuação (Opcional)</option>
+
                     <option value="DireitoEmpresarial">Direito Empresarial</option>
-                    <option value="DireitoMedicosResidentes">Direito dos Médicos Residentes</option>
-                    <option value="DireitoRegistralUrbanistico">Direito Registral e Urbanístico</option>
-                    <option value="Outro">Outro</option>
+                    <option value="DireitoTrabalho">Direito do Trabalho</option>
+                    <option value="DireitoCivil">Direito Civil</option>
+                    <option value="DireitoFamiliaSucessoes">Direito de Família e Sucessões</option>
+                    <option value="DireitoPenal">Direito Penal</option>
+                    <option value="DireitoAgrario">Direito Agrário</option>
+                    <option value="DireitoPrevidenciario">Direito Previdenciário</option>
+                    <option value="DireitoConsumidor">Direito do Consumidor</option>
+                    <option value="DireitoBancario">Direito Bancário</option>
+                    <option value="DireitoDigital">Direito Digital</option>
+                    <option value="DireitoSaude">Direito da Saúde</option>
+                    <option value="DireitoTEA">Direito das Pessoas com TEA</option>
+
+                    <option value="Outro">Outro assunto</option>
                 </select>
                 <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Descreva sua necessidade em detalhes..." 
-                    rows={6} 
+                    placeholder="Descreva sua necessidade em detalhes..."
+                    rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ba9a71] bg-gray-50 text-gray-900 placeholder-gray-500"
                 ></textarea>
                 <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="mt-4 w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-full shadow-lg transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed transform hover:-translate-y-1" 
+                    className="mt-4 w-full flex items-center justify-center gap-2 px-6 py-3 bg-black hover:bg-black-dark text-white font-bold rounded-full shadow-lg transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed transform hover:-translate-y-1"
                 >
                     {status === 'submitting' ? 'Enviando...' : 'Enviar Mensagem'}
                     <FaPaperPlane className="ml-2" />

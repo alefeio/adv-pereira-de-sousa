@@ -1,5 +1,3 @@
-import Artigos from "./Artigos";
-import Casos from "./Casos";
 import ContactForm from "./ContactForm";
 
 interface BannerItem {
@@ -39,11 +37,11 @@ export default function Contato() {
             </div>
 
             {/* Conteúdo */}
-            <div className="relative z-20 flex flex-col justify-start pt-60 w-full">
+            <div className="relative z-20 flex flex-col justify-start w-full pt-20">
                 <div className="container flex flex-col items-center w-full max-w-4xl mx-auto">
                     <div className="flex-1 py-12">
                         {slide.title && (
-                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight max-w-md">
+                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-black/80 drop-shadow-lg mb-4 leading-tight max-w-md">
                                 {slide.title}
                             </h2>
                         )}

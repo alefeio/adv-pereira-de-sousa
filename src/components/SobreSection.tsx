@@ -1,28 +1,29 @@
 import React from "react";
 
 export default function SobreSection() {
-    return (
-        <section className="bg-[#0c1a26]/70 py-20 relative z-20"> {/* Ajustei o padding vertical */}
-            <div className="max-w-7xl mx-auto px-6">
+  return (
+    <section className="bg-black/70 py-20 relative z-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-white text-xl leading-relaxed space-y-8 mb-10">
+          <p>
+            A <span className="font-extrabold">Pereira de Sousa - Advocacia</span> atua com foco em uma advocacia ética,
+            responsável e humanizada, comprometida com a defesa dos direitos, das garantias fundamentais e da dignidade
+            da pessoa humana.
+          </p>
 
-                <div className="text-white text-xl leading-relaxed space-y-8 mb-10">
-                    <p>
-                        A <span className="font-extrabold">Machado - Advogados Associados</span> nasceu com o propósito de oferecer soluções jurídicas
-                        modernas, eficientes e seguras, sempre pautadas na ética e no compromisso com resultados
-                        concretos.
-                    </p>
-                    <p>
-                        Com uma equipe altamente qualificada e estrutura robusta, atuamos de forma estratégica
-                        para atender empresas e clientes que buscam confiança, agilidade e inovação no ambiente
-                        jurídico.
-                    </p>
-                    <p>
-                        Nosso diferencial está na combinação entre tradição e visão de futuro: entregamos assessoria
-                        jurídica de excelência, com linguagem clara, objetiva e personalizada.
-                    </p>
-                </div>
+          <p>
+            O escritório desenvolve sua atuação com base em rigor técnico, organização e constante aprimoramento,
+            buscando oferecer respostas jurídicas seguras, claras e adequadas à realidade de cada cliente, sempre com
+            atenção às normas legais e éticas da profissão.
+          </p>
 
-            </div>
-        </section>
-    );
+          <p>
+            Nosso atendimento é personalizado e acessível, pautado na escuta ativa, na transparência e na construção de
+            relações de confiança. Cada caso é analisado de forma cuidadosa, considerando o contexto, as necessidades e
+            as particularidades de quem confia sua demanda ao escritório.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }

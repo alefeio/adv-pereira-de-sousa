@@ -139,15 +139,15 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
             "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.
             "addressCountry": "BR"
         },
-        "url": "https://machadoeassociados.vercel.app/",
-        "telephone": "+5591980354730", // Telefone atualizado
+        "url": "https://pereiradesousa.vercel.app/",
+        "telephone": "+5591992047151", // Telefone atualizado
         "areaServed": [
             { "@type": "City", "name": "Belém" },
             { "@type": "State", "name": "Pará" }
         ],
         "priceRange": "$$", // Exemplo: indicando uma faixa de preço
         "sameAs": [
-            "https://www.instagram.com/machadoadvassociados/", // Sugestão baseada em busca, verificar a URL exata
+            "https://www.instagram.com/alansousainss/", // Sugestão baseada em busca, verificar a URL exata
             // "https://www.linkedin.com/company/machadoadvogadosassociados"
         ],
         "description": "Escritório de advocacia em Belém, PA. Especializado em Direito do Consumidor, Direito Trabalhista e Assessoria Jurídica Empresarial."
@@ -171,7 +171,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                 <meta property="og:title" content="Machado Advogados Associados | Compromisso com Seus Direitos" />
                 <meta property="og:description" content="Da escuta ao resultado, oferecemos soluções jurídicas completas e personalizadas. Transparência, experiência e relacionamento próximo para sua segurança jurídica." />
                 <meta property="og:image" content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png" /> {/* Use o logo ou uma imagem institucional relevante */}
-                <meta property="og:url" content="https://machadoeassociados.vercel.app/" />
+                <meta property="og:url" content="https://pereiradesousa.vercel.app/" />
                 <meta property="og:type" content="website" />
 
                 {/* Metas para Twitter */}
@@ -191,7 +191,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                 <main className="max-w-full mx-auto">
                     <Contato />
                     <FAQ faqs={faqs} />
-                    <div className="bg-[#1a3044] py-16 md:py-24 relative overflow-hidden text-white"
+                    <div className="bg-black py-16 md:py-24 relative overflow-hidden text-white"
                         style={{
                             // Estilo para simular o fundo da imagem, ajuste conforme necessário
                             backgroundImage: 'url(/images/bg-redes.jpg)',
@@ -205,30 +205,28 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
 
                                 {/* Contato */}
                                 <div className="flex flex-col items-center md:items-end md:border-r md:border-gray-600/50 pr-12">
-                                    <h3 className="text-[#bc9e77] text-xl md:text-2xl mb-6 tracking-wide">
-                                        Contato
-                                    </h3>
+                                 
                                     <div className="space-y-4">
                                         {/* Email */}
                                         <a
-                                            href="mailto:escritório@machadoeassociados.adv.br"
+                                            href="mailto:escritório@pereiradesousa.adv.br"
                                             className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
-                                            aria-label="Enviar email para escritório@machadoeassociados.adv.br"
+                                            aria-label="Enviar email para escritório@pereiradesousa.adv.br"
                                         >
                                             <MdEmail size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
-                                            escritório@machadoeassociados.adv.br
+                                            escritório@pereiradesousa.adv.br
                                         </a>
 
                                         {/* WhatsApp */}
                                         <a
-                                            href="https://wa.me/5591980354730"
+                                            href="https://wa.me/5591992047151"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
-                                            aria-label="Enviar mensagem WhatsApp para +55 91 98035-4730"
+                                            aria-label="Enviar mensagem WhatsApp para +55 91 99204-7151"
                                         >
                                             <FaWhatsapp size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
-                                            +55 91 98035-4730
+                                            +55 91 99204-7151
                                         </a>
                                     </div>
                                 </div>
@@ -241,14 +239,14 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                     <div className="space-y-4">
                                         {/* Instagram */}
                                         <a
-                                            href="https://www.instagram.com/machadoadvassociados"
+                                            href="https://www.instagram.com/alansousainss"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center md:justify-start text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
-                                            aria-label="Acessar Instagram @machadoadvassociados"
+                                            aria-label="Acessar Instagram @alansousainss"
                                         >
                                             <FaInstagram size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
-                                            @machadoadvassociados
+                                            @alansousainss
                                         </a>
 
                                         {/* Espaço reservado para outra rede social (se necessário) */}

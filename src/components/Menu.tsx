@@ -18,10 +18,6 @@ export function Menu({ menuData }: MenuProps) {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  const handleSignIn = () => {
-    router.push('/auth/signin');
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -30,7 +26,6 @@ export function Menu({ menuData }: MenuProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // trava scroll do body quando menu estiver aberto
   useEffect(() => {
     if (menuOpen) {
       const prev = document.body.style.overflow;
@@ -41,9 +36,7 @@ export function Menu({ menuData }: MenuProps) {
     }
   }, [menuOpen]);
 
-  if (!menuData) {
-    return null;
-  }
+  if (!menuData) return null;
 
   const { logoUrl, links } = menuData;
 
@@ -60,26 +53,12 @@ export function Menu({ menuData }: MenuProps) {
     </Link>
   );
 
-  const authButtonMobile = status === 'loading' ? (
-    <li className="block py-2 text-gray-400 border-b border-gray-700">Carregando...</li>
-  ) : session && (
-    <li>
-      <Link
-        href="/admin"
-        className="block py-2 hover:text-[#ba9a71] transition-colors border-b border-gray-700 flex items-center gap-2"
-        onClick={() => setMenuOpen(false)}
-      >
-        <MdAccountCircle className="w-5 h-5" /> Minha Conta
-      </Link>
-    </li>
-  );
-
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-        isScrolled
-          ? "bg-gray-900/95 backdrop-blur-sm py-3 shadow-lg"
-          : "pt-8 md:pt-16"
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-black shadow-lg ${
+        isScrolled 
+          ? "py-3" // Tamanho menor ao rolar
+          : "py-6 md:py-8" // Tamanho normal no topo (mas com fundo preto)
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8">
@@ -88,7 +67,7 @@ export function Menu({ menuData }: MenuProps) {
             src={logoUrl || "/images/logo.png"}
             alt="Logomarca Machado Advogados Associados"
             className={`transition-all duration-300 h-auto ${
-              isScrolled ? "w-28 md:w-36" : "w-52 md:w-60"
+              isScrolled ? "w-28 md:w-36" : "w-44 md:w-52"
             }`}
           />
         </Link>
@@ -112,32 +91,25 @@ export function Menu({ menuData }: MenuProps) {
 
         {/* Botão Hamburger */}
         <button
-          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800/70 text-[#ba9a71] hover:bg-gray-700/80 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ba9a71]"
+          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800 text-[#ba9a71] hover:bg-gray-700 transition-colors"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Abrir menu"
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
         >
-          {menuOpen ? (
-            <MdClose className="w-6 h-6" />
-          ) : (
-            <MdMenu className="w-6 h-6" />
-          )}
+          {menuOpen ? <MdClose className="w-6 h-6" /> : <MdMenu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Menu Mobile */}
       <nav
         id="mobile-menu"
-        className={`fixed inset-0 w-full h-[100vh] bg-gray-800 z-50 md:hidden flex flex-col shadow-xl transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 w-full h-[100vh] bg-black z-50 md:hidden flex flex-col transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-end p-6">
           <button
             onClick={() => setMenuOpen(false)}
-            className="p-2 rounded-md text-gray-100 bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ba9a71]"
-            aria-label="Fechar menu"
+            className="p-2 rounded-md text-gray-100 bg-gray-800 hover:bg-gray-700 transition-colors"
           >
             <MdClose className="w-6 h-6" />
           </button>
@@ -148,7 +120,7 @@ export function Menu({ menuData }: MenuProps) {
             <li key={url}>
               <Link
                 href={url}
-                className="block py-2 text-gray-100 hover:text-[#ba9a71] transition-colors border-b border-gray-700 last:border-b-0"
+                className="block py-4 text-gray-100 hover:text-[#ba9a71] transition-colors border-b border-gray-800"
                 onClick={() => setMenuOpen(false)}
                 target={target}
               >
@@ -156,7 +128,17 @@ export function Menu({ menuData }: MenuProps) {
               </Link>
             </li>
           ))}
-          {authButtonMobile}
+          {session && (
+             <li>
+               <Link
+                 href="/admin"
+                 className="block py-4 text-gray-100 hover:text-[#ba9a71] flex items-center gap-2"
+                 onClick={() => setMenuOpen(false)}
+               >
+                 <MdAccountCircle className="w-5 h-5" /> Minha Conta
+               </Link>
+             </li>
+          )}
         </ul>
       </nav>
     </header>

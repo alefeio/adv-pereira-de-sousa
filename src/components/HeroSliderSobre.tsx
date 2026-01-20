@@ -21,9 +21,7 @@ const STATIC_SLIDES: BannerItem[] = [
     {
         id: 'static-sobre-1',
         url: '/images/bg-sobre1.jpg',
-        title: 'Sobre a Machado',
-        subtitle:
-            '- Advogados Associados',
+        title: 'Sobre a Pereira de Sousa',
     },
 ];
 
@@ -42,18 +40,13 @@ export default function HeroSliderSobre() {
             </div>
 
             {/* Conteúdo */}
-            <div className="relative z-20 flex flex-col justify-start pt-72">
-                <div className="container flex flex-col items-start w-full max-w-4xl mx-auto">
-                    <div className="flex-1">
+            <div className="relative z-20 flex flex-col justify-start pt-40">
+                <div className="container flex flex-col items-start w-full mx-auto">
+                    <div>
                         {slide.title && (
-                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight max-w-md">
+                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight">
                                 {slide.title}
                             </h2>
-                        )}
-                        {slide.subtitle && (
-                            <p className="text-lg md:text-xl lg:text-2xl font-thin text-gray-100 drop-shadow mb-8 max-w-md">
-                                {slide.subtitle}
-                            </p>
                         )}
                     </div>
                 </div>

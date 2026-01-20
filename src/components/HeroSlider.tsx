@@ -92,13 +92,13 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
 
   return (
     <div
-      className="relative w-full h-[100vh] overflow-hidden shadow-2xl" // Sombra mais forte
+      className="relative w-full h-[70vh] overflow-hidden shadow-2xl mt-[88px] md:mt-[150px]" // Adicionado mt aqui
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      onMouseEnter={mouseEnterHandler} // Adicionado handler condicional
-      onMouseLeave={mouseLeaveHandler} // Adicionado handler condicional
+      onMouseEnter={mouseEnterHandler}
+      onMouseLeave={mouseLeaveHandler}
       id="inicio"
     >
       {slides.map((slide, idx) => (
@@ -110,7 +110,7 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
           <img
             src={slide.url}
             alt={slide.title || `Banner ${idx + 1}`}
-            className="object-cover object-[center_60%] w-full h-full"
+            className="object-cover object-[center_top] w-full h-full"
           />
         </div>
       ))}
@@ -118,45 +118,19 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
       {/* Renderiza o conteúdo do banner ativo separadamente */}
       {slides[current] && (slides[current].title || slides[current].subtitle || slides[current].buttonText) && (
         // MUDANÇA CHAVE 1: Usa justify-end para alinhar o conteúdo no final (rodapé)
-        <div className="absolute inset-0 flex flex-col justify-between px-8 pt-60 pb-16 md:py-60 md:pb-12 z-20">
-          {/* MUDANÇA CHAVE 2: Usa container e mx-auto para centralizar e aplica mb-10 para espaçar o slogan */}
-          <div className="container flex flex-col items-start w-full max-w-4xl mx-auto mb-10">
-            {/* Título e Subtítulo - RESTAURADO para o mais próximo da sua versão original */}
-            <div className="flex-1 mb-6 md:mb-24">
+        <div className="absolute inset-0 flex flex-col justify-center px-8 z-20 bg-gradient-to-r from-black/70 via-black/40 to-transparent">
+          <div className="container w-full max-w-4xl mx-auto">
+            <div className="max-w-2xl">
               {slides[current].title && (
-                <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight max-w-md"> {/* Título maior e mais impactante */}
+                <h2 className="font-sans text-4xl md:text-6xl font-extrabold text-[#ba9a71] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] mb-6 leading-tight">
                   {slides[current].title}
                 </h2>
               )}
               {slides[current].subtitle && (
-                <>
-                  <p className="text-lg md:text-xl lg:text-2xl font-thin text-gray-100 drop-shadow mb-8 max-w-md"> {/* Subtítulo mais destacado */}
-                    {slides[current].subtitle}
-                  </p>
-                </>
+                <p className="text-xl md:text-2xl font-medium text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] max-w-xl leading-relaxed">
+                  {slides[current].subtitle}
+                </p>
               )}
-              {/* {slides[current].buttonText && slides[current].link && (
-                <div className="mt-4">
-                  <Link href={slides[current].link} passHref>
-                    <button
-                      className={`inline-block py-3 px-8 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-xl hover:shadow-2xl ${slides[current].buttonColor || "bg-orange-500 hover:bg-orange-600"} text-white`}
-                    >
-                      {slides[current].buttonText}
-                    </button>
-                  </Link>
-                </div>
-              )} */}
-            </div>
-          </div>
-          
-          {/* MUDANÇA CHAVE 3: Slogan Fixo - Posicionado fora do container principal de títulos para ficar na parte inferior da tela, mas com padding e cor corretos */}
-          {/* O estilo de cor e tamanho está sendo herdado pelo contexto do container z-20, mas o posicionamento é o que importa */}
-          <div className="w-full bg-transparent p-6 md:p-10 pt-0 max-w-3xl mx-auto"> {/* Usei um div para replicar o efeito de uma seção com padding */}
-            <div className="container mx-auto max-w-4xl">
-              <p className="text-lg text-center md:text-xl font-thin text-[#0f1f30] drop-shadow max-w-full">
-                {/* Aqui está o texto fixo com o mesmo estilo da imagem (sempre em branco/claro no rodapé) */}
-                {FIXED_SLOGAN}
-              </p>
             </div>
           </div>
         </div>

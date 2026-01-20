@@ -77,7 +77,7 @@ const Artigos: React.FC = () => {
                             {posts.map((post) => (
                                 <div
                                     key={post.id}
-                                    className="bg-[#0c1a25] rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-xl duration-300 cursor-pointer" 
+                                    className="bg-black rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-xl duration-300 cursor-pointer" 
                                     // 🎯 MUDANÇA 3: Ação de clique usa o post.slug
                                     onClick={() => navigateToPost(post.slug)} 
                                 >
@@ -105,7 +105,7 @@ const Artigos: React.FC = () => {
                                             {post.subtitle}
                                         </p>
                                         <button
-                                            className="inline-flex items-center px-4 py-2 bg-[#203354] text-white font-semibold rounded-full shadow-md hover:bg-[#2f3f5b] transition-colors duration-300"
+                                            className="inline-flex items-center px-4 py-2 bg-[#111] hover:bg-[#222] text-white font-semibold rounded-full shadow-md transition-colors duration-300"
                                             onClick={(e) => {
                                                 e.stopPropagation();
                                                 // 🎯 MUDANÇA 4: Clique no botão usa post.slug

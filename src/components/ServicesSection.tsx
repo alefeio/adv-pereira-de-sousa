@@ -2,79 +2,124 @@ import React from "react";
 import {
   HiOutlineScale,
   HiOutlineDocumentText,
+  HiOutlineOfficeBuilding,
+  HiOutlineShieldCheck,
 } from "react-icons/hi";
 import {
-  BsBuilding,
-  BsClipboardCheck,
-  BsPersonBadge,
+  BsPeople,
+  BsBank,
+  BsBriefcase,
   BsHouseDoor,
+  BsLaptop,
+  BsHeartPulse,
+  BsPersonCheck,
+  BsTree,
 } from "react-icons/bs";
 
 const services = [
   {
-    title: "Direito Civil e Contratual",
+    title: "Direito Empresarial",
     description:
-      "Elaboração, análise e execução de contratos, além de soluções para litígios cíveis.",
-    url: '/images/ico-areas-1.png',
+      "Assessoria jurídica completa a empresários e sociedades empresárias, com atuação estratégica em contratos, reorganizações societárias, cobranças e orientação preventiva.",
+    icon: BsBriefcase,
+  },
+  {
+    title: "Direito do Trabalho",
+    description:
+      "Atuação na defesa de trabalhadores e empregadores, com foco em prevenção de conflitos, segurança jurídica, reclamatórias trabalhistas e assessoria empresarial contínua.",
+    icon: BsPeople,
+  },
+  {
+    title: "Direito Civil",
+    description:
+      "Atuação em demandas cíveis em geral, incluindo contratos, cobranças, execuções, responsabilidade civil e resolução de conflitos patrimoniais.",
+    icon: HiOutlineDocumentText,
+  },
+  {
+    title: "Direito de Família e Sucessões",
+    description:
+      "Atendimento humanizado e técnico em divórcios, pensão alimentícia, guarda, inventários, partilhas e planejamento sucessório.",
+    icon: BsPersonCheck,
+  },
+  {
+    title: "Direito Penal",
+    description:
+      "Defesa técnica e estratégica desde a fase policial até o processo judicial, com atuação ética, sigilosa e comprometida com a ampla defesa.",
+    icon: HiOutlineShieldCheck,
+  },
+  {
+    title: "Direito Agrário",
+    description:
+      "Assessoria jurídica ao produtor rural, com atuação em regularização fundiária, contratos agrários e conflitos possessórios.",
+    icon: BsTree,
+  },
+  {
+    title: "Direito Previdenciário",
+    description:
+      "Atuação administrativa e judicial em benefícios previdenciários, aposentadorias, pensões, auxílios, revisões e planejamento previdenciário.",
+    icon: BsBank,
   },
   {
     title: "Direito do Consumidor",
     description:
-      "Defesa de consumidores e empresas em demandas relacionadas a relações de consumo.",
-    url: '/images/ico-areas-2.png',
+      "Defesa dos direitos do consumidor em cobranças indevidas, contratos abusivos, negativação irregular e conflitos com instituições financeiras e prestadores de serviços.",
+    icon: HiOutlineScale,
   },
   {
-    title: "Direito Empresarial",
+    title: "Direito Digital",
     description:
-      "Consultoria e contencioso voltados à proteção e ao crescimento de empresas.",
-    url: '/images/ico-areas-3.png',
+      "Atuação jurídica no ambiente digital, com foco em LGPD, remoção de conteúdos, vazamento de dados, fraudes digitais e proteção da reputação online.",
+    icon: BsLaptop,
   },
   {
-    title: "Direito dos Médicos Residentes",
+    title: "Direito Bancário",
     description:
-      "Atuação pioneira em ações que asseguram direitos e benefícios previstos em lei.",
-    url: '/images/ico-areas-4.png',
+      "Atuação na revisão de contratos bancários, financiamentos, juros abusivos, renegociação de dívidas e defesa em execuções.",
+    icon: HiOutlineOfficeBuilding,
   },
   {
-    title: "Direito Imobiliário",
+    title: "Direito da Saúde",
     description:
-      "Regularização, compra, venda e assessoria em empreendimentos.",
-    url: '/images/ico-areas-5.png',
+      "Atuação na defesa do direito à saúde, com demandas envolvendo planos de saúde, fornecimento de medicamentos e tratamentos médicos.",
+    icon: BsHeartPulse,
   },
   {
-    title: "Direito Registral e Urbanístico",
+    title: "Direito das Pessoas com TEA",
     description:
-      "Soluções jurídicas para regularização fundiária, registros e gestão de imóveis urbanos.",
-    url: '/images/ico-areas-6.png',
+      "Atuação comprometida com a proteção dos direitos das pessoas com Transtorno do Espectro Autista, assegurando acesso à saúde, educação e benefícios assistenciais.",
+    icon: BsPersonCheck,
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#0c1a26]/70 py-36 mt-20 relative z-20">
-      <div className="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-x-72 gap-y-14">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="flex items-start gap-4 md:gap-5 text-left"
-          >
-            <div className="flex-shrink-0">
-              <img
-                src={service.url}
-                alt={service.title || 'Banner Sobre'}
-                className="object-cover object-[center] w-full h-20"
-              />
+    <section className="bg-black/80 py-20 relative z-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16">
+        {services.map((service, index) => {
+          const Icon = service.icon;
+
+          return (
+            <div
+              key={index}
+              className="flex items-start gap-5 text-left"
+            >
+              {/* Ícone */}
+              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-black text-[#ba9a71] text-3xl">
+                <Icon />
+              </div>
+
+              {/* Texto */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-[#ba9a71] mb-2 leading-snug">
+                  {service.title}
+                </h3>
+                <p className="text-gray-200 text-base leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-2xl md:text-3xl font-extrabold text-[#ba9a71] mb-1 leading-snug">
-                {service.title}
-              </h3>
-              <p className="text-gray-200 text-base leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
