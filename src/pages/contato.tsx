@@ -129,7 +129,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "LegalService", // Alterado de LocalBusiness para LegalService (ou Lawyer)
-        "name": "Machado Advogados Associados",
+        "name": "Pereira de Sousa Associados",
         "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png", // Manter ou alterar a URL da imagem se precisar
         "address": {
             "@type": "PostalAddress",
@@ -159,16 +159,16 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
         <>
             <Head>
                 {/* Título Otimizado para SEO de Advocacia */}
-                <title>Machado Advogados | Direito do Consumidor, Trabalhista e Empresarial em Belém-PA</title>
+                <title>Pereira de Sousa | Direito do Consumidor, Trabalhista e Empresarial em Belém-PA</title>
 
                 {/* Descrição Otimizada para SEO de Advocacia */}
-                <meta name="description" content="Machado Advogados Associados: Soluções jurídicas completas e personalizadas para proteger seus direitos. Especialistas em Direito do Consumidor, Trabalhista e Assessoria Empresarial. Atendimento em Belém/PA e online." />
+                <meta name="description" content="Pereira de Sousa Associados: Soluções jurídicas completas e personalizadas para proteger seus direitos. Especialistas em Direito do Consumidor, Trabalhista e Assessoria Empresarial. Atendimento em Belém/PA e online." />
 
                 {/* Keywords Otimizadas para Advocacia */}
-                <meta name="keywords" content="Machado Advogados, escritório de advocacia Belém, advogado em Belém PA, direito do consumidor, advogado trabalhista, assessoria jurídica empresarial, cobranças indevidas, rescisão de contrato, proteção de direitos" />
+                <meta name="keywords" content="Pereira de Sousa, escritório de advocacia Belém, advogado em Belém PA, direito do consumidor, advogado trabalhista, assessoria jurídica empresarial, cobranças indevidas, rescisão de contrato, proteção de direitos" />
 
                 {/* Metas para Redes Sociais (Open Graph) */}
-                <meta property="og:title" content="Machado Advogados Associados | Compromisso com Seus Direitos" />
+                <meta property="og:title" content="Pereira de Sousa Associados | Compromisso com Seus Direitos" />
                 <meta property="og:description" content="Da escuta ao resultado, oferecemos soluções jurídicas completas e personalizadas. Transparência, experiência e relacionamento próximo para sua segurança jurídica." />
                 <meta property="og:image" content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png" /> {/* Use o logo ou uma imagem institucional relevante */}
                 <meta property="og:url" content="https://pereiradesousa.vercel.app/" />
@@ -176,7 +176,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
 
                 {/* Metas para Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Machado Advogados Associados" />
+                <meta name="twitter:title" content="Pereira de Sousa Associados" />
                 <meta name="twitter:description" content="Especialistas em Direito do Consumidor, Trabalhista e Empresarial. Atendimento humanizado e focado em resultados." />
                 <meta name="twitter:image" content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png" /> {/* Use o logo ou uma imagem institucional relevante */}
 
@@ -210,10 +210,10 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                         {/* Email */}
                                         <a
                                             href="mailto:escritório@pereiradesousa.adv.br"
-                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
+                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#ca9a45] transition-colors"
                                             aria-label="Enviar email para escritório@pereiradesousa.adv.br"
                                         >
-                                            <MdEmail size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
+                                            <MdEmail size={20} className="text-[#ca9a45] mr-2 flex-shrink-0" />
                                             escritório@pereiradesousa.adv.br
                                         </a>
 
@@ -222,10 +222,10 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                             href="https://wa.me/5591992047151"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
+                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#ca9a45] transition-colors"
                                             aria-label="Enviar mensagem WhatsApp para +55 91 99204-7151"
                                         >
-                                            <FaWhatsapp size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
+                                            <FaWhatsapp size={20} className="text-[#ca9a45] mr-2 flex-shrink-0" />
                                             +55 91 99204-7151
                                         </a>
                                     </div>
@@ -233,7 +233,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
 
                                 {/* Redes Sociais */}
                                 <div className="flex flex-col items-center md:items-start md:pl-4">
-                                    <h3 className="text-[#bc9e77] text-xl md:text-2xl mb-6 tracking-wide">
+                                    <h3 className="text-[#ca9a45] text-xl md:text-2xl mb-6 tracking-wide">
                                         Redes Sociais
                                     </h3>
                                     <div className="space-y-4">
@@ -242,16 +242,16 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                             href="https://www.instagram.com/alansousainss"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center md:justify-start text-white text-base md:text-lg hover:text-[#bc9e77] transition-colors"
+                                            className="flex items-center justify-center md:justify-start text-white text-base md:text-lg hover:text-[#ca9a45] transition-colors"
                                             aria-label="Acessar Instagram @alansousainss"
                                         >
-                                            <FaInstagram size={20} className="text-[#bc9e77] mr-2 flex-shrink-0" />
+                                            <FaInstagram size={20} className="text-[#ca9a45] mr-2 flex-shrink-0" />
                                             @alansousainss
                                         </a>
 
                                         {/* Espaço reservado para outra rede social (se necessário) */}
                                         {/* <a className="flex items-center text-white text-base md:text-lg">
-                                <FaLinkedin size={20} className="text-[#bc9e77] mr-2" />
+                                <FaLinkedin size={20} className="text-[#ca9a45] mr-2" />
                                 /MachadoAdvogados
                             </a> */}
                                     </div>
@@ -282,7 +282,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                             <div className="relative w-full max-w-4xl mx-auto shadow-xl rounded-3xl overflow-hidden border border-gray-200">
                                 <div className="w-full" style={{ paddingBottom: '56.25%' }}> {/* Proporção 16:9 para o mapa */}
                                     <iframe
-                                        title="Localização do Escritório Machado Advogados Associados"
+                                        title="Localização do Escritório Pereira de Sousa Associados"
                                         src={mapEmbedUrl}
                                         width="100%"
                                         height="100%"
@@ -293,7 +293,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                     ></iframe>
                                 </div>
                                 {/* Botão de maximizar/detalhes que aparece no embed */}
-                                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer text-gray-700 hover:text-[#bc9e77] transition-colors">
+                                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer text-gray-700 hover:text-[#ca9a45] transition-colors">
                                     {/* Ícone ou botão "Ver mapa ampliado" pode ser simulado aqui se não for um iframe */}
                                 </div>
                             </div>

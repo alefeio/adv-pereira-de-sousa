@@ -2,8 +2,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { LinkItem } from '../types/index';
-import { MdMenu, MdClose, MdAccountCircle } from 'react-icons/md';
+import { LinkItem } from "../types";
+import { MdMenu, MdClose, MdAccountCircle } from "react-icons/md";
 
 interface MenuProps {
   menuData: {
@@ -40,104 +40,115 @@ export function Menu({ menuData }: MenuProps) {
 
   const { logoUrl, links } = menuData;
 
-  const authButton = status === 'loading' ? (
-    <span className="text-gray-400">Carregando...</span>
-  ) : session && (
-    <Link
-      href="/admin"
-      className="relative text-gray-100 hover:text-[#ba9a71] transition-colors duration-300 group flex items-center gap-1"
-      onClick={() => setMenuOpen(false)}
-    >
-      <MdAccountCircle className="w-5 h-5" /> Minha Conta
-      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ba9a71] transition-all duration-300 group-hover:w-full"></span>
-    </Link>
-  );
+  const authButton =
+    status === "loading" ? (
+      <span className="text-white/70">Carregando...</span>
+    ) : (
+      session && (
+        <Link
+          href="/admin"
+          onClick={() => setMenuOpen(false)}
+          className="relative flex items-center gap-1 text-white hover:text-[#ca9a45] transition-colors duration-300 group"
+        >
+          <MdAccountCircle className="w-5 h-5 text-white" />
+          Minha Conta
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ca9a45] transition-all duration-300 group-hover:w-full" />
+        </Link>
+      )
+    );
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-black shadow-lg ${
-        isScrolled 
-          ? "py-3" // Tamanho menor ao rolar
-          : "py-6 md:py-8" // Tamanho normal no topo (mas com fundo preto)
+      className={`fixed top-0 left-0 w-full z-40 bg-black shadow-lg transition-all duration-300 ${
+        isScrolled ? "py-3" : "py-6 md:py-8"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8">
-        <Link href="/">
+        {/* Logo */}
+        <Link href="/" aria-label="Página inicial">
           <img
             src={logoUrl || "/images/logo.png"}
-            alt="Logomarca Machado Advogados Associados"
-            className={`transition-all duration-300 h-auto ${
+            alt="Logomarca Pereira de Sousa – Advocacia"
+            className={`transition-all duration-300 ${
               isScrolled ? "w-28 md:w-36" : "w-44 md:w-52"
             }`}
           />
         </Link>
 
         {/* Navegação Desktop */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map(({ text, url, target }) => (
             <Link
               key={url}
               href={url}
-              className="relative text-gray-100 font-extralight antialiased hover:text-[#ba9a71] transition-colors duration-300 group"
-              onClick={() => setMenuOpen(false)}
               target={target}
+              onClick={() => setMenuOpen(false)}
+              className="relative font-light antialiased text-white hover:text-[#ca9a45] transition-colors duration-300 group"
             >
               {text}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ba9a71] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ca9a45] transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
           {authButton}
         </nav>
 
-        {/* Botão Hamburger */}
+        {/* Botão Mobile */}
         <button
-          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800 text-[#ba9a71] hover:bg-gray-700 transition-colors"
-          onClick={() => setMenuOpen((v) => !v)}
           aria-label="Abrir menu"
+          onClick={() => setMenuOpen((v) => !v)}
+          className="md:hidden flex items-center justify-center p-2 rounded-md bg-black border border-[#ca9a45]/40 hover:border-[#ca9a45] transition-colors"
         >
-          {menuOpen ? <MdClose className="w-6 h-6" /> : <MdMenu className="w-6 h-6" />}
+          {menuOpen ? (
+            <MdClose className="w-6 h-6 text-white" />
+          ) : (
+            <MdMenu className="w-6 h-6 text-white" />
+          )}
         </button>
       </div>
 
       {/* Menu Mobile */}
       <nav
-        id="mobile-menu"
-        className={`fixed inset-0 w-full h-[100vh] bg-black z-50 md:hidden flex flex-col transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 z-50 bg-black md:hidden transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Fechar */}
         <div className="flex justify-end p-6">
           <button
             onClick={() => setMenuOpen(false)}
-            className="p-2 rounded-md text-gray-100 bg-gray-800 hover:bg-gray-700 transition-colors"
+            aria-label="Fechar menu"
+            className="p-2 rounded-md border border-[#ca9a45]/40 hover:border-[#ca9a45] transition-colors"
           >
-            <MdClose className="w-6 h-6" />
+            <MdClose className="w-6 h-6 text-white" />
           </button>
         </div>
 
-        <ul className="flex-1 overflow-y-auto flex flex-col gap-4 font-semibold text-gray-100 px-6 pb-8 list-none">
+        {/* Links */}
+        <ul className="flex flex-col gap-4 px-6 pb-10 text-white text-lg">
           {links.map(({ text, url, target }) => (
             <li key={url}>
               <Link
                 href={url}
-                className="block py-4 text-gray-100 hover:text-[#ba9a71] transition-colors border-b border-gray-800"
-                onClick={() => setMenuOpen(false)}
                 target={target}
+                onClick={() => setMenuOpen(false)}
+                className="block py-4 border-b border-white/10 hover:text-[#ca9a45] transition-colors"
               >
                 {text}
               </Link>
             </li>
           ))}
+
           {session && (
-             <li>
-               <Link
-                 href="/admin"
-                 className="block py-4 text-gray-100 hover:text-[#ba9a71] flex items-center gap-2"
-                 onClick={() => setMenuOpen(false)}
-               >
-                 <MdAccountCircle className="w-5 h-5" /> Minha Conta
-               </Link>
-             </li>
+            <li>
+              <Link
+                href="/admin"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center gap-2 py-4 hover:text-[#ca9a45] transition-colors"
+              >
+                <MdAccountCircle className="w-5 h-5 text-white" />
+                Minha Conta
+              </Link>
+            </li>
           )}
         </ul>
       </nav>

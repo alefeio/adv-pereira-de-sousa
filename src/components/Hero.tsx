@@ -9,52 +9,57 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-black py-16 md:py-28">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="relative bg-black py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
 
           {/* Imagem */}
-          <div className="block flex-1 relative w-full md:max-w-xl overflow-hidden rounded-3xl transition-transform duration-500 ease-in-out transform hover:scale-102 order-first md:order-none">
+          <div className="relative flex-1 w-full md:max-w-xl overflow-hidden rounded-3xl order-first md:order-none">
+            <div className="absolute inset-0 bg-black/10 z-10" />
             <img
               src="/images/daniel2.jpg"
-              alt="Ambiente jurídico profissional do escritório Pereira de Sousa"
-              className="w-full h-auto object-cover max-h-96 md:max-h-full"
+              alt="Ambiente jurídico profissional do escritório de advocacia Pereira de Sousa"
+              className="relative z-0 w-full h-auto object-cover max-h-[420px] md:max-h-full transition-transform duration-500 ease-in-out hover:scale-105"
             />
           </div>
 
           {/* Texto institucional */}
-          <div className="flex-1 flex flex-col items-start text-left gap-5">
-            <h2 className="text-3xl sm:text-3xl md:text-4xl font-extrabold text-[#ba9a71] leading-tight max-w-4xl">
+          <div className="flex-1 flex flex-col items-start text-left gap-6">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] leading-tight max-w-4xl">
               Advocacia ética, técnica e comprometida com pessoas
             </h2>
 
-            <p className="text-white text-lg max-w-xl md:max-w-none">
-              A <strong>Pereira de Sousa – Advocacia</strong> atua com responsabilidade, organização e rigor técnico,
-              oferecendo soluções jurídicas seguras, claras e alinhadas à realidade de cada cliente.
+            <p className="text-gray-200 text-base md:text-lg max-w-xl md:max-w-none leading-relaxed">
+              A <strong>Pereira de Sousa – Advocacia</strong> atua com responsabilidade,
+              organização e rigor técnico, oferecendo soluções jurídicas seguras,
+              claras e alinhadas à realidade de cada cliente.
             </p>
 
-            <p className="text-white text-lg max-w-xl md:max-w-none">
-              O escritório adota uma atuação humanizada e personalizada, pautada na escuta ativa,
-              na transparência e no respeito às particularidades de cada demanda.
+            <p className="text-gray-200 text-base md:text-lg max-w-xl md:max-w-none leading-relaxed">
+              O escritório adota uma atuação humanizada e personalizada, pautada
+              na escuta ativa, na transparência e no respeito às particularidades
+              de cada demanda.
             </p>
 
-            <p className="text-white text-lg max-w-xl md:max-w-none">
-              Nosso compromisso é com a ética profissional, a qualidade jurídica e a defesa dos direitos,
-              sempre orientados pela justiça e pela dignidade da pessoa humana.
+            <p className="text-gray-200 text-base md:text-lg max-w-xl md:max-w-none leading-relaxed">
+              Nosso compromisso é com a ética profissional, a qualidade jurídica
+              e a defesa dos direitos, sempre orientados pela justiça e pela
+              dignidade da pessoa humana.
             </p>
 
             {/* Botão opcional */}
             {/*
-            <div className="mt-6 w-fit">
+            <div className="mt-8">
               <button
                 onClick={() => handleClick("/sobre")}
-                className="inline-block bg-[#ba9a71] text-[#0c1a26] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#a6885f] transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+                className="inline-flex items-center justify-center bg-[#ca9a45] text-[#0c1a26] font-bold py-3 px-10 rounded-full shadow-lg hover:bg-[#b28d52] transition-all duration-300 transform hover:-translate-y-1"
               >
                 Conheça o escritório
               </button>
             </div>
             */}
           </div>
+
         </div>
       </div>
     </section>

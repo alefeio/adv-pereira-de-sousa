@@ -34,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Envia o e-mail de confirmação para o cliente
     await resend.emails.send({
-      from: "Machado Advogados Associados <escritório@pereiradesousa.adv.br>", // Altere esta linha
+      from: "Pereira de Sousa Associados <escritório@pereiradesousa.adv.br>", // Altere esta linha
       to: email,
       subject: `Confirmação de Recebimento - ${name}`,
       html: `
@@ -55,13 +55,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         <body>
           <div class="container">
             <div class="header">
-              <h1>Machado Advogados Associados</h1>
+              <h1>Pereira de Sousa Associados</h1>
             </div>
             <div class="content">
               <p>Olá, ${name}!</p>
               <p>Agradecemos o seu contato. Recebemos a sua mensagem com sucesso e nossa equipe já está analisando as suas informações. Em breve, entraremos em contato para dar continuidade ao seu atendimento.</p>
               <p>Atenciosamente,</p>
-              <p>A equipe da Machado Advogados Associados.</p>
+              <p>A equipe da Pereira de Sousa Associados.</p>
             </div>
             <div class="footer">
               <p>Este é um e-mail automático. Por favor, não responda.</p>

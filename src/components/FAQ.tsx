@@ -1,67 +1,92 @@
 import { useState } from "react";
-import React from 'react';
-import { FaPlus, FaMinus } from "react-icons/fa"; // Importa os ícones de mais e menos
+import { FaPlus, FaMinus } from "react-icons/fa";
 
-// Define a tipagem dos dados que serão passados para o componente
 interface FAQItem {
-  id: string;
-  pergunta: string;
-  resposta: string;
+    id: string;
+    pergunta: string;
+    resposta: string;
 }
 
-// Define a tipagem das props do componente
-interface FAQPageProps {
-  faqs: FAQItem[];
+interface FAQProps {
+    faqs: FAQItem[];
 }
 
-export default function FAQ({ faqs }: FAQPageProps) {
-  const [open, setOpen] = useState<number | null>(null);
+export default function FAQ({ faqs }: FAQProps) {
+    const [open, setOpen] = useState<number | null>(null);
 
-  const toggleOpen = (index: number) => {
-    setOpen(open === index ? null : index);
-  };
+    const toggleOpen = (index: number) => {
+        setOpen(open === index ? null : index);
+    };
 
-  return (
-    <>
-      <section className="bg-black py-24 md:py-32"> {/* Adiciona um fundo claro à seção */}
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-12 md:mb-16"> {/* Aumenta margem inferior */}
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-400 leading-tight"> {/* Mais destaque ao título */}
-              Perguntas Frequentes
-            </h2>
-          </div>
+    return (
+        <section className="relative w-full bg-black py-20 md:py-28">
+            <div className="container mx-auto max-w-6xl px-4">
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-            {faqs.map((faq, idx) => (
-              <div
-                key={faq.id}
-                className={`bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 ${open === idx ? 'border-2 border-[#ba9a71]/30' : 'border border-[#ba9a71]/30' // Borda destacada quando aberto
-                  }`}
-              >
-                <button
-                  className={`w-full text-left p-7 transition-colors flex justify-between items-center bg-white`}
-                  onClick={() => toggleOpen(idx)}
-                >
-                  <span className="text-sm md:text-md font-semibold text-gray-800"> {/* Aumenta tamanho da fonte */}
-                    {faq.pergunta}
-                  </span>
-                  <span className="text-xl text-[#ba9a71]"> {/* Ícones para mais/menos */}
-                    {open === idx ? <FaMinus /> : <FaPlus />}
-                  </span>
-                </button>
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${open === idx ? 'max-h-96 opacity-100 p-7 pt-0 bg-white' : 'max-h-0 opacity-0' // Fundo mais claro quando aberto
-                    }`}
-                >
-                  <p className="text-gray-700 leading-relaxed"> {/* Cor do texto ajustada */}
-                    {faq.resposta}
-                  </p>
+                {/* TÍTULO */}
+                <div className="text-center mb-12 md:mb-16">
+                    <h2 className="font-sans text-3xl md:text-5xl font-extrabold text-[#ca9a45] leading-tight">
+                        Perguntas Frequentes
+                    </h2>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
+
+                {/* GRID */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {faqs.map((faq, idx) => (
+                        <div
+                            key={faq.id}
+                            className={`
+                                rounded-2xl
+                                border
+                                transition-all
+                                duration-300
+                                bg-white
+                                ${open === idx
+                                    ? "border-[#ca9a45]"
+                                    : "border-[#ca9a45]/30"}
+                            `}
+                        >
+                            {/* PERGUNTA */}
+                            <button
+                                onClick={() => toggleOpen(idx)}
+                                className="
+                                    w-full
+                                    flex
+                                    items-center
+                                    justify-between
+                                    text-left
+                                    p-6
+                                    focus:outline-none
+                                "
+                            >
+                                <span className="text-sm md:text-base font-semibold text-gray-900">
+                                    {faq.pergunta}
+                                </span>
+
+                                <span className="text-[#ca9a45] text-lg ml-4">
+                                    {open === idx ? <FaMinus /> : <FaPlus />}
+                                </span>
+                            </button>
+
+                            {/* RESPOSTA */}
+                            <div
+                                className={`
+                                    overflow-hidden
+                                    transition-all
+                                    duration-300
+                                    ease-in-out
+                                    ${open === idx
+                                        ? "max-h-96 opacity-100 px-6 pb-6"
+                                        : "max-h-0 opacity-0 px-6"}
+                                `}
+                            >
+                                <p className="text-gray-700 text-sm leading-relaxed">
+                                    {faq.resposta}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 }

@@ -1,4 +1,3 @@
-import { MdPlayArrow, MdPause } from 'react-icons/md';
 import ServicesSection from './ServicesSection';
 import SobreSection from './SobreSection';
 import MissionSection from './MissionSection';
@@ -14,9 +13,6 @@ interface BannerItem {
     buttonColor?: string;
 }
 
-const FIXED_SLOGAN =
-    'Na Machado - Advogados Associados, transformamos desafios em conquistas jurídicas com seriedade, dedicação e inovação.';
-
 const STATIC_SLIDES: BannerItem[] = [
     {
         id: 'static-sobre-1',
@@ -29,31 +25,34 @@ export default function HeroSliderSobre() {
     const slide = STATIC_SLIDES[0];
 
     return (
-        <div className="relative w-full" id="inicio">
-            {/* Imagem de Fundo */}
-            <div className="absolute inset-0 opacity-100 z-10">
+        <section className="relative w-full min-h-[70vh]" id="inicio">
+            {/* Background */}
+            <div className="absolute inset-0 z-0">
                 <img
                     src={slide.url}
                     alt={slide.title || 'Banner Sobre'}
-                    className="object-cover object-[center] w-full h-full"
+                    className="w-full h-full object-cover object-center"
                 />
+                {/* Overlay escuro para leitura */}
+                <div className="absolute inset-0 bg-black/60" />
             </div>
 
-            {/* Conteúdo */}
-            <div className="relative z-20 flex flex-col justify-start pt-40">
-                <div className="container flex flex-col items-start w-full mx-auto">
-                    <div>
-                        {slide.title && (
-                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight">
-                                {slide.title}
-                            </h2>
-                        )}
-                    </div>
+            {/* Conteúdo do Banner */}
+            <div className="relative z-10 flex items-center justify-center min-h-[70vh] px-6">
+                <div className="max-w-5xl mx-auto text-center">
+                    {slide.title && (
+                        <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#ca9a45] drop-shadow-xl leading-tight">
+                            {slide.title}
+                        </h1>
+                    )}
                 </div>
+            </div>
 
+            {/* Seções abaixo do banner */}
+            <div className="relative z-20">
                 <SobreSection />
                 <MissionSection />
             </div>
-        </div>
+        </section>
     );
 }

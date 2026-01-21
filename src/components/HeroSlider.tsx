@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { MdPlayArrow, MdPause } from 'react-icons/md'; // Importa os ícones de play/pause
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { MdPlayArrow, MdPause } from "react-icons/md";
 
-// Interface atualizada para corresponder ao BannerForm.tsx
 interface BannerItem {
   id: string;
   url: string;
@@ -21,29 +20,30 @@ interface HeroSliderProps {
   }[];
 }
 
-// O slogan fixo que você quer exibir
-const FIXED_SLOGAN = "Na Machado - Advogados Associados, transformamos desafios em conquistas jurídicas com seriedade, dedicação e inovação.";
+const FIXED_SLOGAN =
+  "Na Machado - Advogados Associados, transformamos desafios em conquistas jurídicas com seriedade, dedicação e inovação.";
 
 export default function HeroSlider({ banners }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [startX, setStartX] = useState<number | null>(null);
+
   const slides = banners[0]?.banners || [];
   const router = useRouter();
 
-  // Variável para verificar se há mais de um banner
   const hasMultipleSlides = slides.length > 1;
 
   useEffect(() => {
-    // A execução do timer só ocorre se houver mais de um slide
     if (!playing || !hasMultipleSlides) return;
 
-    const timer = setTimeout(() => setCurrent((c) => (c + 1) % slides.length), 8000); // Tempo de transição ajustado
+    const timer = setTimeout(() => {
+      setCurrent((c) => (c + 1) % slides.length);
+    }, 8000);
+
     return () => clearTimeout(timer);
-  }, [current, playing, slides.length, hasMultipleSlides]); // Adicionado hasMultipleSlides como dependência
+  }, [current, playing, slides.length, hasMultipleSlides]);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Só pausa no clique/arrasto se houver mais de um slide
     if (!hasMultipleSlides) return;
     setPlaying(false);
     setStartX(e.clientX);
@@ -51,10 +51,15 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
 
   const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
     if (startX === null || !hasMultipleSlides) return;
+
     const deltaX = e.clientX - startX;
 
     if (Math.abs(deltaX) > 50) {
-      setCurrent((prev) => (deltaX > 0 ? (prev - 1 + slides.length) % slides.length : (prev + 1) % slides.length));
+      setCurrent((prev) =>
+        deltaX > 0
+          ? (prev - 1 + slides.length) % slides.length
+          : (prev + 1) % slides.length
+      );
     }
 
     setStartX(null);
@@ -69,103 +74,103 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
 
   const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     if (startX === null || !hasMultipleSlides) return;
+
     const endX = e.changedTouches[0].clientX;
     const deltaX = endX - startX;
 
     if (Math.abs(deltaX) > 50) {
-      setCurrent((prev) => (deltaX > 0 ? (prev - 1 + slides.length) % slides.length : (prev + 1) % slides.length));
+      setCurrent((prev) =>
+        deltaX > 0
+          ? (prev - 1 + slides.length) % slides.length
+          : (prev + 1) % slides.length
+      );
     }
 
     setStartX(null);
     setPlaying(true);
   };
 
-  // Se não houver slides, retorna null. Se houver apenas 1, renderiza-o.
-  if (slides.length === 0) {
-    return null;
-  }
-
-  // Define o comportamento de mouse enter/leave condicionalmente
-  const mouseEnterHandler = hasMultipleSlides ? () => setPlaying(false) : undefined;
-  const mouseLeaveHandler = hasMultipleSlides ? () => setPlaying(true) : undefined;
-
+  if (slides.length === 0) return null;
 
   return (
     <div
-      className="relative w-full h-[70vh] overflow-hidden shadow-2xl mt-[88px] md:mt-[150px]" // Adicionado mt aqui
+      id="inicio"
+      className="relative w-full h-[70vh] overflow-hidden shadow-2xl mt-[88px] md:mt-[150px]"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
-      id="inicio"
+      onMouseEnter={hasMultipleSlides ? () => setPlaying(false) : undefined}
+      onMouseLeave={hasMultipleSlides ? () => setPlaying(true) : undefined}
     >
+      {/* Slides */}
       {slides.map((slide, idx) => (
         <div
           key={slide.id}
-          // Z-index para garantir que apenas o banner ativo ou o banner único esteja no topo.
-          className={`absolute inset-0 transition-opacity duration-700 ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+          className={`absolute inset-0 transition-opacity duration-700 ${
+            idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
         >
           <img
             src={slide.url}
             alt={slide.title || `Banner ${idx + 1}`}
-            className="object-cover object-[center_top] w-full h-full"
+            className="w-full h-full object-cover object-[center_top]"
           />
         </div>
       ))}
 
-      {/* Renderiza o conteúdo do banner ativo separadamente */}
-      {slides[current] && (slides[current].title || slides[current].subtitle || slides[current].buttonText) && (
-        // MUDANÇA CHAVE 1: Usa justify-end para alinhar o conteúdo no final (rodapé)
-        <div className="absolute inset-0 flex flex-col justify-center px-8 z-20 bg-gradient-to-r from-black/70 via-black/40 to-transparent">
-          <div className="container w-full max-w-4xl mx-auto">
-            <div className="max-w-2xl">
-              {slides[current].title && (
-                <h2 className="font-sans text-4xl md:text-6xl font-extrabold text-[#ba9a71] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] mb-6 leading-tight">
-                  {slides[current].title}
-                </h2>
-              )}
-              {slides[current].subtitle && (
-                <p className="text-xl md:text-2xl font-medium text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] max-w-xl leading-relaxed">
-                  {slides[current].subtitle}
-                </p>
-              )}
-            </div>
+      {/* Overlay e Conteúdo */}
+      {slides[current] && (
+        <div className="absolute inset-0 z-20 flex items-center bg-gradient-to-r from-black/80 via-black/50 to-transparent">
+          <div className="container mx-auto px-8 max-w-5xl">
+            {slides[current].title && (
+              <h2 className="text-4xl md:text-6xl font-extrabold text-[#ca9a45] drop-shadow-lg mb-6 leading-tight">
+                {slides[current].title}
+              </h2>
+            )}
+
+            {slides[current].subtitle && (
+              <p className="text-xl md:text-2xl text-white leading-relaxed drop-shadow-md max-w-2xl">
+                {slides[current].subtitle}
+              </p>
+            )}
           </div>
         </div>
       )}
 
-      {/* --- INÍCIO: Controles Condicionais (só aparecem se houver mais de 1 slide) --- */}
+      {/* CONTROLES — SOMENTE SE HOUVER +1 SLIDE */}
       {hasMultipleSlides && (
         <>
-          {/* Navegação/Bullets */}
+          {/* Bullets */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-3">
             {slides.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-4 h-4 rounded-full transition-colors duration-300 ${idx === current ? "bg-orange-500" : "bg-gray-400 hover:bg-gray-200"}`} // Cores e tamanho ajustados
                 onClick={() => setCurrent(idx)}
-                aria-label={`Ir para slide ${idx + 1}`}
+                aria-label={`Slide ${idx + 1}`}
+                className={`w-4 h-4 rounded-full transition-all ${
+                  idx === current
+                    ? "bg-[#ca9a45]"
+                    : "bg-white/60 hover:bg-white"
+                }`}
               />
             ))}
           </div>
 
-          {/* Botão Play/Pause */}
+          {/* Play / Pause — BRANCO PURO */}
           <button
-            className="absolute bottom-6 right-6 bg-white/90 rounded-full p-2 shadow-lg hover:bg-white z-30 transition-colors duration-300" // Cor de fundo e hover ajustados
             onClick={() => setPlaying((p) => !p)}
             aria-label={playing ? "Pausar" : "Reproduzir"}
+            className="absolute bottom-6 right-6 z-30 flex items-center justify-center w-10 h-10 rounded-full bg-black/70 hover:bg-black transition-colors"
           >
             {playing ? (
-              <MdPause className="w-5 h-5 text-gray-700" /> // Usando ícone de react-icons/md
+              <MdPause className="w-6 h-6 text-white" />
             ) : (
-              <MdPlayArrow className="w-5 h-5 text-gray-700" /> // Usando ícone de react-icons/md
+              <MdPlayArrow className="w-6 h-6 text-white" />
             )}
           </button>
         </>
       )}
-      {/* --- FIM: Controles Condicionais --- */}
     </div>
   );
 }

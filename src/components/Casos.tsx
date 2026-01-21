@@ -46,15 +46,15 @@ const ProjetoCard: React.FC<ProjetoCardProps> = ({ projeto, isOpen, toggleAccord
     return (
         <div 
             key={projeto.id} 
-            className="bg-[#0c1a25] rounded-xl shadow-lg overflow-hidden border border-[#ba9a71]/20" 
+            className="bg-[#0c1a25] rounded-xl shadow-lg overflow-hidden border border-[#ca9a45]/20" 
         >
             <div 
-                className={`p-6 cursor-pointer flex justify-between items-center ${!isOpen ? 'border-b border-[#ba9a71]/30' : ''}`}
+                className={`p-6 cursor-pointer flex justify-between items-center ${!isOpen ? 'border-b border-[#ca9a45]/30' : ''}`}
                 onClick={() => toggleAccordion(projeto.id)}
             >
-                <h3 className="text-xl md:text-2xl font-bold text-[#ba9a71]">{projeto.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-[#ca9a45]">{projeto.title}</h3>
                 <button
-                    className="p-2 text-[#ba9a71] hover:text-white transition-colors duration-200"
+                    className="p-2 text-[#ca9a45] hover:text-white transition-colors duration-200"
                     aria-label={isOpen ? 'Fechar detalhes' : 'Abrir detalhes'}
                 >
                     {isOpen ? <FaMinus size={18} /> : <FaPlus size={18} />}

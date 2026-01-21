@@ -1,47 +1,59 @@
 import Artigos from "./Artigos";
-import Casos from "./Casos";
 
 interface BannerItem {
-    id: string;
-    url: string;
-    title?: string;
-    subtitle?: string;
-    link?: string;
-    target?: string;
-    buttonText?: string;
-    buttonColor?: string;
+  id: string;
+  url: string;
+  title?: string;
+  subtitle?: string;
+  link?: string;
+  target?: string;
+  buttonText?: string;
+  buttonColor?: string;
 }
 
-const FIXED_SLOGAN =
-    'Na Machado - Advogados Associados, transformamos desafios em conquistas jurídicas com seriedade, dedicação e inovação.';
-
 const STATIC_SLIDES: BannerItem[] = [
-    {
-        id: 'static-blog',
-        url: '/images/bg-blog.jpg',
-        title: 'Blog',
-    },
+  {
+    id: "static-blog",
+    url: "/images/bg-blog.jpg",
+    title: "Blog",
+  },
 ];
 
 export default function Blog() {
-    const slide = STATIC_SLIDES[0];
+  const slide = STATIC_SLIDES[0];
 
-    return (
-        <div className="relative w-full bg-black/95" id="inicio">
-            {/* Conteúdo */}
-            <div className="relative z-20 flex flex-col justify-start pt-40 w-full">
-                <div className="container flex flex-col items-center w-full max-w-4xl mx-auto">
-                    <div className="flex-1">
-                        {slide.title && (
-                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ba9a71] drop-shadow-lg mb-4 leading-tight max-w-md">
-                                {slide.title}
-                            </h2>
-                        )}
-                    </div>
-                </div>
+  return (
+    <section
+      id="inicio"
+      className="relative w-full bg-black overflow-hidden"
+    >
+      {/* Background opcional (se quiser manter imagem futuramente) */}
+      {/* 
+      <div className="absolute inset-0 z-0">
+        <img
+          src={slide.url}
+          alt={slide.title}
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
+      */}
 
-                <Artigos />
+      {/* Conteúdo */}
+      <div className="relative z-10 flex flex-col items-center pt-40 md:pt-44 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
+          {/* Título */}
+          {slide.title && (
+            <div className="flex justify-center mb-14">
+              <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#ca9a45] text-center leading-tight">
+                {slide.title}
+              </h1>
             </div>
+          )}
+
+          {/* Conteúdo do Blog */}
+          <Artigos />
         </div>
-    );
+      </div>
+    </section>
+  );
 }

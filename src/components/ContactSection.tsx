@@ -19,15 +19,15 @@ const ContactSection: React.FC = () => {
                     <h4 className="font-bold text-white text-2xl mb-6">Fale Conosco</h4>
                     <div className="space-y-5 text-gray-200">
                         <p className="flex flex-col items-center justify-center space-x-3 text-xl">
-                            <MdPhone className="text-[#ba9a71] text-3xl" />
-                            <a href="tel:+5591982016888" className="font-semibold hover:text-[#ba9a71] transition-colors">
+                            <MdPhone className="text-[#ca9a45] text-3xl" />
+                            <a href="tel:+5591982016888" className="font-semibold hover:text-[#ca9a45] transition-colors">
                                 +55 (91) 98455-5829
                             </a>
                         </p>
                         <p className="flex flex-col items-center justify-center space-x-3 text-xl overflow-hidden">
-                            <MdEmail className="text-[#ba9a71] text-3xl" />
+                            <MdEmail className="text-[#ca9a45] text-3xl" />
                             <small className="md:text-sm">
-                                <a href="mailto:escritório@pereiradesousa.adv.br" className="font-semibold hover:text-[#ba9a71] transition-colors">
+                                <a href="mailto:escritório@pereiradesousa.adv.br" className="font-semibold hover:text-[#ca9a45] transition-colors">
                                     escritório@pereiradesousa.adv.br
                                 </a>
                             </small>
@@ -54,13 +54,13 @@ const ContactSection: React.FC = () => {
                 {/* Endereço e Mapa */}
                 <div className="flex flex-col items-center p-8 bg-[#0c1a25] rounded-xl shadow-xl md:col-span-2"> {/* Ocupa 2 colunas em telas médias */}
                     <h4 className="font-bold text-white text-2xl mb-6">Nossa Localização</h4>
-                    <address className="text-[#ba9a71] font-semibold not-italic text-center text-xl mb-6">
+                    <address className="text-[#ca9a45] font-semibold not-italic text-center text-xl mb-6">
                         <MdLocationOn className="inline text-3xl mr-2 align-middle" />
                         Ed. Angra - Travessa São Pedro, 842, sala 301 - Batista Campos - Belém - PA
                     </address>
                     <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg border-2 border-gray-700">
                         <iframe
-                            title="Machado Advogados Associados"
+                            title="Pereira de Sousa Associados"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5221138970182!2d-48.493792799999994!3d-1.4605280999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48e61f5802201%3A0x41904427b403b82f!2sTv.%20S%C3%A3o%20Pedro%2C%20842%20-%20Batista%20Campos%2C%20Bel%C3%A9m%20-%20PA%2C%2066030-465!5e0!3m2!1spt-BR!2sbr!4v1761805811395!5m2!1spt-BR!2sbr"
                             width="100%"
                             height="100%"

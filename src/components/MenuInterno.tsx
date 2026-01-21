@@ -85,7 +85,7 @@ export function MenuInterno({ menuData }: MenuProps) {
         <Link href="/">
           <img
             src={logoUrl || "/images/logo.png"}
-            alt="Logomarca Machado Advogados Associados"
+            alt="Logomarca Pereira de Sousa Associados"
             className={`transition-all duration-300 h-auto ${isScrolled ? "w-28 md:w-36" : "w-52 md:w-60"
               }`}
           />
@@ -97,12 +97,12 @@ export function MenuInterno({ menuData }: MenuProps) {
             <Link
               key={url}
               href={url}
-              className="relative text-gray-100 font-extralight antialiased hover:text-[#ba9a71] transition-colors duration-300 group"
+              className="relative text-gray-100 font-extralight antialiased hover:text-[#ca9a45] transition-colors duration-300 group"
               onClick={() => setMenuOpen(false)}
               target={target}
             >
               {text}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ba9a71] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ca9a45] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
           {authButton}
@@ -110,7 +110,7 @@ export function MenuInterno({ menuData }: MenuProps) {
 
         {/* Botão Hamburger */}
         <button
-          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800/70 text-[#ba9a71] hover:bg-gray-700/80 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ba9a71]"
+          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800/70 text-[#ca9a45] hover:bg-gray-700/80 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ca9a45]"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Abrir menu"
           aria-expanded={menuOpen}
@@ -133,7 +133,7 @@ export function MenuInterno({ menuData }: MenuProps) {
         <div className="flex justify-end p-6">
           <button
             onClick={() => setMenuOpen(false)}
-            className="p-2 rounded-md text-gray-100 bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ba9a71]"
+            className="p-2 rounded-md text-gray-100 bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ca9a45]"
             aria-label="Fechar menu"
           >
             <MdClose className="w-6 h-6" />
@@ -145,7 +145,7 @@ export function MenuInterno({ menuData }: MenuProps) {
             <li key={url}>
               <Link
                 href={url}
-                className="block py-2 text-gray-100 hover:text-[#ba9a71] transition-colors border-b border-gray-700 last:border-b-0"
+                className="block py-2 text-gray-100 hover:text-[#ca9a45] transition-colors border-b border-gray-700 last:border-b-0"
                 onClick={() => setMenuOpen(false)}
                 target={target}
               >

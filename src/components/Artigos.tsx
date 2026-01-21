@@ -1,128 +1,130 @@
 // components/Artigos.tsx
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/router'; 
-import { richTextToHtml } from 'utils/richTextToHtml'; 
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
-// Definições de tipo adaptadas para Blog/BlogFoto
+// Tipagens
 interface BlogFoto {
-    id: string;
-    detalhes: string; // Descrição ou legenda da imagem
-    img: string; // URL da imagem
+  id: string;
+  detalhes: string;
+  img: string;
 }
 
-// 🎯 MUDANÇA 1: Adicionar 'slug' à interface BlogItem
 interface BlogItem {
-    id: string;
-    title: string;
-    subtitle: string;
-    description: string;
-    order: number;
-    publico: boolean;
-    items: BlogFoto[]; 
-    slug: string; // <-- O slug AGORA é necessário para a navegação
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  order: number;
+  publico: boolean;
+  items: BlogFoto[];
+  slug: string;
 }
 
-// O componente Artigos NÃO receberá props (posts)
 const Artigos: React.FC = () => {
-    const [posts, setPosts] = useState<BlogItem[]>([]);
-    const [loading, setLoading] = useState(true);
-    const router = useRouter(); 
-    
-    useEffect(() => {
-        fetchPosts();
-    }, []);
+  const [posts, setPosts] = useState<BlogItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
-    const fetchPosts = async () => {
-        setLoading(true);
-        try {
-            // Chamada para o endpoint público do blog
-            const res = await fetch("/api/crud/blog", { method: "GET" });
-            const data = await res.json();
-            if (res.ok && data.success) {
-                // Filtra posts públicos e assume que eles já vêm com o slug da API
-                const publicPosts = data.posts.filter((p: BlogItem) => p.publico);
-                setPosts(publicPosts.sort((a: BlogItem, b: BlogItem) => a.order - b.order));
-            } else {
-                console.error("Erro ao carregar posts:", data.message);
-            }
-        } catch (e) {
-            console.error("Erro ao conectar com a API do blog.", e);
-        } finally {
-            setLoading(false);
-        }
-    };
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
-    /**
-     * Função para navegar para a página de post dedicada.
-     * 🎯 MUDANÇA 2: Usamos o slug do post, que é a nova rota dinâmica (/blog/[slug]).
-     */
-    const navigateToPost = (postSlug: string) => { // Aceita o slug
-        router.push(`/blog/${postSlug}`); // Navega usando o slug
-    };
+  const fetchPosts = async () => {
+    try {
+      const res = await fetch("/api/crud/blog");
+      const data = await res.json();
 
-    // --- Renderização ---
+      if (res.ok && data.success) {
+        const publicPosts = data.posts
+          .filter((p: BlogItem) => p.publico)
+          .sort((a: BlogItem, b: BlogItem) => a.order - b.order);
 
-    return (
-        <>
-            <div className="pt-12 pb-48"> 
-                <div className="container mx-auto px-4 md:px-8">
+        setPosts(publicPosts);
+      }
+    } catch (error) {
+      console.error("Erro ao carregar posts do blog", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-                    {loading ? (
-                        <p className="text-center text-gray-600 text-xl py-10">Carregando posts...</p>
-                    ) : (posts.length === 0 ? (
-                        <p className="text-center text-gray-600 text-xl py-10">Nenhum post publicado no momento.</p>
-                    ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {posts.map((post) => (
-                                <div
-                                    key={post.id}
-                                    className="bg-black rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-xl duration-300 cursor-pointer" 
-                                    // 🎯 MUDANÇA 3: Ação de clique usa o post.slug
-                                    onClick={() => navigateToPost(post.slug)} 
-                                >
-                                    <div className="relative h-60 w-full">
-                                        {post.items.length > 0 ? (
-                                            <Image
-                                                src={post.items[0].img} 
-                                                alt={post.title}
-                                                fill
-                                                sizes="(max-width: 768px) 100vw, 33vw"
-                                                style={{ objectFit: "cover" }}
-                                                className="rounded-t-xl transition-transform duration-500 hover:scale-110"
-                                            />
-                                        ) : (
-                                            <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500 rounded-t-xl">
-                                                [Imagem de Post]
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className="p-6">
-                                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#ba9a71] line-clamp-2"> 
-                                            {post.title}
-                                        </h3>
-                                        <p className="text-white text-base leading-relaxed mb-4 line-clamp-3"> 
-                                            {post.subtitle}
-                                        </p>
-                                        <button
-                                            className="inline-flex items-center px-4 py-2 bg-[#111] hover:bg-[#222] text-white font-semibold rounded-full shadow-md transition-colors duration-300"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                // 🎯 MUDANÇA 4: Clique no botão usa post.slug
-                                                navigateToPost(post.slug); 
-                                            }}
-                                        >
-                                            Ler artigo <span className="ml-2" aria-hidden="true">&rarr;</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    ))}
+  const navigateToPost = (slug: string) => {
+    router.push(`/blog/${slug}`);
+  };
+
+  return (
+    <section className="w-full bg-black pb-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+
+        {/* Estados */}
+        {loading && (
+          <p className="text-center text-gray-400 text-lg py-20">
+            Carregando artigos…
+          </p>
+        )}
+
+        {!loading && posts.length === 0 && (
+          <p className="text-center text-gray-400 text-lg py-20">
+            Nenhum artigo publicado no momento.
+          </p>
+        )}
+
+        {!loading && posts.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {posts.map((post) => (
+              <article
+                key={post.id}
+                onClick={() => navigateToPost(post.slug)}
+                className="group bg-black border border-[#ca9a45]/20 rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                {/* Imagem */}
+                <div className="relative w-full h-60 overflow-hidden">
+                  {post.items.length > 0 ? (
+                    <Image
+                      src={post.items[0].img}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-[#111] flex items-center justify-center text-gray-500 text-sm">
+                      Sem imagem
+                    </div>
+                  )}
                 </div>
-            </div>
-        </>
-    );
+
+                {/* Conteúdo */}
+                <div className="p-6 flex flex-col gap-4">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-[#ca9a45] leading-snug line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+                    {post.subtitle}
+                  </p>
+
+                  <div className="pt-2">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigateToPost(post.slug);
+                      }}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#ca9a45] hover:text-[#e0b66a] transition-colors"
+                    >
+                      Ler artigo
+                      <span className="text-lg leading-none">→</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default Artigos;

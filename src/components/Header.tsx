@@ -32,7 +32,7 @@ const servicesList = [
   {
     title: "Atuação Técnica e Estratégica",
     description:
-      "O escritório Pereira de Sousa atua com elevado rigor técnico e visão estratégica, aliando conhecimento jurídico atualizado à experiência prática para oferecer soluções eficazes e seguras.",
+      "O escritório de advocacia Pereira de Sousa atua com elevado rigor técnico e visão estratégica, aliando conhecimento jurídico atualizado à experiência prática para oferecer soluções eficazes e seguras.",
   },
 ]
 
@@ -66,16 +66,16 @@ export default function Header() {
 
               {/* Coluna esquerda */}
               <div className="flex flex-col gap-5">
-                <h2 className="w-full text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#ba9a71] leading-tight max-w-2xl mx-auto md:mx-0">
-                  Sobre o Pereira de Sousa
+                <h2 className="w-full text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#ca9a45] leading-tight max-w-2xl mx-auto md:mx-0">
+                  Sobre o escritório de advocacia Pereira de Sousa
                   <br />
-                  <small className="text-[#ba9a71] font-medium">
+                  <small className="text-[#ca9a45] font-medium">
                     – Advocacia
                   </small>
                 </h2>
 
                 <p className="text-white text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-                  O Pereira de Sousa Advocacia atua com foco na proteção dos direitos de seus clientes,
+                  O escritório de advocacia Pereira de Sousa Advocacia atua com foco na proteção dos direitos de seus clientes,
                   oferecendo assessoria jurídica segura, ética e alinhada às exigências do ordenamento jurídico.
                 </p>
 
@@ -104,7 +104,7 @@ export default function Header() {
                       <span className="text-lg md:text-xl font-semibold">
                         {service.title}
                       </span>
-                      <span className="text-2xl font-bold text-[#ba9a71]">
+                      <span className="text-2xl font-bold text-[#ca9a45]">
                         {open.includes(index) ? <FaMinus /> : <FaPlus />}
                       </span>
                     </button>
@@ -125,7 +125,7 @@ export default function Header() {
 
             {/* Valores */}
             <div className="mt-16 flex flex-col gap-6 w-full mx-auto md:mx-0">
-              <p className="text-[#ba9a71] text-3xl font-bold leading-relaxed max-w-xl mx-auto md:mx-0">
+              <p className="text-[#ca9a45] text-3xl font-bold leading-relaxed max-w-xl mx-auto md:mx-0">
                 Nossos Valores
               </p>
 

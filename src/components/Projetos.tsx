@@ -154,7 +154,7 @@ const Projetos: React.FC = () => {
                                         />
                                     </div>
                                     <div className="p-6">
-                                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#ba9a71]">{projeto.title}</h3> {/* Título maior */}
+                                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#ca9a45]">{projeto.title}</h3> {/* Título maior */}
                                         <p className="text-white text-base leading-relaxed mb-4">{projeto.subtitle}</p> {/* Subtítulo mais legível */}
                                         <button
                                             onClick={() => openModal(projeto)}

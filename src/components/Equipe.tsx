@@ -84,7 +84,7 @@ const Equipe: React.FC = () => {
                 <div className="container mx-auto px-6 lg:px-12">
                     {/* Título */}
                     <div className="text-left md:text-center mb-16">
-                        <h1 className="text-4xl text-center md:text-5xl font-bold text-[#ba9a71] mb-4">
+                        <h1 className="text-4xl text-center md:text-5xl font-bold text-[#ca9a45] mb-4">
                             Equipe
                         </h1>
                     </div>

@@ -234,11 +234,11 @@ export default function Testimonials({ testimonials }: TestimonialsPageProps) {
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <div className="text-center mb-12 md:mb-16">
                         <div className="flex items-center justify-center mb-12">
-                            <span className="h-0.5 w-12 bg-[#bc9e77] mr-4"></span>
+                            <span className="h-0.5 w-12 bg-[#ca9a45] mr-4"></span>
                             <p className="text-white font-medium text-3xl tracking-wider">
                                 O que nossos clientes dizem de nós
                             </p>
-                            <span className="h-0.5 w-12 bg-[#bc9e77] ml-4"></span>
+                            <span className="h-0.5 w-12 bg-[#ca9a45] ml-4"></span>
                         </div>
                     </div>
 
@@ -335,7 +335,7 @@ export default function Testimonials({ testimonials }: TestimonialsPageProps) {
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(itemsToShow === 1 ? index : index * itemsToShow)}
-                                className={`h-2 w-2 rounded-full ${index === currentGroupIndex ? 'bg-[#ba9a71]' : 'bg-gray-300 hover:bg-gray-400'} transition-colors duration-300`}
+                                className={`h-2 w-2 rounded-full ${index === currentGroupIndex ? 'bg-[#ca9a45]' : 'bg-gray-300 hover:bg-gray-400'} transition-colors duration-300`}
                                 aria-label={`Ir para a página de depoimentos ${index + 1}`}
                             />
                         ))}

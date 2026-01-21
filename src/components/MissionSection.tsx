@@ -2,27 +2,27 @@ import React from "react";
 
 export default function MissionSection() {
   return (
-    <section className="bg-black py-20 relative z-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 space-y-20">
+    <section className="relative bg-black py-24 md:py-32 z-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 space-y-24">
 
         {/* MISSÃO + VISÃO */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+
           {/* Missão */}
           <div className="flex flex-col items-center text-center">
-            <h3 className="text-3xl font-extrabold text-[#ba9a71] mb-6">
+            <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-8">
               Missão
             </h3>
 
-            <div className="space-y-4 max-w-xl">
-              <p className="text-gray-200 text-sm leading-relaxed">
+            <div className="space-y-6 max-w-xl">
+              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
                 Exercer a advocacia de forma ética, humanizada e responsável,
                 oferecendo um atendimento personalizado, acessível e acolhedor,
                 comprometido com a defesa dos direitos, das garantias fundamentais
                 e da dignidade da pessoa humana.
               </p>
 
-              <p className="text-gray-200 text-sm leading-relaxed">
+              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
                 Atuar com excelência técnica e sensibilidade social nas diversas
                 áreas do Direito, buscando respostas jurídicas seguras, justas e
                 adequadas à realidade de cada cliente.
@@ -32,18 +32,18 @@ export default function MissionSection() {
 
           {/* Visão */}
           <div className="flex flex-col items-center text-center">
-            <h3 className="text-3xl font-extrabold text-[#ba9a71] mb-6">
+            <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-8">
               Visão
             </h3>
 
-            <div className="space-y-4 max-w-xl">
-              <p className="text-gray-200 text-sm leading-relaxed">
+            <div className="space-y-6 max-w-xl">
+              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
                 Construir uma advocacia que cresça de forma sólida, responsável
                 e humana, acompanhando as transformações da sociedade e do
                 Direito, sem perder de vista o valor central de cada pessoa.
               </p>
 
-              <p className="text-gray-200 text-sm leading-relaxed">
+              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
                 Projetar o futuro a partir de uma atuação personalizada,
                 juridicamente fundamentada e alinhada às normas legais e éticas
                 da advocacia.
@@ -54,12 +54,12 @@ export default function MissionSection() {
         </div>
 
         {/* VALORES */}
-        <div className="flex flex-col items-center">
-          <h3 className="text-3xl font-extrabold text-[#ba9a71] mb-10">
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-14">
             Valores
           </h3>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-8 max-w-6xl list-none">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl w-full">
             {[
               {
                 title: "Ética e Responsabilidade Profissional",
@@ -94,11 +94,14 @@ export default function MissionSection() {
                 desc: "Aprimoramento técnico e institucional permanente.",
               },
             ].map((item, i) => (
-              <li key={i}>
-                <span className="block text-[#ba9a71] font-semibold text-sm mb-1">
+              <li
+                key={i}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-left list-none"
+              >
+                <span className="block text-[#ca9a45] font-semibold text-base mb-2">
                   {item.title}
                 </span>
-                <span className="block text-gray-300 text-sm leading-relaxed">
+                <span className="block text-gray-300 text-base leading-relaxed">
                   {item.desc}
                 </span>
               </li>

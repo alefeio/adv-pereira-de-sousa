@@ -14,7 +14,7 @@ export default function Breadcrumb() {
   };
 
   return (
-    <div className='bg-[#ba9a71]/30'>
+    <div className='bg-[#ca9a45]/30'>
       <nav className="max-w-7xl mx-auto mt-20 text-sm font-sans py-1" aria-label="Breadcrumb">
         <ol className="mx-4 md:mx-8 list-none p-0 inline-flex">
           {/* Link para a Home */}
