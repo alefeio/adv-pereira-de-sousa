@@ -1,3 +1,5 @@
+// pages/blog/[slug].tsx
+
 import { PrismaClient } from '@prisma/client';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
@@ -5,7 +7,7 @@ import Image from 'next/image';
 import { Menu as MenuComponent } from 'components/Menu';
 import Footer from 'components/Footer';
 import WhatsAppButton from 'components/WhatsAppButton';
-import { MenuData, LinkItem } from '../../types';
+import { MenuData, LinkItem } from '../../types/index';
 import { FaCalendarAlt } from 'react-icons/fa';
 import { Analytics } from '@vercel/analytics/next';
 
@@ -29,12 +31,12 @@ interface BlogPostProps {
   content: string;
   author: string;
   createdAt: string;
-  updatedAt: string;
   slug: string;
   items: BlogFoto[];
   publico: boolean;
   subtitle: string | null;
   description: string | null;
+  updatedAt: string;
 }
 
 interface BlogPageProps {
@@ -59,7 +61,7 @@ const formatDate = (dateString: string) => {
 };
 
 /* =========================
-   SERVER SIDE PROPS
+   GET SERVER SIDE PROPS
 ========================= */
 
 export const getServerSideProps: GetServerSideProps<BlogPageProps> = async (
@@ -83,11 +85,11 @@ export const getServerSideProps: GetServerSideProps<BlogPageProps> = async (
     }
 
     const menus = await prisma.menu.findMany();
-    const rawMenu = menus[0] || null;
+    const rawMenu = menus[0] ?? null;
 
     let formattedMenu: MenuData | null = null;
 
-    if (rawMenu?.links && Array.isArray(rawMenu.links)) {
+    if (rawMenu && Array.isArray(rawMenu.links)) {
       const links: LinkItem[] = rawMenu.links.map((link: any) => ({
         id: link.id,
         text: link.text,
@@ -105,7 +107,7 @@ export const getServerSideProps: GetServerSideProps<BlogPageProps> = async (
       title: post.title,
       content: post.description || '',
       author: (post as any).author || 'Pereira de Sousa Advogados',
-      slug: post.slug,
+      slug: post.slug ?? post.id, // ✅ CORREÇÃO DEFINITIVA
       publico: post.publico,
       subtitle: post.subtitle,
       description: post.description,
@@ -122,12 +124,12 @@ export const getServerSideProps: GetServerSideProps<BlogPageProps> = async (
 
     return {
       props: {
-        post: JSON.parse(JSON.stringify(formattedPost)),
-        menu: JSON.parse(JSON.stringify(formattedMenu)),
+        post: formattedPost,
+        menu: formattedMenu,
       },
     };
   } catch (error) {
-    console.error('Erro ao carregar post:', error);
+    console.error('[BLOG SLUG ERROR]', error);
     return { notFound: true };
   } finally {
     await prisma.$disconnect();
@@ -172,21 +174,23 @@ export default function BlogPage({ post, menu }: BlogPageProps) {
             src={coverImage}
             alt={post.title}
             fill
-            priority
             className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-black/70" />
 
           <div className="relative z-10 h-full flex items-end">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 pb-10 w-full">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 pb-10 w-full text-left">
               <h1 className="font-display text-3xl md:text-5xl font-extrabold leading-tight mb-4">
                 {post.title}
               </h1>
 
-              <span className="flex items-center gap-2 text-sm text-gray-200">
-                <FaCalendarAlt className="text-[#ca9a45]" />
-                {formatDate(post.createdAt)}
-              </span>
+              <div className="flex items-center gap-4 text-sm text-gray-200">
+                <span className="flex items-center gap-2">
+                  <FaCalendarAlt className="text-[#ca9a45]" />
+                  {formatDate(post.createdAt)}
+                </span>
+              </div>
             </div>
           </div>
         </section>
