@@ -38,14 +38,12 @@ export default function HeroSliderSobre() {
             </div>
 
             {/* Conteúdo do Banner */}
-            <div className="relative z-10 flex items-center justify-center min-h-[70vh] px-6">
-                <div className="max-w-5xl mx-auto text-center">
-                    {slide.title && (
-                        <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#ca9a45] drop-shadow-xl leading-tight">
-                            {slide.title}
-                        </h1>
-                    )}
-                </div>
+            <div className="relative z-10 flex flex-col items-center pt-40 md:pt-48">
+                {slide.title && (
+                    <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#ca9a45] drop-shadow-lg mb-16 leading-tight">
+                        {slide.title}
+                    </h1>
+                )}
             </div>
 
             {/* Seções abaixo do banner */}

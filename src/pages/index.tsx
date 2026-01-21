@@ -347,18 +347,13 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                     <span id="localizacao"></span>
 
                     {/* LOCALIZAÇÃO */}
-                    <section className="py-20 md:py-28 bg-white">
-                        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-
-                            {/* ÍCONE */}
-                            <div className="flex justify-center mb-4">
-                                <FaMapMarkerAlt size={32} className="text-[#ca9a45]" />
-                            </div>
+                    <section className="bg-white">
+                        <div className="relative z-10 flex flex-col items-center py-40 md:pt-48">
 
                             {/* TÍTULO */}
-                            <h2 className="text-gray-900 text-3xl md:text-4xl font-extrabold mb-10">
+                            <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-black drop-shadow-lg mb-16 leading-tight">
                                 Nossa Localização
-                            </h2>
+                            </h1>
 
                             {/* MAPA */}
                             <div className="relative w-full max-w-4xl mx-auto shadow-2xl rounded-3xl overflow-hidden border border-gray-200 bg-white">

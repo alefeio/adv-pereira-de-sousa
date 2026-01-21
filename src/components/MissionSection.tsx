@@ -10,7 +10,7 @@ export default function MissionSection() {
 
           {/* Missão */}
           <div className="flex flex-col items-start md:items-center text-left md:text-center">
-            <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-8">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-[#ca9a45] mb-8">
               Missão
             </h3>
 
@@ -32,7 +32,7 @@ export default function MissionSection() {
 
           {/* Visão */}
           <div className="flex flex-col items-start md:items-center text-left md:text-center">
-            <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-8">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-[#ca9a45] mb-8">
               Visão
             </h3>
 
@@ -55,7 +55,7 @@ export default function MissionSection() {
 
         {/* VALORES */}
         <div className="flex flex-col items-start md:items-center text-left md:text-center">
-          <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-14">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-[#ca9a45] mb-14">
             Valores
           </h3>
 

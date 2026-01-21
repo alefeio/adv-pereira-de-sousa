@@ -103,7 +103,12 @@ export default function ServicesSection() {
             return (
               <div
                 key={index}
-                className="flex items-start gap-6"
+                className="
+                  flex flex-col md:flex-row
+                  items-center md:items-start
+                  gap-6
+                  text-center md:text-left
+                "
               >
                 {/* Ícone */}
                 <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full border border-[#ca9a45]/40 text-[#ca9a45] text-3xl">
