@@ -9,7 +9,7 @@ export default function MissionSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
 
           {/* Missão */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-start md:items-center text-left md:text-center">
             <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-8">
               Missão
             </h3>
@@ -31,7 +31,7 @@ export default function MissionSection() {
           </div>
 
           {/* Visão */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-start md:items-center text-left md:text-center">
             <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-8">
               Visão
             </h3>
@@ -54,7 +54,7 @@ export default function MissionSection() {
         </div>
 
         {/* VALORES */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-start md:items-center text-left md:text-center">
           <h3 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] mb-14">
             Valores
           </h3>
