@@ -27,7 +27,7 @@ const CookieBanner = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-gray-900 bg-opacity-90 text-white z-50">
+    <div className="fixed bottom-0 left-0 w-full bg-black bg-opacity-90 text-white z-50">
       <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
         <div className="text-sm">
           Nós utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar, você concorda com a nossa <a href="/politica-de-cookies" className="text-ORANGE-500 hover:underline">Política de Cookies</a>.
@@ -41,7 +41,7 @@ const CookieBanner = () => {
           </button>
           <button
             onClick={handleAcceptCookies}
-            className="bg-primary hover:bg-orange-500 text-white py-2 px-4 rounded-md text-sm focus:outline-none"
+            className="bg-gray-900 hover:bg-gray-800 text-white py-2 px-4 rounded-md text-sm focus:outline-none"
           >
             Aceitar
           </button>

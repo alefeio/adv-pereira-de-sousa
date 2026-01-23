@@ -33,6 +33,7 @@ import Blog from 'components/Blog';
 import Contato from 'components/Contato';
 import { MdEmail } from 'react-icons/md';
 import { FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import Parcerias from 'components/Parcerias';
 
 // FUNÇÃO SLUGIFY
 function slugify(text: string): string {
@@ -276,6 +277,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                     {/* <Cases /> */}
                     <Testimonials testimonials={testimonials} />
                     <span id="fale"></span>
+                    <Parcerias />
                     <Contato />
                     <span id="faq"></span>
                     <FAQ faqs={faqs} />
