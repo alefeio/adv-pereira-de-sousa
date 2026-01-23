@@ -19,7 +19,7 @@ const FloatingButtons: React.FC<FloatingButtonsProps> = ({ colecoes }) => {
             <div className={`flex justify-center items-center space-x-2 transition-all duration-300 ease-in-out`}>
                 <button
                     onClick={toggleButtons}
-                    className="flex items-center justify-center w-8 h-8 bg-white text-gray-500 opacity-80 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300"
+                    className="flex items-center justify-center w-8 h-8 bg-white text-white opacity-80 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300"
                     aria-label={showButtons ? "Ocultar botões" : "Mostrar botões"}
                 >
                     {/* Ícone de menu (três pontos) */}

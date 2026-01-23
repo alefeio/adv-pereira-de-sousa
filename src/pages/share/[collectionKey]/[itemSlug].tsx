@@ -116,7 +116,7 @@ const SharePage = ({ product, collectionTitle, shareUrl }: ShareProps) => {
             </button>
             <a
               href="/"
-              className="flex items-center space-x-2 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200"
+              className="flex items-center space-x-2 bg-white hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200"
             >
               <FaHome className='text-white' />
               <span>Site</span>

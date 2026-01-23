@@ -30,13 +30,13 @@ const FilesTable = ({
       return <span className="text-blue-500">🖼️</span>;
     if (mimetype === "application/pdf")
       return <span className="text-red-500">📄</span>;
-    return <span className="text-gray-500">📁</span>;
+    return <span className="text-white">📁</span>;
   };
 
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
       {files.length === 0 ? (
-        <p className="p-6 text-gray-500 text-center">
+        <p className="p-6 text-white text-center">
           Nenhum arquivo encontrado.
         </p>
       ) : (
@@ -48,19 +48,19 @@ const FilesTable = ({
                 <th className="px-6 py-3">
                   <span className="sr-only">Selecionar</span>
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                   Arquivo
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                   Projeto
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                   Tarefa
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                   Tipo
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                   Data
                 </th>
                 <th className="px-6 py-3 relative">
@@ -93,16 +93,16 @@ const FilesTable = ({
                     )}
                     {file.filename}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-500">
+                  <td className="px-6 py-4 text-sm text-white">
                     {file.projeto?.title || "N/A"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-500">
+                  <td className="px-6 py-4 text-sm text-white">
                     {file.task?.title || "N/A"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-500">
+                  <td className="px-6 py-4 text-sm text-white">
                     {file.mimetype}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-500">
+                  <td className="px-6 py-4 text-sm text-white">
                     {new Date(file.createdAt).toLocaleDateString()}
                   </td>
                   <td className="px-6 py-4 text-right text-sm font-medium flex gap-2 justify-end">
@@ -153,19 +153,19 @@ const FilesTable = ({
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-white">
                   <span className="font-semibold">Projeto: </span>
                   {file.projeto?.title || "N/A"}
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-white">
                   <span className="font-semibold">Tarefa: </span>
                   {file.task?.title || "N/A"}
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-white">
                   <span className="font-semibold">Tipo: </span>
                   {file.mimetype}
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-white">
                   <span className="font-semibold">Data: </span>
                   {new Date(file.createdAt).toLocaleDateString()}
                 </p>
@@ -204,13 +204,13 @@ const FilesGrid = ({ files, selectedFilesIds, toggleFileSelection, handleFileCli
   const getFileIcon = (mimetype: string) => {
     if (mimetype.startsWith('image/')) return <span className="text-blue-500">🖼️</span>;
     if (mimetype === 'application/pdf') return <span className="text-red-500">📄</span>;
-    return <span className="text-gray-500">📁</span>;
+    return <span className="text-white">📁</span>;
   };
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {files.length === 0 ? (
-        <p className="text-gray-500 col-span-full text-center">Nenhum arquivo encontrado.</p>
+        <p className="text-white col-span-full text-center">Nenhum arquivo encontrado.</p>
       ) : files.map(file => (
         <div key={file.id} className="relative">
           <input
@@ -580,12 +580,12 @@ export default function FilesPage() {
               ref={fileInputRef}
               onChange={(e) => setFilesToUpload(e.target.files ? Array.from(e.target.files) : [])}
               multiple
-              className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
+              className="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
             />
             <button
               type="submit"
               disabled={filesToUpload.length === 0 || isFileUploading || isFileSavingMetadata}
-              className={`py-2 px-4 rounded-md font-bold transition duration-300 ${filesToUpload.length === 0 || isFileUploading || isFileSavingMetadata ? 'bg-gray-400 cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'} text-white`}
+              className={`py-2 px-4 rounded-md font-bold transition duration-300 ${filesToUpload.length === 0 || isFileUploading || isFileSavingMetadata ? 'bg-white cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'} text-white`}
             >
               {isFileUploading ? 'Enviando...' : isFileSavingMetadata ? 'Salvando...' : 'Enviar'}
             </button>

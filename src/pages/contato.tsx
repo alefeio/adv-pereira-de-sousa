@@ -140,14 +140,14 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
             "addressCountry": "BR"
         },
         "url": "https://pereiradesousa.vercel.app/",
-        "telephone": "+5591992047151", // Telefone atualizado
+        "telephone": "+5591986284970", // Telefone atualizado
         "areaServed": [
             { "@type": "City", "name": "Belém" },
             { "@type": "State", "name": "Pará" }
         ],
         "priceRange": "$$", // Exemplo: indicando uma faixa de preço
         "sameAs": [
-            "https://www.instagram.com/alansousainss/", // Sugestão baseada em busca, verificar a URL exata
+            "https://www.instagram.com/pereiradesousaescritorio/", // Sugestão baseada em busca, verificar a URL exata
             // "https://www.linkedin.com/company/machadoadvogadosassociados"
         ],
         "description": "Escritório de advocacia em Belém, PA. Especializado em Direito do Consumidor, Direito Trabalhista e Assessoria Jurídica Empresarial."
@@ -210,48 +210,48 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                         {/* Email */}
                                         <a
                                             href="mailto:escritório@pereiradesousa.adv.br"
-                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#ca9a45] transition-colors"
+                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#fec655] transition-colors"
                                             aria-label="Enviar email para escritório@pereiradesousa.adv.br"
                                         >
-                                            <MdEmail size={20} className="text-[#ca9a45] mr-2 flex-shrink-0" />
+                                            <MdEmail size={20} className="text-[#fec655] mr-2 flex-shrink-0" />
                                             escritório@pereiradesousa.adv.br
                                         </a>
 
                                         {/* WhatsApp */}
                                         <a
-                                            href="https://wa.me/5591992047151"
+                                            href="https://wa.me/5591986284970"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#ca9a45] transition-colors"
-                                            aria-label="Enviar mensagem WhatsApp para +55 91 99204-7151"
+                                            className="flex items-center justify-center md:justify-end text-white text-base md:text-lg hover:text-[#fec655] transition-colors"
+                                            aria-label="Enviar mensagem WhatsApp para +55 91 98628-4970"
                                         >
-                                            <FaWhatsapp size={20} className="text-[#ca9a45] mr-2 flex-shrink-0" />
-                                            +55 91 99204-7151
+                                            <FaWhatsapp size={20} className="text-[#fec655] mr-2 flex-shrink-0" />
+                                            +55 91 98628-4970
                                         </a>
                                     </div>
                                 </div>
 
                                 {/* Redes Sociais */}
                                 <div className="flex flex-col items-center md:items-start md:pl-4">
-                                    <h3 className="text-[#ca9a45] text-xl md:text-2xl mb-6 tracking-wide">
+                                    <h3 className="text-[#fec655] text-xl md:text-2xl mb-6 tracking-wide">
                                         Redes Sociais
                                     </h3>
                                     <div className="space-y-4">
                                         {/* Instagram */}
                                         <a
-                                            href="https://www.instagram.com/alansousainss"
+                                            href="https://www.instagram.com/pereiradesousaescritorio"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center md:justify-start text-white text-base md:text-lg hover:text-[#ca9a45] transition-colors"
-                                            aria-label="Acessar Instagram @alansousainss"
+                                            className="flex items-center justify-center md:justify-start text-white text-base md:text-lg hover:text-[#fec655] transition-colors"
+                                            aria-label="Acessar Instagram @pereiradesousaescritorio"
                                         >
-                                            <FaInstagram size={20} className="text-[#ca9a45] mr-2 flex-shrink-0" />
-                                            @alansousainss
+                                            <FaInstagram size={20} className="text-[#fec655] mr-2 flex-shrink-0" />
+                                            @pereiradesousaescritorio
                                         </a>
 
                                         {/* Espaço reservado para outra rede social (se necessário) */}
                                         {/* <a className="flex items-center text-white text-base md:text-lg">
-                                <FaLinkedin size={20} className="text-[#ca9a45] mr-2" />
+                                <FaLinkedin size={20} className="text-[#fec655] mr-2" />
                                 /MachadoAdvogados
                             </a> */}
                                     </div>
@@ -293,7 +293,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                                     ></iframe>
                                 </div>
                                 {/* Botão de maximizar/detalhes que aparece no embed */}
-                                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer text-gray-700 hover:text-[#ca9a45] transition-colors">
+                                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer text-gray-700 hover:text-[#fec655] transition-colors">
                                     {/* Ícone ou botão "Ver mapa ampliado" pode ser simulado aqui se não for um iframe */}
                                 </div>
                             </div>
@@ -322,7 +322,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
                         {/* Botão de fechar */}
                         <button
                             onClick={() => setShowExitModal(false)}
-                            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
+                            className="absolute top-2 right-2 text-white hover:text-gray-600 transition-colors"
                             aria-label="Fechar"
                         >
                             <AiOutlineClose size={24} />

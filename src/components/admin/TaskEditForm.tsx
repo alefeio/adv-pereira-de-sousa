@@ -166,7 +166,7 @@ const TaskEditForm: React.FC<TaskEditFormProps> = ({ taskId, onClose, onTaskUpda
     return (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg shadow-xl max-w-lg w-full relative">
-                <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold">
+                <button onClick={onClose} className="absolute top-3 right-3 text-white hover:text-gray-800 text-2xl font-bold">
                     &times;
                 </button>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Editar Tarefa</h2>
@@ -302,7 +302,7 @@ const TaskEditForm: React.FC<TaskEditFormProps> = ({ taskId, onClose, onTaskUpda
                         <button
                             type="submit"
                             disabled={loading || dataLoading || status !== 'authenticated'}
-                            className={`py-2 px-4 rounded-md font-bold transition duration-300 ${loading || dataLoading || status !== 'authenticated' ? 'bg-gray-400 cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'} text-white`}
+                            className={`py-2 px-4 rounded-md font-bold transition duration-300 ${loading || dataLoading || status !== 'authenticated' ? 'bg-white cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'} text-white`}
                         >
                             {loading ? 'Atualizando...' : 'Salvar Alterações'}
                         </button>

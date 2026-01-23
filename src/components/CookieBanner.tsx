@@ -35,7 +35,7 @@ const CookieBanner = () => {
         <div className="space-x-2">
           <button
             onClick={handleDeclineCookies}
-            className="bg-transparent border border-gray-500 text-gray-400 hover:text-white hover:border-white py-2 px-4 rounded-md text-sm focus:outline-none"
+            className="bg-transparent border border-white text-white hover:text-white hover:border-white py-2 px-4 rounded-md text-sm focus:outline-none"
           >
             Recusar
           </button>

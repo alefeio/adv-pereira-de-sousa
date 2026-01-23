@@ -147,7 +147,7 @@ export default function TasksPage() {
       case 0:
         return 'bg-blue-500 text-white'; // Baixa
       default:
-        return 'bg-gray-500 text-white';
+        return 'bg-white text-white';
     }
   };
 
@@ -347,28 +347,28 @@ export default function TasksPage() {
         {viewMode === 'table' ? (
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             {tasks.length === 0 ? (
-              <p className="p-6 text-gray-500 text-center">Nenhuma tarefa encontrada.</p>
+              <p className="p-6 text-white text-center">Nenhuma tarefa encontrada.</p>
             ) : (
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Título
                       </th>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Projeto
                       </th> {/* NOVO: Coluna Projeto na tabela */}
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Status
                       </th>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Prioridade
                       </th>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Responsável
                       </th>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Vencimento
                       </th>
                       <th scope="col" className="relative px-6 py-3">
@@ -387,7 +387,7 @@ export default function TasksPage() {
                           </div>
                         </td>
                         {/* NOVO: Dados do Projeto na tabela */}
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
                           {task.projeto?.title || 'N/A'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
@@ -400,10 +400,10 @@ export default function TasksPage() {
                             {getPriorityText(task.priority)}
                           </span>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
                           {task.assignedTo?.name || 'N/A'}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
                           {task.dueDate ? new Date(task.dueDate).toLocaleDateString() : 'N/A'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
@@ -446,7 +446,7 @@ export default function TasksPage() {
                 </h2>
                 <div className="space-y-4">
                   {kanbanColumns[statusColumn].length === 0 ? (
-                    <div className="text-center text-gray-500 p-4">
+                    <div className="text-center text-white p-4">
                       Nenhuma tarefa nesta coluna.
                     </div>
                   ) : (
@@ -472,9 +472,9 @@ export default function TasksPage() {
                         {task.projeto?.title && (
                           <p className="text-sm text-gray-600 mt-1">Projeto: {task.projeto.title}</p>
                         )}
-                        <p className="text-sm text-gray-500 mt-1">Responsável: {task.assignedTo?.name || 'N/A'}</p>
+                        <p className="text-sm text-white mt-1">Responsável: {task.assignedTo?.name || 'N/A'}</p>
                         {task.dueDate && (
-                          <p className="text-xs text-gray-400 mt-1">
+                          <p className="text-xs text-white mt-1">
                             Vencimento: {new Date(task.dueDate).toLocaleDateString()}
                           </p>
                         )}

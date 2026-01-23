@@ -21,7 +21,7 @@ export default function FAQ({ faqs }: FAQProps) {
   return (
     <section className="relative w-full bg-black">
       <div className="container mx-auto max-w-6xl relative z-10 flex flex-col items-center py-40 md:pt-48">
-        <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#ca9a45] drop-shadow-lg mb-16 leading-tight">
+        <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#fec655] drop-shadow-lg mb-16 leading-tight">
           Perguntas Frequentes
         </h1>
 
@@ -37,8 +37,8 @@ export default function FAQ({ faqs }: FAQProps) {
                                 duration-300
                                 bg-white
                                 ${open === idx
-                  ? "border-[#ca9a45]"
-                  : "border-[#ca9a45]/30"}
+                  ? "border-[#fec655]"
+                  : "border-[#fec655]/30"}
                             `}
             >
               {/* PERGUNTA */}
@@ -58,7 +58,7 @@ export default function FAQ({ faqs }: FAQProps) {
                   {faq.pergunta}
                 </span>
 
-                <span className="text-[#ca9a45] text-lg ml-4">
+                <span className="text-[#fec655] text-lg ml-4">
                   {open === idx ? <FaMinus /> : <FaPlus />}
                 </span>
               </button>

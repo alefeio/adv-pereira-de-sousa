@@ -187,7 +187,7 @@ export default function BlogPage({ post, menu }: BlogPageProps) {
 
               <div className="flex items-center gap-4 text-sm text-gray-200">
                 <span className="flex items-center gap-2">
-                  <FaCalendarAlt className="text-[#ca9a45]" />
+                  <FaCalendarAlt className="text-[#fec655]" />
                   {formatDate(post.createdAt)}
                 </span>
               </div>

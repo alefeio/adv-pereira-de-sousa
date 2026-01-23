@@ -54,7 +54,7 @@ const FileViewerModal: React.FC<FileViewerModalProps> = ({ file, onClose }) => {
     }
     return (
       <div className="flex flex-col items-center justify-center p-8 text-center bg-gray-100 rounded-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-white mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0011.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
         <p className="text-xl font-semibold mb-2">Pré-visualização não disponível</p>
@@ -75,7 +75,7 @@ const FileViewerModal: React.FC<FileViewerModalProps> = ({ file, onClose }) => {
       <div className="relative p-4 bg-white rounded-lg shadow-2xl max-w-4xl w-full">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-3xl transition-transform transform hover:scale-110"
+          className="absolute top-2 right-2 text-white hover:text-gray-800 text-3xl transition-transform transform hover:scale-110"
         >
           &times;
         </button>
@@ -356,7 +356,7 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
       );
     }
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0011.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     );
@@ -385,7 +385,7 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
       <div className="bg-white p-6 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl"
+          className="absolute top-4 right-4 text-white hover:text-gray-800 text-2xl"
         >
           &times;
         </button>
@@ -396,24 +396,24 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gray-800">{task.title}</h3>
             <div className="p-4 bg-gray-50 rounded-lg shadow-sm space-y-2">
-              <p className="text-sm font-medium text-gray-500">Descrição:</p>
+              <p className="text-sm font-medium text-white">Descrição:</p>
               <p className="text-gray-900">{task.description}</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="text-sm font-medium text-gray-500">Status:</p>
+                <p className="text-sm font-medium text-white">Status:</p>
                 <span className={`mt-1 px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(task.status)}`}>
                   {task.status.replace(/_/g, ' ')}
                 </span>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">Prioridade:</p>
+                <p className="text-sm font-medium text-white">Prioridade:</p>
                 <span className={`mt-1 px-3 py-1 rounded-full text-sm font-semibold ${getPriorityColor(task.priority)}`}>
                   {getPriorityText(task.priority)}
                 </span>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">Vencimento:</p>
+                <p className="text-sm font-medium text-white">Vencimento:</p>
                 <div className="mt-1">
                   {task.dueDate ? (
                     <>
@@ -430,18 +430,18 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
                 </div>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-500">Responsável:</p>
+                <p className="text-sm font-medium text-white">Responsável:</p>
                 <p className="mt-1 text-gray-900">{task.assignedTo?.name || 'Não atribuído'}</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="text-sm font-medium text-gray-500">Criada em:</p>
+                <p className="text-sm font-medium text-white">Criada em:</p>
                 <p className="mt-1 text-gray-900">{formatDate(task.createdAt)}</p>
               </div>
               {task.updatedAt && (
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Última atualização:</p>
+                  <p className="text-sm font-medium text-white">Última atualização:</p>
                   <p className="mt-1 text-gray-900">{formatDate(task.updatedAt)}</p>
                 </div>
               )}
@@ -459,13 +459,13 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
                     type="file"
                     ref={fileInputRef}
                     onChange={handleFileChange}
-                    className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
+                    className="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
                     disabled={isProcessingFile}
                   />
                   <button
                     type="submit"
                     disabled={isProcessingFile || !fileToUpload}
-                    className={`py-2 px-4 rounded-md font-bold transition duration-300 w-full sm:w-auto ${isProcessingFile || !fileToUpload ? 'bg-gray-400 cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'
+                    className={`py-2 px-4 rounded-md font-bold transition duration-300 w-full sm:w-auto ${isProcessingFile || !fileToUpload ? 'bg-white cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'
                       } text-white`}
                   >
                     {isFileUploading ? 'Enviando...' : isFileSavingMetadata ? 'Salvando...' : 'Enviar'}
@@ -519,7 +519,7 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
                   <div key={comment.id} className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
                     <div className="flex justify-between items-center text-sm mb-1">
                       <span className="font-semibold text-gray-800">{comment.author?.name || 'Usuário Desconhecido'}</span>
-                      <span className="text-gray-500 text-xs">{formatDate(comment.createdAt)}</span>
+                      <span className="text-white text-xs">{formatDate(comment.createdAt)}</span>
                     </div>
                     <p className="text-gray-700 text-sm">{comment.message}</p>
                     <div
@@ -527,7 +527,7 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
                       onMouseEnter={() => setShowTooltip(comment.id)}
                       onMouseLeave={() => setShowTooltip(null)}
                     >
-                      <div className="text-right text-xs text-gray-500 mt-2 cursor-pointer hover:underline">
+                      <div className="text-right text-xs text-white mt-2 cursor-pointer hover:underline">
                         Visualizações: {comment.viewedBy.length}
                       </div>
                       {showTooltip === comment.id && comment.viewedBy.length > 0 && (
@@ -568,7 +568,7 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, onClose }) => {
                 <button
                   type="submit"
                   disabled={commentLoading || !newCommentMessage.trim()}
-                  className={`py-2 px-4 rounded-md font-bold transition duration-300 w-full ${commentLoading || !newCommentMessage.trim() ? 'bg-gray-400 cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'
+                  className={`py-2 px-4 rounded-md font-bold transition duration-300 w-full ${commentLoading || !newCommentMessage.trim() ? 'bg-white cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'
                     } text-white`}
                 >
                   {commentLoading ? 'Enviando...' : 'Comentar'}

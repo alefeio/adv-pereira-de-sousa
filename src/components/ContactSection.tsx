@@ -19,15 +19,15 @@ const ContactSection: React.FC = () => {
                     <h4 className="font-bold text-white text-2xl mb-6">Fale Conosco</h4>
                     <div className="space-y-5 text-gray-200">
                         <p className="flex flex-col items-center justify-center space-x-3 text-xl">
-                            <MdPhone className="text-[#ca9a45] text-3xl" />
-                            <a href="tel:+5591982016888" className="font-semibold hover:text-[#ca9a45] transition-colors">
+                            <MdPhone className="text-[#fec655] text-3xl" />
+                            <a href="tel:+5591982016888" className="font-semibold hover:text-[#fec655] transition-colors">
                                 +55 (91) 98455-5829
                             </a>
                         </p>
                         <p className="flex flex-col items-center justify-center space-x-3 text-xl overflow-hidden">
-                            <MdEmail className="text-[#ca9a45] text-3xl" />
+                            <MdEmail className="text-[#fec655] text-3xl" />
                             <small className="md:text-sm">
-                                <a href="mailto:escritório@pereiradesousa.adv.br" className="font-semibold hover:text-[#ca9a45] transition-colors">
+                                <a href="mailto:escritório@pereiradesousa.adv.br" className="font-semibold hover:text-[#fec655] transition-colors">
                                     escritório@pereiradesousa.adv.br
                                 </a>
                             </small>
@@ -39,7 +39,7 @@ const ContactSection: React.FC = () => {
                 <div className="flex flex-col items-center p-8 bg-[#0c1a25] rounded-xl shadow-xl text-white">
                     <h4 className="font-bold text-white text-2xl mb-6">Siga-nos</h4>
                     <div className="flex space-x-8 text-gray-200">
-                        <a href="https://wa.me//5591992047151?text=Olá! Estou entrando em contato através do site." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-4xl hover:text-green-500 transition-colors">
+                        <a href="https://wa.me//5591986284970?text=Olá! Estou entrando em contato através do site." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-4xl hover:text-green-500 transition-colors">
                             <FaWhatsapp />
                         </a>
                         <a href="https://www.instagram.com/curvaengenhariaearquitetura" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-4xl hover:text-pink-500 transition-colors">
@@ -54,7 +54,7 @@ const ContactSection: React.FC = () => {
                 {/* Endereço e Mapa */}
                 <div className="flex flex-col items-center p-8 bg-[#0c1a25] rounded-xl shadow-xl md:col-span-2"> {/* Ocupa 2 colunas em telas médias */}
                     <h4 className="font-bold text-white text-2xl mb-6">Nossa Localização</h4>
-                    <address className="text-[#ca9a45] font-semibold not-italic text-center text-xl mb-6">
+                    <address className="text-[#fec655] font-semibold not-italic text-center text-xl mb-6">
                         <MdLocationOn className="inline text-3xl mr-2 align-middle" />
                         Ed. Angra - Travessa São Pedro, 842, sala 301 - Batista Campos - Belém - PA
                     </address>

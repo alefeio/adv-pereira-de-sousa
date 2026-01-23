@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Informações de contato */}
           <div className="mb-4 md:mb-0">
             <h3 className="text-lg font-semibold mb-2">My Dress Belém</h3>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white">
               Ed. Angra - Travessa São Pedro, 842, sala 301 - Batista Campos
               <br />
               Belém - PA
@@ -21,16 +21,16 @@ const Footer = () => {
           {/* Links e redes sociais */}
           <div className="flex space-x-6 mb-4 md:mb-0">
             <a href="https://www.instagram.com/mydressbelem/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <FaInstagram className="h-6 w-6 text-gray-400 hover:text-white transition-colors" />
+              <FaInstagram className="h-6 w-6 text-white hover:text-white transition-colors" />
             </a>
             <a href="https://wa.me/5591985810208" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <FaWhatsapp className="h-6 w-6 text-gray-400 hover:text-white transition-colors" />
+              <FaWhatsapp className="h-6 w-6 text-white hover:text-white transition-colors" />
             </a>
           </div>
         </div>
 
         {/* Direitos autorais */}
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-white">
           © {currentYear} My Dress Belém. Todos os direitos reservados.
         </div>
       </div>

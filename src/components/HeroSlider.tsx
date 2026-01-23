@@ -124,7 +124,7 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
         <div className="absolute inset-0 z-20 flex items-center bg-gradient-to-r from-black/80 via-black/50 to-transparent">
           <div className="container mx-auto px-8 max-w-5xl">
             {slides[current].title && (
-              <h2 className="text-4xl md:text-6xl font-extrabold text-[#ca9a45] drop-shadow-lg mb-6 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-extrabold text-[#fec655] drop-shadow-lg mb-6 leading-tight">
                 {slides[current].title}
               </h2>
             )}
@@ -150,7 +150,7 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
                 aria-label={`Slide ${idx + 1}`}
                 className={`w-4 h-4 rounded-full transition-all ${
                   idx === current
-                    ? "bg-[#ca9a45]"
+                    ? "bg-[#fec655]"
                     : "bg-white/60 hover:bg-white"
                 }`}
               />

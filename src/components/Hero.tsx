@@ -25,7 +25,7 @@ export default function Hero() {
 
           {/* Texto institucional */}
           <div className="flex-1 flex flex-col items-start text-left gap-6">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#ca9a45] leading-tight max-w-4xl">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#fec655] leading-tight max-w-4xl">
               Advocacia ética, técnica e comprometida com pessoas
             </h2>
 
@@ -52,7 +52,7 @@ export default function Hero() {
             <div className="mt-8">
               <button
                 onClick={() => handleClick("/sobre")}
-                className="inline-flex items-center justify-center bg-[#ca9a45] text-[#0c1a26] font-bold py-3 px-10 rounded-full shadow-lg hover:bg-[#b28d52] transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center bg-[#fec655] text-[#0c1a26] font-bold py-3 px-10 rounded-full shadow-lg hover:bg-[#b28d52] transition-all duration-300 transform hover:-translate-y-1"
               >
                 Conheça o escritório
               </button>

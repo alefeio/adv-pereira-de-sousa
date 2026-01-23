@@ -329,7 +329,7 @@ export default function AdminProjetos() {
                         <img src={item.img} alt="Visualização da foto" className="w-24 h-24 object-cover rounded-lg" />
                       </div>
                     )}
-                    <label htmlFor={`img-${index}`} className="w-full flex-1 text-gray-500 cursor-pointer flex items-center justify-center gap-2 font-semibold hover:bg-gray-100 transition duration-200 p-2 rounded-lg">
+                    <label htmlFor={`img-${index}`} className="w-full flex-1 text-white cursor-pointer flex items-center justify-center gap-2 font-semibold hover:bg-gray-100 transition duration-200 p-2 rounded-lg">
                       <MdAddPhotoAlternate size={24} />
                       {item.img instanceof File ? item.img.name : "Escolher arquivo..."}
                     </label>
@@ -349,11 +349,11 @@ export default function AdminProjetos() {
               </button>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                <button type="submit" disabled={loading} className="bg-orange-500 text-white p-4 rounded-lg flex-1 font-bold shadow-md hover:bg-orange-600 transition duration-200 disabled:bg-gray-400">
+                <button type="submit" disabled={loading} className="bg-orange-500 text-white p-4 rounded-lg flex-1 font-bold shadow-md hover:bg-orange-600 transition duration-200 disabled:bg-white">
                   {loading ? (form.id ? "Atualizando..." : "Salvando...") : (form.id ? "Atualizar Projeto" : "Salvar Projeto")}
                 </button>
                 {form.id && (
-                  <button type="button" onClick={resetForm} className="bg-gray-300 text-gray-800 p-4 rounded-lg flex-1 font-bold shadow-md hover:bg-gray-400 transition duration-200">
+                  <button type="button" onClick={resetForm} className="bg-gray-300 text-gray-800 p-4 rounded-lg flex-1 font-bold shadow-md hover:bg-white transition duration-200">
                     Cancelar Edição
                   </button>
                 )}
@@ -375,7 +375,7 @@ export default function AdminProjetos() {
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-800">{projeto.title}</h3>
-                      <p className="text-sm text-gray-500">{projeto.subtitle}</p>
+                      <p className="text-sm text-white">{projeto.subtitle}</p>
                       {/* CORRIGIDO: Exibe se o projeto é público usando 'publico' */}
                       {projeto.publico && (
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mt-2">
@@ -398,10 +398,10 @@ export default function AdminProjetos() {
                         <img src={item.img as string} alt={item.detalhes} className="w-20 h-20 object-cover rounded-lg" />
                         <div className="flex-1">
                           <h4 className="font-semibold text-gray-800">{item.local}</h4>
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-white mt-1">
                             Tipo: {item.tipo}
                           </p>
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-white mt-1">
                             {item.detalhes}
                           </p>
                         </div>
@@ -440,7 +440,7 @@ export default function AdminProjetos() {
                   setShowModal(false);
                   setModalAction(null); // Limpa a ação ao cancelar
                 }}
-                className="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition duration-200"
+                className="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-white transition duration-200"
               >
                 {modalAction ? "Cancelar" : "Ok"}
               </button>

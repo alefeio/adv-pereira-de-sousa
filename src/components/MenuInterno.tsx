@@ -48,7 +48,7 @@ export function MenuInterno({ menuData }: MenuProps) {
   const { logoUrl, links } = menuData;
 
   const authButton = status === 'loading' ? (
-    <span className="text-gray-400">Carregando...</span>
+    <span className="text-white">Carregando...</span>
   ) : session && (
     <Link
       href="/admin"
@@ -61,7 +61,7 @@ export function MenuInterno({ menuData }: MenuProps) {
   );
 
   const authButtonMobile = status === 'loading' ? (
-    <li className="block py-2 text-gray-400 border-b border-gray-700">Carregando...</li>
+    <li className="block py-2 text-white border-b border-gray-700">Carregando...</li>
   ) : session && (
     <li>
       <Link
@@ -97,12 +97,12 @@ export function MenuInterno({ menuData }: MenuProps) {
             <Link
               key={url}
               href={url}
-              className="relative text-gray-100 font-extralight antialiased hover:text-[#ca9a45] transition-colors duration-300 group"
+              className="relative text-gray-100 font-extralight antialiased hover:text-[#fec655] transition-colors duration-300 group"
               onClick={() => setMenuOpen(false)}
               target={target}
             >
               {text}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ca9a45] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#fec655] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
           {authButton}
@@ -110,7 +110,7 @@ export function MenuInterno({ menuData }: MenuProps) {
 
         {/* Botão Hamburger */}
         <button
-          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800/70 text-[#ca9a45] hover:bg-gray-700/80 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ca9a45]"
+          className="md:hidden flex items-center justify-center p-2 rounded-md bg-gray-800/70 text-[#fec655] hover:bg-gray-700/80 transition-colors focus:outline-none focus:ring-2 focus:ring-[#fec655]"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Abrir menu"
           aria-expanded={menuOpen}
@@ -133,7 +133,7 @@ export function MenuInterno({ menuData }: MenuProps) {
         <div className="flex justify-end p-6">
           <button
             onClick={() => setMenuOpen(false)}
-            className="p-2 rounded-md text-gray-100 bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ca9a45]"
+            className="p-2 rounded-md text-gray-100 bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-[#fec655]"
             aria-label="Fechar menu"
           >
             <MdClose className="w-6 h-6" />
@@ -145,7 +145,7 @@ export function MenuInterno({ menuData }: MenuProps) {
             <li key={url}>
               <Link
                 href={url}
-                className="block py-2 text-gray-100 hover:text-[#ca9a45] transition-colors border-b border-gray-700 last:border-b-0"
+                className="block py-2 text-gray-100 hover:text-[#fec655] transition-colors border-b border-gray-700 last:border-b-0"
                 onClick={() => setMenuOpen(false)}
                 target={target}
               >

@@ -42,9 +42,9 @@ export function TaskCard({
             {task.projeto?.title && (
                 <p className="text-sm text-gray-600 mt-1">Projeto: {task.projeto.title}</p>
             )}
-            <p className="text-sm text-gray-500 mt-1">Responsável: {task.assignedTo?.name || 'N/A'}</p>
+            <p className="text-sm text-white mt-1">Responsável: {task.assignedTo?.name || 'N/A'}</p>
             {task.dueDate && (
-                <p className="text-xs text-gray-400 mt-1">Vencimento: {new Date(task.dueDate).toLocaleDateString()}</p>
+                <p className="text-xs text-white mt-1">Vencimento: {new Date(task.dueDate).toLocaleDateString()}</p>
             )}
             <div className="flex flex-wrap items-center mt-2 space-x-2">
                 <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${getPriorityColor(task.priority)}`}>

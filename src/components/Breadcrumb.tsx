@@ -14,16 +14,16 @@ export default function Breadcrumb() {
   };
 
   return (
-    <div className='bg-[#ca9a45]/30'>
+    <div className='bg-[#fec655]/30'>
       <nav className="max-w-7xl mx-auto mt-20 text-sm font-sans py-1" aria-label="Breadcrumb">
         <ol className="mx-4 md:mx-8 list-none p-0 inline-flex">
           {/* Link para a Home */}
           <li className="flex items-center">
             <Link href="/">
-              <span className="text-gray-500 hover:text-accent">Home</span>
+              <span className="text-white hover:text-accent">Home</span>
             </Link>
             {pathnames.length > 0 && (
-              <span className="text-gray-500 mx-2">/</span>
+              <span className="text-white mx-2">/</span>
             )}
           </li>
 
@@ -38,13 +38,13 @@ export default function Breadcrumb() {
                   <span className="text-gray-700 font-medium">{formatName(pathname)}</span>
                 ) : (
                   <Link href={href}>
-                    <span className="text-gray-500 hover:text-accent">
+                    <span className="text-white hover:text-accent">
                       {formatName(pathname)}
                     </span>
                   </Link>
                 )}
                 {!isLast && (
-                  <span className="text-gray-500 mx-2">/</span>
+                  <span className="text-white mx-2">/</span>
                 )}
               </li>
             );

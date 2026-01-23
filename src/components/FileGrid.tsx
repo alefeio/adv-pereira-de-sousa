@@ -11,7 +11,7 @@ export default function FileGrid({ files, handleFileClick, getFileIcon }: Props)
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {files.length === 0 ? (
-        <p className="text-gray-500 col-span-full text-center">Nenhum arquivo encontrado.</p>
+        <p className="text-white col-span-full text-center">Nenhum arquivo encontrado.</p>
       ) : files.map(file => (
         <button
           key={file.id}

@@ -141,7 +141,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
         "name": "Pereira de Sousa Advocacia",
         "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png",
         "url": "https://www.pereiradesousa.adv.br/",
-        "telephone": "+5591992047151",
+        "telephone": "+5591986284970",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
@@ -156,7 +156,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
             { "@type": "State", "name": "Pará" }
         ],
         "sameAs": [
-            "https://www.instagram.com/alansousainss/"
+            "https://www.instagram.com/pereiradesousaescritorio/"
         ],
         "description": "O escritório de advocacia Pereira de Sousa Advocacia é um escritório de advocacia em Belém-PA com atuação estratégica em Direito Empresarial, Civil, Família e Sucessões, Previdenciário, Trabalhista, Penal, Bancário, Digital, Agrário, Saúde e defesa das pessoas com TEA."
     };
@@ -293,49 +293,49 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
 
                                 {/* CONTATO */}
                                 <div className="flex flex-col items-center md:items-end md:border-r md:border-gray-500/40 md:pr-16">
-                                    <h3 className="text-[#ca9a45] text-xl md:text-2xl font-semibold tracking-wide mb-8">
+                                    <h3 className="text-[#fec655] text-xl md:text-2xl font-semibold tracking-wide mb-8">
                                         Contato
                                     </h3>
 
                                     <div className="space-y-5">
                                         <a
                                             href="mailto:escritório@pereiradesousa.adv.br"
-                                            className="flex items-center justify-center md:justify-end gap-3 text-base md:text-lg hover:text-[#ca9a45] transition-colors"
+                                            className="flex items-center justify-center md:justify-end gap-3 text-base md:text-lg hover:text-[#fec655] transition-colors"
                                             aria-label="Enviar email para escritório@pereiradesousa.adv.br"
                                         >
-                                            <MdEmail size={22} className="text-[#ca9a45] flex-shrink-0" />
+                                            <MdEmail size={22} className="text-[#fec655] flex-shrink-0" />
                                             escritório@pereiradesousa.adv.br
                                         </a>
 
                                         <a
-                                            href="https://wa.me/5591992047151"
+                                            href="https://wa.me/5591986284970"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center md:justify-end gap-3 text-base md:text-lg hover:text-[#ca9a45] transition-colors"
-                                            aria-label="Enviar mensagem WhatsApp para +55 91 99204-7151"
+                                            className="flex items-center justify-center md:justify-end gap-3 text-base md:text-lg hover:text-[#fec655] transition-colors"
+                                            aria-label="Enviar mensagem WhatsApp para +55 91 98628-4970"
                                         >
-                                            <FaWhatsapp size={22} className="text-[#ca9a45] flex-shrink-0" />
-                                            +55 91 99204-7151
+                                            <FaWhatsapp size={22} className="text-[#fec655] flex-shrink-0" />
+                                            +55 91 98628-4970
                                         </a>
                                     </div>
                                 </div>
 
                                 {/* REDES SOCIAIS */}
                                 <div className="flex flex-col items-center md:items-start md:pl-6">
-                                    <h3 className="text-[#ca9a45] text-xl md:text-2xl font-semibold tracking-wide mb-8">
+                                    <h3 className="text-[#fec655] text-xl md:text-2xl font-semibold tracking-wide mb-8">
                                         Redes Sociais
                                     </h3>
 
                                     <div className="space-y-5">
                                         <a
-                                            href="https://www.instagram.com/alansousainss"
+                                            href="https://www.instagram.com/pereiradesousaescritorio"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center md:justify-start gap-3 text-base md:text-lg hover:text-[#ca9a45] transition-colors"
-                                            aria-label="Acessar Instagram @alansousainss"
+                                            className="flex items-center justify-center md:justify-start gap-3 text-base md:text-lg hover:text-[#fec655] transition-colors"
+                                            aria-label="Acessar Instagram @pereiradesousaescritorio"
                                         >
-                                            <FaInstagram size={22} className="text-[#ca9a45] flex-shrink-0" />
-                                            @alansousainss
+                                            <FaInstagram size={22} className="text-[#fec655] flex-shrink-0" />
+                                            @pereiradesousaescritorio
                                         </a>
                                     </div>
                                 </div>
@@ -396,7 +396,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                         {/* Botão de fechar */}
                         <button
                             onClick={() => setShowExitModal(false)}
-                            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
+                            className="absolute top-2 right-2 text-white hover:text-gray-600 transition-colors"
                             aria-label="Fechar"
                         >
                             <AiOutlineClose size={24} />

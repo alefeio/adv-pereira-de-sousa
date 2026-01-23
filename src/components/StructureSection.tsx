@@ -44,7 +44,7 @@ export default function StructureSection() {
                 <div className="container flex flex-col items-start w-full max-w-4xl mx-auto mb-20">
                     <div className="flex-1">
                         {slide.title && (
-                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#ca9a45] drop-shadow-lg mb-4 leading-tight max-w-md">
+                            <h2 className="font-sans text-3xl md:text-5xl lg:text-5xl font-extrabold text-[#fec655] drop-shadow-lg mb-4 leading-tight max-w-md">
                                 {slide.title}
                             </h2>
                         )}

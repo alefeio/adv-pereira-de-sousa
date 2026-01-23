@@ -59,6 +59,12 @@ const services = [
     icon: BsBank,
   },
   {
+    title: "Direito Tributário",
+    description:
+      "Atuação estratégica na defesa do contribuinte, com foco em planejamento tributário, revisão de tributos, recuperação de créditos fiscais e defesa em autos de infração.",
+    icon: BsBank,
+  },
+  {
     title: "Direito do Consumidor",
     description:
       "Defesa dos direitos do consumidor em cobranças indevidas, contratos abusivos, negativação irregular e conflitos com instituições financeiras e prestadores de serviços.",
@@ -94,7 +100,6 @@ export default function ServicesSection() {
   return (
     <section className="relative z-20 bg-black/80 py-24 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16">
           {services.map((service, index) => {
@@ -111,13 +116,13 @@ export default function ServicesSection() {
                 "
               >
                 {/* Ícone */}
-                <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full border border-[#ca9a45]/40 text-[#ca9a45] text-3xl">
+                <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full border border-[#fec655]/40 text-[#fec655] text-3xl">
                   <Icon />
                 </div>
 
                 {/* Texto */}
                 <div className="space-y-2">
-                  <h3 className="text-xl md:text-2xl font-extrabold text-[#ca9a45] leading-snug">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-[#fec655] leading-snug">
                     {service.title}
                   </h3>
                   <p className="text-gray-300 text-base leading-relaxed">
@@ -128,7 +133,6 @@ export default function ServicesSection() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

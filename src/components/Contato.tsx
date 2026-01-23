@@ -34,7 +34,7 @@ export default function Contato() {
             {/* Título */}
             <div className="relative z-10 flex flex-col items-center py-40 md:pt-48">
                 {slide.title && (
-                    <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#ca9a45] drop-shadow-lg mb-16 leading-tight">
+                    <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#fec655] drop-shadow-lg mb-16 leading-tight">
                         {slide.title}
                     </h1>
                 )}

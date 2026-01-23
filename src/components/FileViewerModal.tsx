@@ -77,7 +77,7 @@ export default function FileViewerModal({ file, onClose, onEdit, onDelete }: Fil
         {/* Cabeçalho */}
         <div className="flex justify-between items-center p-4 border-b border-gray-200">
           <h2 className="text-xl font-bold truncate">{file.filename}</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-900 font-bold text-lg">&times;</button>
+          <button onClick={onClose} className="text-white hover:text-gray-900 font-bold text-lg">&times;</button>
         </div>
 
         {/* Preview do arquivo */}
@@ -94,7 +94,7 @@ export default function FileViewerModal({ file, onClose, onEdit, onDelete }: Fil
           {!file.mimetype.startsWith('image/') &&
             !file.mimetype.startsWith('video/') &&
             file.mimetype !== 'application/pdf' && (
-              <p className="text-gray-500 p-4">Tipo de arquivo não suportado para visualização.</p>
+              <p className="text-white p-4">Tipo de arquivo não suportado para visualização.</p>
             )}
         </div>
 

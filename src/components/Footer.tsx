@@ -141,56 +141,56 @@ const Footer = ({ menuData }: MenuProps) => {
                         </div>
 
                         {/* Texto descritivo (Slogan da Home) */}
-                        <p className="text-sm text-gray-400 max-w-xs">
+                        <p className="text-sm text-white max-w-xs">
                             Atuamos de forma ética, técnica e humanizada para orientar pessoas na identificação e na resolução de suas demandas jurídicas, oferecendo segurança, clareza e acompanhamento responsável em cada etapa do processo.
                         </p>
 
                         {/* Direitos Autorais na Coluna 1 (como na imagem) */}
-                        <p className="text-xs text-gray-500 mt-4 pt-4">
+                        <p className="text-xs text-gray-400 mt-4 pt-4">
                             © 2024 Todos os direitos reservados.
                         </p>
                     </div>
 
                     {/* COLUNA 2: CONTATO E ÍCONES */}
                     <div className="flex flex-col items-start">
-                        <h4 className="text-[#ca9a45] text-lg font-bold mb-4">
+                        <h4 className="text-[#fec655] text-lg font-bold mb-4">
                             Contato
                         </h4>
 
                         {/* Subtítulo */}
-                        <p className="text-sm text-gray-400 mb-4">
+                        <p className="text-sm text-white mb-4">
                             Entre em contato conosco através de um dos meios abaixo:
                         </p>
 
                         <div className="space-y-3">
                             {/* Instagram */}
                             <a
-                                href="https://www.instagram.com/alansousainss"
+                                href="https://www.instagram.com/pereiradesousaescritorio"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center text-white hover:text-[#ca9a45] transition-colors text-sm"
+                                className="flex items-center text-white hover:text-[#fec655] transition-colors text-sm"
                             >
-                                <FaInstagram size={16} className="text-[#ca9a45] mr-3 flex-shrink-0" />
-                                @alansousainss
+                                <FaInstagram size={16} className="text-[#fec655] mr-3 flex-shrink-0" />
+                                @pereiradesousaescritorio
                             </a>
 
                             {/* WhatsApp */}
                             <a
-                                href="https://wa.me/5591992047151"
+                                href="https://wa.me/5591986284970"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center text-white hover:text-[#ca9a45] transition-colors text-sm"
+                                className="flex items-center text-white hover:text-[#fec655] transition-colors text-sm"
                             >
-                                <FaWhatsapp size={16} className="text-[#ca9a45] mr-3 flex-shrink-0" />
-                                +55 91 99204-7151
+                                <FaWhatsapp size={16} className="text-[#fec655] mr-3 flex-shrink-0" />
+                                +55 91 98628-4970
                             </a>
 
                             {/* Email */}
                             <a
                                 href="mailto:escritório@pereiradesousa.adv.br"
-                                className="flex items-center text-white hover:text-[#ca9a45] transition-colors text-sm"
+                                className="flex items-center text-white hover:text-[#fec655] transition-colors text-sm"
                             >
-                                <MdEmail size={16} className="text-[#ca9a45] mr-3 flex-shrink-0" />
+                                <MdEmail size={16} className="text-[#fec655] mr-3 flex-shrink-0" />
                                 escritório@pereiradesousa.adv.br
                             </a>
                         </div>
@@ -198,13 +198,13 @@ const Footer = ({ menuData }: MenuProps) => {
 
                     {/* COLUNA 3: ÚLTIMOS POSTS (AGORA DINÂMICO) */}
                     <div className="flex flex-col items-start">
-                        <h4 className="text-[#ca9a45] text-lg font-bold mb-4">
+                        <h4 className="text-[#fec655] text-lg font-bold mb-4">
                             Últimos Posts
                         </h4>
 
                         {/* Renderização dinâmica dos posts */}
                         {loading ? (
-                            <p className="text-sm text-gray-500">Carregando posts...</p>
+                            <p className="text-sm text-gray-400">Carregando posts...</p>
                         ) : (
                             <div className="space-y-6">
                                 {posts.map((post) => (
@@ -226,10 +226,10 @@ const Footer = ({ menuData }: MenuProps) => {
                                         </div>
 
                                         <div className="flex flex-col">
-                                            <span className="text-white text-sm group-hover:text-[#ca9a45] transition-colors leading-tight line-clamp-2">
+                                            <span className="text-white text-sm group-hover:text-[#fec655] transition-colors leading-tight line-clamp-2">
                                                 {post.title}
                                             </span>
-                                            <span className="text-gray-500 text-xs mt-1 flex items-center">
+                                            <span className="text-gray-400 text-xs mt-1 flex items-center">
                                                 <FaCalendarAlt size={10} className="mr-1 opacity-70" />
                                                 {formatDate(post.createdAt)}
                                             </span>
@@ -237,19 +237,19 @@ const Footer = ({ menuData }: MenuProps) => {
                                     </Link>
                                 ))}
                                 {/* Mensagem se não houver posts */}
-                                {posts.length === 0 && <p className="text-sm text-gray-500">Nenhum post encontrado.</p>}
+                                {posts.length === 0 && <p className="text-sm text-gray-400">Nenhum post encontrado.</p>}
                             </div>
                         )}
                     </div>
 
                     {/* COLUNA 4: ENDEREÇO */}
                     <div className="flex flex-col items-start">
-                        <h4 className="text-[#ca9a45] text-lg font-bold mb-4">
+                        <h4 className="text-[#fec655] text-lg font-bold mb-4">
                             Endereço
                         </h4>
 
                         <div className="flex items-start mb-4">
-                            <FaMapMarkerAlt size={20} className="text-[#ca9a45] mr-3 mt-1 flex-shrink-0" />
+                            <FaMapMarkerAlt size={20} className="text-[#fec655] mr-3 mt-1 flex-shrink-0" />
                             <p className="text-white text-sm">
                                 Ed. Angra dos reis<br />
                                 Tv. São Pedro, 842, sala 301<br />
@@ -258,7 +258,7 @@ const Footer = ({ menuData }: MenuProps) => {
                         </div>
 
                         {/* Linha Divisória abaixo do endereço (como na imagem) */}
-                        <div className="w-20 border-t border-[#ca9a45] mt-2"></div>
+                        <div className="w-20 border-t border-[#fec655] mt-2"></div>
                     </div>
                 </div>
             </div>

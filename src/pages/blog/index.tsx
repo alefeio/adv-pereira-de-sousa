@@ -129,14 +129,14 @@ export default function PageBlog({ menu }: HomePageProps) {
             "addressCountry": "BR"
         },
         "url": "https://pereiradesousa.vercel.app/",
-        "telephone": "+5591992047151", // Telefone atualizado
+        "telephone": "+5591986284970", // Telefone atualizado
         "areaServed": [
             { "@type": "City", "name": "Belém" },
             { "@type": "State", "name": "Pará" }
         ],
         "priceRange": "$$", // Exemplo: indicando uma faixa de preço
         "sameAs": [
-            "https://www.instagram.com/alansousainss/", // Sugestão baseada em busca, verificar a URL exata
+            "https://www.instagram.com/pereiradesousaescritorio/", // Sugestão baseada em busca, verificar a URL exata
             // "https://www.linkedin.com/company/machadoadvogadosassociados"
         ],
         "description": "Escritório de advocacia em Belém, PA. Especializado em Direito do Consumidor, Direito Trabalhista e Assessoria Jurídica Empresarial."
@@ -201,7 +201,7 @@ export default function PageBlog({ menu }: HomePageProps) {
                         {/* Botão de fechar */}
                         <button
                             onClick={() => setShowExitModal(false)}
-                            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
+                            className="absolute top-2 right-2 text-white hover:text-gray-600 transition-colors"
                             aria-label="Fechar"
                         >
                             <AiOutlineClose size={24} />

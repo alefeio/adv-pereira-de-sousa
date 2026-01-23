@@ -46,15 +46,15 @@ const ProjetoCard: React.FC<ProjetoCardProps> = ({ projeto, isOpen, toggleAccord
     return (
         <div 
             key={projeto.id} 
-            className="bg-[#0c1a25] rounded-xl shadow-lg overflow-hidden border border-[#ca9a45]/20" 
+            className="bg-[#0c1a25] rounded-xl shadow-lg overflow-hidden border border-[#fec655]/20" 
         >
             <div 
-                className={`p-6 cursor-pointer flex justify-between items-center ${!isOpen ? 'border-b border-[#ca9a45]/30' : ''}`}
+                className={`p-6 cursor-pointer flex justify-between items-center ${!isOpen ? 'border-b border-[#fec655]/30' : ''}`}
                 onClick={() => toggleAccordion(projeto.id)}
             >
-                <h3 className="text-xl md:text-2xl font-bold text-[#ca9a45]">{projeto.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-[#fec655]">{projeto.title}</h3>
                 <button
-                    className="p-2 text-[#ca9a45] hover:text-white transition-colors duration-200"
+                    className="p-2 text-[#fec655] hover:text-white transition-colors duration-200"
                     aria-label={isOpen ? 'Fechar detalhes' : 'Abrir detalhes'}
                 >
                     {isOpen ? <FaMinus size={18} /> : <FaPlus size={18} />}
@@ -111,7 +111,7 @@ const Casos: React.FC = () => {
             <div className="bg-[#0c1a26]/70 py-24">
                 <div className="container mx-auto px-4 md:px-8">
                     {loading ? (
-                        <p className="text-center text-gray-400 text-xl py-10">Carregando casos...</p>
+                        <p className="text-center text-white text-xl py-10">Carregando casos...</p>
                     ) : (
                         <div className="grid grid-cols-1 gap-8">
                             {projects.map((projeto) => (

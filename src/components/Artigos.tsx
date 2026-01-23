@@ -59,13 +59,13 @@ const Artigos: React.FC = () => {
 
         {/* Estados */}
         {loading && (
-          <p className="text-center text-gray-400 text-lg py-20">
+          <p className="text-center text-white text-lg py-20">
             Carregando artigos…
           </p>
         )}
 
         {!loading && posts.length === 0 && (
-          <p className="text-center text-gray-400 text-lg py-20">
+          <p className="text-center text-white text-lg py-20">
             Nenhum artigo publicado no momento.
           </p>
         )}
@@ -76,7 +76,7 @@ const Artigos: React.FC = () => {
               <article
                 key={post.id}
                 onClick={() => navigateToPost(post.slug)}
-                className="group bg-black border border-[#ca9a45]/20 rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="group bg-black border border-[#fec655]/20 rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 {/* Imagem */}
                 <div className="relative w-full h-60 overflow-hidden">
@@ -89,7 +89,7 @@ const Artigos: React.FC = () => {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="w-full h-full bg-[#111] flex items-center justify-center text-gray-500 text-sm">
+                    <div className="w-full h-full bg-[#111] flex items-center justify-center text-white text-sm">
                       Sem imagem
                     </div>
                   )}
@@ -97,7 +97,7 @@ const Artigos: React.FC = () => {
 
                 {/* Conteúdo */}
                 <div className="p-6 flex flex-col gap-4">
-                  <h3 className="text-xl md:text-2xl font-extrabold text-[#ca9a45] leading-snug line-clamp-2">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-[#fec655] leading-snug line-clamp-2">
                     {post.title}
                   </h3>
 
@@ -111,7 +111,7 @@ const Artigos: React.FC = () => {
                         e.stopPropagation();
                         navigateToPost(post.slug);
                       }}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#ca9a45] hover:text-[#e0b66a] transition-colors"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#fec655] hover:text-[#e0b66a] transition-colors"
                     >
                       Ler artigo
                       <span className="text-lg leading-none">→</span>

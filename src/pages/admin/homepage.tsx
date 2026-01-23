@@ -51,7 +51,7 @@ const GenericSectionForm: React.FC<GenericSectionFormProps> = ({ content, onUpda
       <h4 className="text-lg font-semibold mb-2">Editar Sessão Personalizada</h4>
       <div className="bg-gray-200 p-4 rounded-md mb-4">
         <h5 className="text-sm font-bold mb-2">Pré-visualização</h5>
-        <div className="bg-white p-4 rounded-md border-2 border-dashed border-gray-400">
+        <div className="bg-white p-4 rounded-md border-2 border-dashed border-white">
           <DynamicSection content={{ ...data, type: 'custom' }} />
         </div>
       </div>
@@ -80,7 +80,7 @@ const GenericSectionForm: React.FC<GenericSectionFormProps> = ({ content, onUpda
       </div>
       <div className="flex justify-end gap-2 mt-4">
         <button onClick={() => onUpdate(data)} className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary">Salvar</button>
-        <button onClick={onCancel} className="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400">Cancelar</button>
+        <button onClick={onCancel} className="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-white">Cancelar</button>
       </div>
     </div>
   );
@@ -254,13 +254,13 @@ export default function HomepageAdmin() {
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold">{index + 1}. {section.type.charAt(0).toUpperCase() + section.type.slice(1)}</span>
                   <div className="flex gap-2">
-                    <button onClick={() => handleMove(section.id, "up")} className="text-gray-500 hover:text-primary disabled:opacity-50" disabled={index === 0}>
+                    <button onClick={() => handleMove(section.id, "up")} className="text-white hover:text-primary disabled:opacity-50" disabled={index === 0}>
                       <FaArrowUp />
                     </button>
-                    <button onClick={() => handleMove(section.id, "down")} className="text-gray-500 hover:text-primary disabled:opacity-50" disabled={index === sections.length - 1}>
+                    <button onClick={() => handleMove(section.id, "down")} className="text-white hover:text-primary disabled:opacity-50" disabled={index === sections.length - 1}>
                       <FaArrowDown />
                     </button>
-                    <button onClick={() => setEditingId(section.id)} className="text-gray-500 hover:text-primary">
+                    <button onClick={() => setEditingId(section.id)} className="text-white hover:text-primary">
                       <FaEdit />
                     </button>
                     <button onClick={() => handleDelete(section.id)} className="text-primary hover:text-primary">
@@ -271,7 +271,7 @@ export default function HomepageAdmin() {
                 {editingId === section.id ? (
                   getFormForType(section)
                 ) : (
-                  <div className="text-sm text-gray-500 mt-2">
+                  <div className="text-sm text-white mt-2">
                     <p>ID: {section.id}</p>
                     <p>Tipo: {section.type}</p>
                     <p>Conteúdo: {JSON.stringify(section.content)}</p>
@@ -283,7 +283,7 @@ export default function HomepageAdmin() {
           <button
             onClick={handleSave}
             disabled={isButtonDisabled}
-            className={`mt-6 w-full p-3 text-white font-bold rounded-md ${isButtonDisabled ? "bg-gray-400 cursor-not-allowed" : "bg-primary hover:bg-primary"}`}
+            className={`mt-6 w-full p-3 text-white font-bold rounded-md ${isButtonDisabled ? "bg-white cursor-not-allowed" : "bg-primary hover:bg-primary"}`}
           >
             {loading ? "Salvando..." : "Salvar Ordem e Conteúdo"}
           </button>

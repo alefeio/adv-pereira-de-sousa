@@ -264,7 +264,7 @@ export default function MenuForm() {
                     <button
                         type="button"
                         onClick={handleCancelEdit}
-                        className="flex-1 bg-gray-300 text-gray-800 p-2 rounded-md hover:bg-gray-400 transition-colors"
+                        className="flex-1 bg-gray-300 text-gray-800 p-2 rounded-md hover:bg-white transition-colors"
                     >
                         Cancelar Edição
                     </button>
@@ -282,8 +282,8 @@ export default function MenuForm() {
               >
                 <div>
                   <p className="font-semibold">{link.text}</p>
-                  <p className="text-sm text-gray-500">{link.url}</p>
-                  <p className="text-sm text-gray-500">Abre em: {link.target === "_blank" ? "Nova aba" : "Mesma aba"}</p>
+                  <p className="text-sm text-white">{link.url}</p>
+                  <p className="text-sm text-white">Abre em: {link.target === "_blank" ? "Nova aba" : "Mesma aba"}</p>
                 </div>
                 <div className="flex space-x-2">
                   <button
@@ -312,7 +312,7 @@ export default function MenuForm() {
       <button
         type="button"
         onClick={handleSave}
-        className={`w-full p-3 text-white font-bold rounded-md mt-6 ${isButtonDisabled ? "bg-gray-400 cursor-not-allowed" : "bg-orange-500 hover:bg-orange-600"}`}
+        className={`w-full p-3 text-white font-bold rounded-md mt-6 ${isButtonDisabled ? "bg-white cursor-not-allowed" : "bg-orange-500 hover:bg-orange-600"}`}
         disabled={isButtonDisabled}
       >
         {loading ? "Salvando..." : "Salvar Menu Completo"}

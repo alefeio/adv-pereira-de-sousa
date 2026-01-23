@@ -48,11 +48,11 @@ export function Menu({ menuData }: MenuProps) {
         <Link
           href="/admin"
           onClick={() => setMenuOpen(false)}
-          className="relative flex items-center gap-1 text-white hover:text-[#ca9a45] transition-colors duration-300 group"
+          className="relative flex items-center gap-1 text-white hover:text-[#fec655] transition-colors duration-300 group"
         >
           <MdAccountCircle className="w-5 h-5 text-white" />
           Minha Conta
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ca9a45] transition-all duration-300 group-hover:w-full" />
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fec655] transition-all duration-300 group-hover:w-full" />
         </Link>
       )
     );
@@ -83,10 +83,10 @@ export function Menu({ menuData }: MenuProps) {
               href={url}
               target={target}
               onClick={() => setMenuOpen(false)}
-              className="relative font-light antialiased text-white hover:text-[#ca9a45] transition-colors duration-300 group"
+              className="relative font-light antialiased text-white hover:text-[#fec655] transition-colors duration-300 group"
             >
               {text}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ca9a45] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fec655] transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
           {authButton}
@@ -96,7 +96,7 @@ export function Menu({ menuData }: MenuProps) {
         <button
           aria-label="Abrir menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="md:hidden flex items-center justify-center p-2 rounded-md bg-black border border-[#ca9a45]/40 hover:border-[#ca9a45] transition-colors"
+          className="md:hidden flex items-center justify-center p-2 rounded-md bg-black border border-[#fec655]/40 hover:border-[#fec655] transition-colors"
         >
           {menuOpen ? (
             <MdClose className="w-6 h-6 text-white" />
@@ -117,7 +117,7 @@ export function Menu({ menuData }: MenuProps) {
           <button
             onClick={() => setMenuOpen(false)}
             aria-label="Fechar menu"
-            className="p-2 rounded-md border border-[#ca9a45]/40 hover:border-[#ca9a45] transition-colors"
+            className="p-2 rounded-md border border-[#fec655]/40 hover:border-[#fec655] transition-colors"
           >
             <MdClose className="w-6 h-6 text-white" />
           </button>
@@ -131,7 +131,7 @@ export function Menu({ menuData }: MenuProps) {
                 href={url}
                 target={target}
                 onClick={() => setMenuOpen(false)}
-                className="block py-4 border-b border-white/10 hover:text-[#ca9a45] transition-colors"
+                className="block py-4 border-b border-white/10 hover:text-[#fec655] transition-colors"
               >
                 {text}
               </Link>
@@ -143,7 +143,7 @@ export function Menu({ menuData }: MenuProps) {
               <Link
                 href="/admin"
                 onClick={() => setMenuOpen(false)}
-                className="flex items-center gap-2 py-4 hover:text-[#ca9a45] transition-colors"
+                className="flex items-center gap-2 py-4 hover:text-[#fec655] transition-colors"
               >
                 <MdAccountCircle className="w-5 h-5 text-white" />
                 Minha Conta

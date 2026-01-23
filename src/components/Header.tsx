@@ -66,10 +66,10 @@ export default function Header() {
 
               {/* Coluna esquerda */}
               <div className="flex flex-col gap-5">
-                <h2 className="w-full text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#ca9a45] leading-tight max-w-2xl mx-auto md:mx-0">
+                <h2 className="w-full text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#fec655] leading-tight max-w-2xl mx-auto md:mx-0">
                   Sobre o escritório de advocacia Pereira de Sousa
                   <br />
-                  <small className="text-[#ca9a45] font-medium">
+                  <small className="text-[#fec655] font-medium">
                     – Advocacia
                   </small>
                 </h2>
@@ -104,7 +104,7 @@ export default function Header() {
                       <span className="text-lg md:text-xl font-semibold">
                         {service.title}
                       </span>
-                      <span className="text-2xl font-bold text-[#ca9a45]">
+                      <span className="text-2xl font-bold text-[#fec655]">
                         {open.includes(index) ? <FaMinus /> : <FaPlus />}
                       </span>
                     </button>
@@ -125,14 +125,14 @@ export default function Header() {
 
             {/* Valores */}
             <div className="mt-16 flex flex-col gap-6 w-full mx-auto md:mx-0">
-              <p className="text-[#ca9a45] text-3xl font-bold leading-relaxed max-w-xl mx-auto md:mx-0">
+              <p className="text-[#fec655] text-3xl font-bold leading-relaxed max-w-xl mx-auto md:mx-0">
                 Nossos Valores
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-8 sm:gap-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="flex flex-col items-center sm:items-start text-left">
-                    <span className="text-2xl font-bold text-gray-500">
+                    <span className="text-2xl font-bold text-white">
                       {stat.value}
                     </span>
                     <span className="text-white text-lg font-medium">

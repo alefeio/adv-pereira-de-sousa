@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
             duration-200
             hover:-translate-y-1
             hover:shadow-xl
-            disabled:bg-gray-400
+            disabled:bg-white
             disabled:cursor-not-allowed
           "
         >
