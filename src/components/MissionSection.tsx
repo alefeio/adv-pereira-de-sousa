@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MissionSection() {
   return (
-    <section className="relative bg-black py-24 md:py-32 z-20">
+    <section className="relative pt-24 md:pt-32 z-20">
       <div className="max-w-7xl mx-auto px-6 md:px-10 space-y-24">
 
         {/* MISSÃO + VISÃO */}
@@ -16,16 +16,11 @@ export default function MissionSection() {
 
             <div className="space-y-6 max-w-xl">
               <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Exercer a advocacia de forma ética, humanizada e responsável,
-                oferecendo um atendimento personalizado, acessível e acolhedor,
-                comprometido com a defesa dos direitos, das garantias fundamentais
-                e da dignidade da pessoa humana.
+                Exercer a advocacia com ética, responsabilidade e sensibilidade humana, oferecendo um atendimento personalizado, acessível e acolhedor, comprometido com a defesa dos direitos, das garantias fundamentais e da dignidade da pessoa humana.
               </p>
 
               <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Atuar com excelência técnica e sensibilidade social nas diversas
-                áreas do Direito, buscando respostas jurídicas seguras, justas e
-                adequadas à realidade de cada cliente.
+                Atuar com excelência técnica nas diversas áreas do Direito, buscando soluções jurídicas seguras, justas e compatíveis com a realidade de cada cliente, sempre orientadas pela legalidade e pela justiça.
               </p>
             </div>
           </div>
@@ -38,15 +33,11 @@ export default function MissionSection() {
 
             <div className="space-y-6 max-w-xl">
               <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Construir uma advocacia que cresça de forma sólida, responsável
-                e humana, acompanhando as transformações da sociedade e do
-                Direito, sem perder de vista o valor central de cada pessoa.
+                Consolidar uma advocacia sólida, responsável e humana, capaz de acompanhar as transformações da sociedade e do Direito, sem perder de vista o valor central de cada pessoa atendida.
               </p>
 
               <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Projetar o futuro a partir de uma atuação personalizada,
-                juridicamente fundamentada e alinhada às normas legais e éticas
-                da advocacia.
+                Construir o futuro do escritório por meio de uma atuação personalizada, juridicamente fundamentada e rigorosamente alinhada às normas legais e éticas que regem a advocacia.
               </p>
             </div>
           </div>
@@ -63,35 +54,35 @@ export default function MissionSection() {
             {[
               {
                 title: "Ética e Responsabilidade Profissional",
-                desc: "Atuação pautada pelo respeito às normas legais e princípios éticos da profissão.",
+                desc: "Atuação orientada pelo respeito às normas legais, ao Código de Ética da OAB e aos princípios que fundamentam a advocacia.",
               },
               {
                 title: "Atendimento Humanizado",
-                desc: "Escuta ativa e atendimento individualizado, respeitando a realidade de cada cliente.",
+                desc: "Escuta ativa, empatia e atendimento individualizado, considerando as particularidades de cada cliente e de cada demanda.",
               },
               {
                 title: "Rigor Técnico",
-                desc: "Compromisso com estudo contínuo e aplicação responsável do Direito.",
+                desc: "Compromisso com o estudo contínuo, atualização jurídica e aplicação responsável do Direito.",
               },
               {
                 title: "Transparência e Clareza",
-                desc: "Comunicação objetiva, honesta e acessível.",
+                desc: "Comunicação objetiva, honesta e acessível em todas as etapas da atuação profissional.",
               },
               {
-                title: "Justiça Social",
-                desc: "Proteção dos direitos e da dignidade da pessoa humana.",
+                title: "Justiça Sociale Dignidade Humana",
+                desc: "Defesa dos direitos fundamentais e da dignidade da pessoa humana como pilares da atuação jurídica.",
               },
               {
-                title: "Organização",
-                desc: "Planejamento e método como base da eficiência jurídica.",
+                title: "Organização e Método",
+                desc: "Planejamento, organização e gestão responsável como base para a eficiência e segurança jurídica.",
               },
               {
                 title: "Confiança e Parceria",
-                desc: "Relações construídas com respeito e cooperação.",
+                desc: "Construção de relações pautadas no respeito, na cooperação e na lealdade profissional.",
               },
               {
                 title: "Evolução Contínua",
-                desc: "Aprimoramento técnico e institucional permanente.",
+                desc: "Aprimoramento técnico, institucional e humano de forma permanente, acompanhando as mudanças do Direito e da sociedade.",
               },
             ].map((item, i) => (
               <li

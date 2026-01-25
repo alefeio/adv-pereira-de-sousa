@@ -2,8 +2,8 @@ import React from "react";
 
 export default function SobreSection() {
   return (
-    <section className="bg-black/70 py-20 relative z-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-black/70 max-w-7xl mx-auto rounded-3xl py-20 relative z-20">
+      <div className="px-6">
         <div
           className="
             text-white
@@ -15,28 +15,15 @@ export default function SobreSection() {
           "
         >
           <p>
-            A{" "}
-            <span className="font-extrabold">
-              Pereira de Sousa – Advocacia
-            </span>{" "}
-            atua com foco em uma advocacia ética, responsável e humanizada,
-            comprometida com a defesa dos direitos, dos fundamentos jurídicos
-            essenciais e da dignidade da pessoa humana.
+            O <strong>Escritório de Advocacia Pereira de Sousa</strong> desenvolve sua atuação com foco na prestação de serviços jurídicos qualificados, fundamentados na ética, na responsabilidade profissional e no constante aprimoramento técnico.
           </p>
 
           <p>
-            O escritório desenvolve sua atuação com base em rigor técnico,
-            organização e constante aprimoramento, buscando oferecer respostas
-            jurídicas claras e adequadas à realidade de cada cliente, sempre em
-            conformidade com as normas legais e éticas da profissão.
+            A atuação do escritório é estruturada a partir de uma análise criteriosa de cada demanda, buscando respostas jurídicas claras, seguras e adequadas ao contexto específico de cada cliente, sempre em conformidade com as normas legais e com o Código de Ética da Advocacia.
           </p>
 
           <p>
-            O atendimento é personalizado e acessível, pautado na escuta ativa,
-            na transparência e na construção de relações de confiança. Cada caso
-            é analisado de forma cuidadosa, considerando o contexto, as
-            necessidades e as particularidades de quem confia sua demanda ao
-            escritório.
+            O atendimento é personalizado e transparente, com comunicação direta e acompanhamento responsável de cada caso. Valorizamos a construção de relações de confiança, baseadas no respeito, na seriedade e no compromisso com a defesa dos direitos e com os princípios que orientam a advocacia.
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ const MidiWhiteDresses: React.FC = () => {
             <p className="text-gray-700">
                 Explore our collection of elegant midi white dresses. Perfect for various occasions, these dresses offer a timeless style that can be dressed up or down.
             </p>
-            <p className="text-white">
+            <p className="text-gray-500">
                 While we focus on vibrant party dresses, our midi white dresses provide a chic option for those who prefer a more understated look.
             </p>
         </section>

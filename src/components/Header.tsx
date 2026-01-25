@@ -132,7 +132,7 @@ export default function Header() {
               <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-8 sm:gap-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="flex flex-col items-center sm:items-start text-left">
-                    <span className="text-2xl font-bold text-white">
+                    <span className="text-2xl font-bold text-gray-500">
                       {stat.value}
                     </span>
                     <span className="text-white text-lg font-medium">

@@ -286,7 +286,7 @@ export default function AdminColecoes() {
                         <img src={item.img} alt="Visualização do item" className="w-24 h-24 object-cover rounded-lg" />
                       </div>
                     )}
-                    <label htmlFor={`img-${index}`} className="w-full flex-1 text-white cursor-pointer flex items-center justify-center gap-2 font-semibold hover:bg-gray-100 transition duration-200 p-2 rounded-lg">
+                    <label htmlFor={`img-${index}`} className="w-full flex-1 text-gray-500 cursor-pointer flex items-center justify-center gap-2 font-semibold hover:bg-gray-100 transition duration-200 p-2 rounded-lg">
                       <MdAddPhotoAlternate size={24} />
                       {item.img instanceof File ? item.img.name : "Escolher arquivo..."}
                     </label>
@@ -332,7 +332,7 @@ export default function AdminColecoes() {
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-800">{colecao.title}</h3>
-                      <p className="text-sm text-white">{colecao.subtitle}</p>
+                      <p className="text-sm text-gray-500">{colecao.subtitle}</p>
                     </div>
                     <div className="flex gap-2 mt-4 md:mt-0">
                       <button onClick={() => handleEdit(colecao)} className="bg-primary text-white p-2 rounded-lg hover:bg-primary transition duration-200">
@@ -349,7 +349,7 @@ export default function AdminColecoes() {
                         <img src={item.img as string} alt={item.productModel} className="w-20 h-20 object-cover rounded-lg" />
                         <div className="flex-1">
                           <h4 className="font-semibold text-gray-800">{item.productMark} - {item.productModel} ({item.cor})</h4>
-                          <p className="text-xs text-white mt-1">
+                          <p className="text-xs text-gray-500 mt-1">
                             Tamanho: {item.size || 'N/A'} | Preço: R${item.price || 'N/A'} | A prazo: R${item.price_card || 'N/A'}
                           </p>
                         </div>

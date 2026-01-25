@@ -89,7 +89,7 @@ const Artigos: React.FC = () => {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="w-full h-full bg-[#111] flex items-center justify-center text-white text-sm">
+                    <div className="w-full h-full bg-[#111] flex items-center justify-center text-gray-500 text-sm">
                       Sem imagem
                     </div>
                   )}

@@ -282,8 +282,8 @@ export default function MenuForm() {
               >
                 <div>
                   <p className="font-semibold">{link.text}</p>
-                  <p className="text-sm text-white">{link.url}</p>
-                  <p className="text-sm text-white">Abre em: {link.target === "_blank" ? "Nova aba" : "Mesma aba"}</p>
+                  <p className="text-sm text-gray-500">{link.url}</p>
+                  <p className="text-sm text-gray-500">Abre em: {link.target === "_blank" ? "Nova aba" : "Mesma aba"}</p>
                 </div>
                 <div className="flex space-x-2">
                   <button

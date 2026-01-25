@@ -58,7 +58,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       <div className="md:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="p-2 rounded-md text-white dark:text-white bg-white dark:bg-gray-800 shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
+          className="p-2 rounded-md text-gray-500 dark:text-white bg-white dark:bg-gray-800 shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
           aria-label="Toggle sidebar"
         >
           {isSidebarOpen ? (
@@ -95,7 +95,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdDashboard className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdDashboard className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Dashboard</span>
                 </Link>
               </li>
@@ -103,7 +103,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-white mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
               Conteúdo do Site
             </h3>
             <ul className="space-y-1 list-none">
@@ -112,7 +112,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/menu"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdMenu className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdMenu className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Menu</span>
                 </Link>
               </li>
@@ -121,7 +121,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/banner"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdViewCarousel className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdViewCarousel className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Banner</span>
                 </Link>
               </li>
@@ -130,7 +130,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/testimonials"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdReviews className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdReviews className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Depoimentos</span>
                 </Link>
               </li>
@@ -139,7 +139,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/faq"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdHelpOutline className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdHelpOutline className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">FAQ</span>
                 </Link>
               </li>
@@ -148,7 +148,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
 
           {/* Grupo 3: Gerenciamento */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-white mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
               Gerenciamento
             </h3>
             <ul className="space-y-1 list-none">
@@ -157,7 +157,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/projetos"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdPalette className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdPalette className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Gerenciar Cases</span>
                 </Link>
               </li>
@@ -166,7 +166,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/blog"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdPalette className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdPalette className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Gerenciar Blog</span>
                 </Link>
               </li>
@@ -175,7 +175,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/tasks"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdAssignment className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdAssignment className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Gerenciar Tarefas</span>
                 </Link>
               </li>
@@ -184,7 +184,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   href="/admin/files"
                   className="text-gray-900 dark:text-white flex items-center p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
                 >
-                  <MdPhotoLibrary className="mr-3 text-xl text-white group-hover:text-primary transition-colors" />
+                  <MdPhotoLibrary className="mr-3 text-xl text-gray-500 group-hover:text-primary transition-colors" />
                   <span className="text-sm font-medium">Gerenciar Arquivos</span>
                 </Link>
               </li>
@@ -193,7 +193,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
 
           {/* Grupo 4: Autenticação */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-white mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
               Conta
             </h3>
             <ul className="space-y-1 list-none">

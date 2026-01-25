@@ -3,7 +3,7 @@ import { FaHandshake, FaUserTie, FaBalanceScale, FaRegCheckCircle, FaWhatsapp } 
 
 export default function Parcerias() {
     return (
-        <section id="parcerias" className="relative z-20 bg-black/80">
+        <section id="parcerias" className="relative z-20 bg-black">
             <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 flex flex-col items-center py-40 md:pt-48">
 
                 <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#fec655] drop-shadow-lg mb-16 leading-tight">
@@ -86,10 +86,6 @@ export default function Parcerias() {
                                 <FaWhatsapp />
                                 Quero firmar parceria
                             </a>
-
-                            <p className="text-xs text-gray-400 mt-3 text-center">
-                                Resposta rápida pelo WhatsApp.
-                            </p>
                         </div>
                     </div>
                 </div>

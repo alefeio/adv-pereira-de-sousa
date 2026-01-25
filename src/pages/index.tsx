@@ -270,6 +270,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                     <Hero />
                     <span id="sobre"></span>
                     <HeroSliderSobre />
+                    <Parcerias />
                     <span id="atuacao"></span>
                     <HeroSliderAreas />
                     <span id="blog"></span>
@@ -277,7 +278,6 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                     {/* <Cases /> */}
                     <Testimonials testimonials={testimonials} />
                     <span id="fale"></span>
-                    <Parcerias />
                     <Contato />
                     <span id="faq"></span>
                     <FAQ faqs={faqs} />

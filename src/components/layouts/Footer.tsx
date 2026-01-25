@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         {/* Direitos autorais */}
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-white">
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
           © {currentYear} My Dress Belém. Todos os direitos reservados.
         </div>
       </div>

@@ -64,7 +64,7 @@ const TimelineSection: React.FC = () => {
                       {service.icon}
                     </div>
 
-                    <div className="w-48 text-sm text-white whitespace-pre-line hidden md:block">
+                    <div className="w-48 text-sm text-gray-500 whitespace-pre-line hidden md:block">
                       {service.subText}
                     </div>
                   </div>

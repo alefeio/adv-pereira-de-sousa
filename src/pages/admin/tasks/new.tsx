@@ -155,7 +155,7 @@ export default function NewTaskPage() {
   if (status === 'loading') {
     return (
       <AdminLayout>
-        <div className="container mx-auto p-4 md:p-8 text-center text-white">
+        <div className="container mx-auto p-4 md:p-8 text-center text-gray-500">
           <p>Carregando...</p>
         </div>
       </AdminLayout>
@@ -171,7 +171,7 @@ export default function NewTaskPage() {
 
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-800">Criar Nova Tarefa</h1>
-          <p className="text-white">
+          <p className="text-gray-500">
             <Link href="/admin/tasks" className="text-orange-500 hover:underline">Voltar para a lista de tarefas</Link>
           </p>
         </div>
@@ -252,7 +252,7 @@ export default function NewTaskPage() {
               <div>
                 <label htmlFor="assignedToId" className="block text-sm font-medium text-gray-700 mb-1">Responsável</label>
                 {usersLoading ? (
-                  <p className="mt-1 text-white">Carregando usuários...</p>
+                  <p className="mt-1 text-gray-500">Carregando usuários...</p>
                 ) : (
                   <select
                     name="assignedToId"
@@ -274,7 +274,7 @@ export default function NewTaskPage() {
               <div>
                 <label htmlFor="projetoId" className="block text-sm font-medium text-gray-700 mb-1">Projeto (Opcional)</label>
                 {projetosLoading ? (
-                  <p className="mt-1 text-white">Carregando projetos...</p>
+                  <p className="mt-1 text-gray-500">Carregando projetos...</p>
                 ) : (
                   <select
                     name="projetoId"

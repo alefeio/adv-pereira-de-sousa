@@ -94,7 +94,7 @@ const PromotionsForm: React.FC = () => {
                             onChange={(e) => setName(e.target.value)}
                             placeholder="Seu Nome"
                             required
-                            className="w-full px-4 py-3 border border-primary-dark rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-white"
+                            className="w-full px-4 py-3 border border-primary-dark rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500"
                         />
                         <input
                             type="email"
@@ -102,14 +102,14 @@ const PromotionsForm: React.FC = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Seu Melhor E-mail"
                             required
-                            className="w-full px-4 py-3 border border-primary-dark rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-white"
+                            className="w-full px-4 py-3 border border-primary-dark rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500"
                         />
                         <input
                             type="text"
                             value={phone}
                             onChange={handlePhoneChange}
                             placeholder="Seu WhatsApp (Opcional)"
-                            className="w-full px-4 py-3 border border-primary-dark rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-white"
+                            className="w-full px-4 py-3 border border-primary-dark rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500"
                         />
                         <button
                             type="submit"

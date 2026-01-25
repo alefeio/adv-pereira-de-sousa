@@ -254,13 +254,13 @@ export default function HomepageAdmin() {
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold">{index + 1}. {section.type.charAt(0).toUpperCase() + section.type.slice(1)}</span>
                   <div className="flex gap-2">
-                    <button onClick={() => handleMove(section.id, "up")} className="text-white hover:text-primary disabled:opacity-50" disabled={index === 0}>
+                    <button onClick={() => handleMove(section.id, "up")} className="text-gray-500 hover:text-primary disabled:opacity-50" disabled={index === 0}>
                       <FaArrowUp />
                     </button>
-                    <button onClick={() => handleMove(section.id, "down")} className="text-white hover:text-primary disabled:opacity-50" disabled={index === sections.length - 1}>
+                    <button onClick={() => handleMove(section.id, "down")} className="text-gray-500 hover:text-primary disabled:opacity-50" disabled={index === sections.length - 1}>
                       <FaArrowDown />
                     </button>
-                    <button onClick={() => setEditingId(section.id)} className="text-white hover:text-primary">
+                    <button onClick={() => setEditingId(section.id)} className="text-gray-500 hover:text-primary">
                       <FaEdit />
                     </button>
                     <button onClick={() => handleDelete(section.id)} className="text-primary hover:text-primary">
@@ -271,7 +271,7 @@ export default function HomepageAdmin() {
                 {editingId === section.id ? (
                   getFormForType(section)
                 ) : (
-                  <div className="text-sm text-white mt-2">
+                  <div className="text-sm text-gray-500 mt-2">
                     <p>ID: {section.id}</p>
                     <p>Tipo: {section.type}</p>
                     <p>Conteúdo: {JSON.stringify(section.content)}</p>

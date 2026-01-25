@@ -286,7 +286,7 @@ export default function Testimonials({ testimonials }: TestimonialsPageProps) {
                 Imagem/Vídeo do Cliente (Opcional)
               </label>
               {(editing && currentAvatarUrl) && (
-                <p className="text-xs text-white mb-2">
+                <p className="text-xs text-gray-500 mb-2">
                   Arquivo atual: <a href={currentAvatarUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visualizar</a> (O upload de um novo arquivo substituirá o atual.)
                 </p>
               )}
@@ -325,7 +325,7 @@ export default function Testimonials({ testimonials }: TestimonialsPageProps) {
                 <button
                   type="button"
                   onClick={() => { setEditing(null); setFile(null); }}
-                  className="bg-white text-gray-800 py-2 px-4 rounded-md hover:bg-white transition"
+                  className="bg-white text-gray-800 py-2 px-4 rounded-md hover:bg-gray-500 transition"
                 >
                   Cancelar
                 </button>
@@ -377,7 +377,7 @@ export default function Testimonials({ testimonials }: TestimonialsPageProps) {
               ))}
             </ul>
           ) : (
-            <div className="text-center text-white">
+            <div className="text-center text-gray-500">
               <p>Nenhum depoimento encontrado.</p>
             </div>
           )}

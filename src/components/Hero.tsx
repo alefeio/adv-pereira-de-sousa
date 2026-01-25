@@ -25,26 +25,20 @@ export default function Hero() {
 
           {/* Texto institucional */}
           <div className="flex-1 flex flex-col items-start text-left gap-6">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#fec655] leading-tight max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#fec655] leading-tight max-w-4xl">
               Advocacia ética, técnica e comprometida com pessoas
             </h2>
 
             <p className="text-gray-200 text-base md:text-lg max-w-xl md:max-w-none leading-relaxed">
-              A <strong>Pereira de Sousa – Advocacia</strong> atua com responsabilidade,
-              organização e rigor técnico, oferecendo soluções jurídicas seguras,
-              claras e alinhadas à realidade de cada cliente.
+              Atuamos na defesa dos direitos com seriedade, clareza e responsabilidade, oferecendo soluções jurídicas seguras e alinhadas à realidade de cada cliente.
             </p>
 
             <p className="text-gray-200 text-base md:text-lg max-w-xl md:max-w-none leading-relaxed">
-              O escritório adota uma atuação humanizada e personalizada, pautada
-              na escuta ativa, na transparência e no respeito às particularidades
-              de cada demanda.
+              Nosso trabalho é pautado na ética profissional, na organização e no rigor técnico, sem abrir mão de uma atuação humana, acessível e respeitosa.
             </p>
 
             <p className="text-gray-200 text-base md:text-lg max-w-xl md:max-w-none leading-relaxed">
-              Nosso compromisso é com a ética profissional, a qualidade jurídica
-              e a defesa dos direitos, sempre orientados pela justiça e pela
-              dignidade da pessoa humana.
+              Acreditamos que a advocacia vai além do processo: envolve escuta, orientação adequada e compromisso real com a justiça e com a dignidade da pessoa humana.
             </p>
 
             {/* Botão opcional */}

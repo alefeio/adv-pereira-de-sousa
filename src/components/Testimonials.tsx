@@ -310,7 +310,7 @@ export default function Testimonials({ testimonials }: TestimonialsPageProps) {
                                                 <span className="block text-gray-800 text-lg font-bold">
                                                     {t.name}
                                                 </span>
-                                                {t.type && <span className="block text-white text-sm">{t.type}</span>}
+                                                {t.type && <span className="block text-gray-500 text-sm">{t.type}</span>}
                                             </div>
                                         </article>
                                     );
