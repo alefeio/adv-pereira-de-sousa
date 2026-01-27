@@ -148,7 +148,7 @@ export default function DireitoDasPessoasComTEAPage({ menu }: AreaPageProps) {
         <MenuComponent menuData={menu} />
 
         {/* HERO */}
-        <section className="relative w-full h-[420px] md:h-[600px] lg:h-[680px] overflow-hidden">
+        <section className="relative w-full h-[100vh] md:h-[600px] lg:h-[680px] overflow-hidden">
           <Image
             src={heroImage}
             alt="Atendimento jurídico — Direitos das Pessoas com TEA"
