@@ -131,6 +131,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
 };
 
 export default function Home({ banners, menu, testimonials, faqs, colecoes }: HomePageProps) {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     const address = "Ed. Angra dos reis, Travessa São Pedro, 842, sala 301 Batista Campos - Belém - PA";
 
@@ -140,7 +141,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
         "@context": "https://schema.org",
         "@type": "LegalService",
         "name": "Pereira de Sousa Advocacia",
-        "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png",
+        "image": `${baseUrl}/images/logo.jpg`,
         "url": "https://www.pereiradesousa.adv.br/",
         "telephone": "+5591986284970",
         "priceRange": "$$",
