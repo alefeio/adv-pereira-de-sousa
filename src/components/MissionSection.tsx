@@ -2,55 +2,56 @@ import React from "react";
 
 export default function MissionSection() {
   return (
-    <section className="relative pt-24 md:pt-32 z-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 space-y-24">
+    <section className="relative pt-16 md:pt-24 z-20">
+      <div className="max-w-7xl mx-auto space-y-24">
 
         {/* MISSÃO + VISÃO */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
 
-          {/* Missão */}
-          <div className="flex flex-col items-start md:items-center text-left md:text-center">
+          <div className="text-center">
             <h3 className="text-3xl md:text-4xl font-extrabold text-[#fec655] mb-8">
               Missão
             </h3>
+            {/* Missão */}
+            <div className="flex flex-col items-start md:items-center text-left md:text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-left list-none">
+              <div className="space-y-6 max-w-xl text-left">
+                <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+                  Exercer a advocacia com ética, responsabilidade e sensibilidade humana, oferecendo um atendimento personalizado, acessível e acolhedor, comprometido com a defesa dos direitos, das garantias fundamentais e da dignidade da pessoa humana.
+                </p>
 
-            <div className="space-y-6 max-w-xl">
-              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Exercer a advocacia com ética, responsabilidade e sensibilidade humana, oferecendo um atendimento personalizado, acessível e acolhedor, comprometido com a defesa dos direitos, das garantias fundamentais e da dignidade da pessoa humana.
-              </p>
-
-              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Atuar com excelência técnica nas diversas áreas do Direito, buscando soluções jurídicas seguras, justas e compatíveis com a realidade de cada cliente, sempre orientadas pela legalidade e pela justiça.
-              </p>
+                <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+                  Atuar com excelência técnica nas diversas áreas do Direito, buscando soluções jurídicas seguras, justas e compatíveis com a realidade de cada cliente, sempre orientadas pela legalidade e pela justiça.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Visão */}
-          <div className="flex flex-col items-start md:items-center text-left md:text-center">
+          <div className="text-center">
             <h3 className="text-3xl md:text-4xl font-extrabold text-[#fec655] mb-8">
               Visão
             </h3>
+            {/* Visão */}
+            <div className="flex flex-col items-start md:items-center text-left md:text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-left list-none">
+              <div className="space-y-6 max-w-xl text-left">
+                <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+                  Consolidar uma advocacia sólida, responsável e humana, capaz de acompanhar as transformações da sociedade e do Direito, sem perder de vista o valor central de cada pessoa atendida.
+                </p>
 
-            <div className="space-y-6 max-w-xl">
-              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Consolidar uma advocacia sólida, responsável e humana, capaz de acompanhar as transformações da sociedade e do Direito, sem perder de vista o valor central de cada pessoa atendida.
-              </p>
-
-              <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                Construir o futuro do escritório por meio de uma atuação personalizada, juridicamente fundamentada e rigorosamente alinhada às normas legais e éticas que regem a advocacia.
-              </p>
+                <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+                  Construir o futuro do escritório por meio de uma atuação personalizada, juridicamente fundamentada e rigorosamente alinhada às normas legais e éticas que regem a advocacia.
+                </p>
+              </div>
             </div>
           </div>
-
         </div>
 
         {/* VALORES */}
-        <div className="flex flex-col items-start md:items-center text-left md:text-center">
-          <h3 className="text-3xl md:text-4xl font-extrabold text-[#fec655] mb-14">
+        <div className="flex flex-col items-start items-center md:text-center">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-[#fec655] mb-8">
             Valores
           </h3>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl w-full">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl w-full">
             {[
               {
                 title: "Ética e Responsabilidade Profissional",

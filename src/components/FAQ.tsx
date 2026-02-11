@@ -20,13 +20,13 @@ export default function FAQ({ faqs }: FAQProps) {
 
   return (
     <section className="relative w-full bg-black">
-      <div className="container mx-auto max-w-6xl relative z-10 flex flex-col items-center py-40 md:pt-48">
+      <div className="container mx-auto max-w-7xl relative z-10 flex flex-col items-center py-40 md:pt-48">
         <h1 className="text-center font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#fec655] drop-shadow-lg mb-16 leading-tight">
           Perguntas Frequentes
         </h1>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 px-2 md:px-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {faqs.map((faq, idx) => (
             <div
               key={faq.id}

@@ -97,7 +97,7 @@ export default function DireitoCivilPage({ menu }: AreaPageProps) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={`${baseUrl}${heroImage}`} />
+        <meta property="og:image" content={`${baseUrl}${areaImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
 
         <script
@@ -113,7 +113,7 @@ export default function DireitoCivilPage({ menu }: AreaPageProps) {
         {/* HERO */}
         <section className="relative w-full h-[100vh] md:h-[600px] lg:h-[680px] overflow-hidden">
           <Image
-            src={heroImage}
+            src={areaImage}
             alt="Atendimento jurídico em Direito Civil"
             fill
             priority
@@ -179,7 +179,7 @@ export default function DireitoCivilPage({ menu }: AreaPageProps) {
                 </p>
 
                 {/* IMAGEM DA ÁREA */}
-                <figure className="not-prose my-10">
+                {/* <figure className="not-prose my-10">
                   <div className="relative w-full overflow-hidden rounded-3xl border border-gray-200 shadow-lg">
                     <div className="relative w-full aspect-[16/9]">
                       <Image
@@ -202,7 +202,7 @@ export default function DireitoCivilPage({ menu }: AreaPageProps) {
                       prevenção e resolução de conflitos.
                     </figcaption>
                   </div>
-                </figure>
+                </figure> */}
 
                 <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                   <div className="rounded-2xl border border-gray-200 p-5">

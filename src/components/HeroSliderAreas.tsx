@@ -9,7 +9,7 @@ interface BannerItem {
 const STATIC_SLIDES: BannerItem[] = [
   {
     id: 'static-areas-1',
-    url: '/images/bg-areas1.jpg',
+    url: '/images/bg-sobre1.jpg',
     title: 'Áreas de Atuação',
   },
 ];

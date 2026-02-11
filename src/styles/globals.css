@@ -17,6 +17,9 @@ html {
 h1, h2, h3, h4, h5, h6 {
   /* Estilo para títulos: negrito, cor principal e espaçamento de linha */
   @apply font-bold text-[#fec655] leading-snug;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
 }
 
 a {

@@ -91,7 +91,7 @@ export default function DireitoEmpresarialPage({ menu }: AreaPageProps) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={`${baseUrl}${heroImage}`} />
+        <meta property="og:image" content={`${baseUrl}${areaImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
 
         <script
@@ -107,7 +107,7 @@ export default function DireitoEmpresarialPage({ menu }: AreaPageProps) {
         {/* HERO */}
         <section className="relative w-full h-[100vh] md:h-[600px] lg:h-[680px] overflow-hidden">
           <Image
-            src={heroImage}
+            src={areaImage}
             alt="Atendimento jurídico empresarial"
             fill
             priority
@@ -162,7 +162,7 @@ export default function DireitoEmpresarialPage({ menu }: AreaPageProps) {
                 </p>
 
                 {/* IMAGEM ESPECÍFICA */}
-                <figure className="not-prose my-10">
+                {/* <figure className="not-prose my-10">
                   <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-lg">
                     <Image
                       src={areaImage}
@@ -174,7 +174,7 @@ export default function DireitoEmpresarialPage({ menu }: AreaPageProps) {
                   <figcaption className="text-sm text-gray-600 mt-3 text-center">
                     Assessoria jurídica empresarial voltada à segurança, organização e crescimento do negócio.
                   </figcaption>
-                </figure>
+                </figure> */}
 
                 <h2>Principais serviços em Direito Empresarial</h2>
                 <ul>
