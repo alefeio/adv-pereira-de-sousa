@@ -9,6 +9,7 @@ import Footer from 'components/Footer';
 import WhatsAppButton from 'components/WhatsAppButton';
 import { MenuData, LinkItem } from '../../types/index';
 import { Analytics } from '@vercel/analytics/next';
+import WhatsAppButton2 from 'components/WhatsAppButton2';
 
 const prisma =
   (globalThis as any).prisma ||
@@ -57,9 +58,9 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const canonicalUrl = `${baseUrl}/areas/direito-previdenciario`;
 
-  const title = 'Direito Previdenciário em Belém | Pereira de Sousa Advogados';
+  const title = 'Advogado Previdenciário em Belém | Dr. Alan Sousa — Pereira de Sousa Advogados';
   const description =
-    'Atuação completa em Direito Previdenciário: planejamento previdenciário, aposentadorias, benefícios por incapacidade, BPC/LOAS, pensão por morte, revisões e recursos no INSS e na Justiça.';
+    'Dr. Alan Sousa atua em Direito Previdenciário (RGPS/INSS e RPPS), com demandas no BELÉMPREV e IGEPPS, planejamento previdenciário, aposentadorias, auxílio-doença, BPC/LOAS, pensão por morte, salário-maternidade, revisões, recursos e ações judiciais em Belém/PA.';
 
   /**
    * ✅ REGRA:
@@ -74,28 +75,28 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
 
   const faq = [
     {
+      q: 'Vocês atuam no RGPS (INSS) e no RPPS?',
+      a: 'Sim. Atuamos tanto em demandas do Regime Geral (RGPS/INSS) quanto em demandas ligadas a Regimes Próprios (RPPS), conforme a legislação aplicável e a realidade funcional de cada segurado.',
+    },
+    {
+      q: 'Vocês atuam em demandas do BELÉMPREV e do IGEPPS?',
+      a: 'Sim. Acompanhamos e orientamos demandas previdenciárias em RPPS, incluindo casos relacionados ao BELÉMPREV e ao IGEPPS, com análise técnica individualizada e acompanhamento especializado.',
+    },
+    {
       q: 'Quando devo fazer planejamento previdenciário?',
-      a: 'Quando você quer entender qual regra se aplica ao seu caso, estimar valores, organizar documentos e escolher o melhor momento para requerer o benefício, evitando indeferimentos e perdas financeiras.',
+      a: 'Quando você quer identificar a melhor regra, estimar valores, organizar documentos e definir o momento ideal para requerer o benefício, evitando indeferimentos e perdas financeiras.',
     },
     {
-      q: 'O que fazer se meu benefício foi negado pelo INSS?',
-      a: 'É possível analisar o motivo do indeferimento, revisar documentos e exames, cumprir exigências e apresentar recurso administrativo. Em alguns casos, também é cabível ação judicial, conforme a estratégia do caso.',
+      q: 'O que fazer se meu benefício foi negado?',
+      a: 'A estratégia depende do motivo do indeferimento. É possível revisar documentos e provas, cumprir exigências, apresentar recurso administrativo e, em situações apropriadas, ingressar com ação judicial.',
     },
     {
-      q: 'Quais aposentadorias vocês atendem?',
-      a: 'Atuamos com concessão, revisão e restabelecimento de aposentadorias (por idade, por tempo de contribuição/regras de transição, especial, incapacidade permanente, entre outras possibilidades conforme o histórico contributivo).',
-    },
-    {
-      q: 'Vocês atuam com BPC/LOAS?',
-      a: 'Sim. O BPC/LOAS exige análise criteriosa de requisitos e documentação. Também atuamos em revisão, recursos e acompanhamento do processo.',
+      q: 'Quais benefícios vocês atendem?',
+      a: 'Atuamos com aposentadorias, planejamento previdenciário, auxílio por incapacidade temporária (auxílio-doença), BPC/LOAS (idoso e pessoa com deficiência), salário-maternidade, pensão por morte, revisões e demais demandas previdenciárias, conforme o caso.',
     },
     {
       q: 'Quais documentos normalmente são necessários?',
-      a: 'Em geral: documentos pessoais, comprovantes de contribuição (CNIS), carteira de trabalho/contratos, PPP/LTCAT (se houver atividade especial), laudos/exames (em benefícios por incapacidade) e demais registros do vínculo e da atividade.',
-    },
-    {
-      q: 'Vocês atuam no RPPS e no RGPS?',
-      a: 'Sim. Atuamos tanto em demandas do Regime Geral (RGPS/INSS) quanto em demandas ligadas a Regimes Próprios (RPPS), conforme a legislação aplicável em cada ente federativo e a realidade funcional de cada segurado.',
+      a: 'Em geral: documentos pessoais, comprovantes de contribuições e vínculos (CNIS/CTPS), documentos funcionais (em RPPS), PPP/LTCAT (tempo especial), laudos e exames (incapacidade) e demais registros específicos do benefício.',
     },
   ];
 
@@ -115,7 +116,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    name: 'Direito Previdenciário — Pereira de Sousa Advogados',
+    name: 'Direito Previdenciário — Dr. Alan Sousa | Pereira de Sousa Advogados',
     areaServed: 'Belém/PA e região',
     url: canonicalUrl,
     description,
@@ -150,7 +151,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
       <div className="min-h-screen bg-black text-white">
         <Analytics />
 
-        {/* ✅ LOGOMARCA / MENU (como antes) */}
+        {/* ✅ LOGOMARCA / MENU */}
         <MenuComponent menuData={menu} />
 
         {/* HERO (comum a todas as áreas) */}
@@ -172,8 +173,10 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                 Direito Previdenciário
               </h1>
               <p className="max-w-3xl text-gray-200 text-base md:text-lg">
-                Acompanhamento técnico e humanizado em demandas previdenciárias, com análise do histórico contributivo,
-                orientação completa e estratégia para requerimentos no INSS, recursos e ações judiciais quando necessário.
+                Atuação dedicada na defesa dos direitos de segurados do <strong>RGPS (INSS)</strong> e do{' '}
+                <strong>RPPS</strong>, incluindo demandas relacionadas ao <strong>BELÉMPREV</strong> e ao{' '}
+                <strong>IGEPPS</strong>, com análise técnica individualizada, orientação clara e acompanhamento especializado
+                em cada caso.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
@@ -200,7 +203,6 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
         <main className="relative z-10">
           <section className="max-w-7xl mx-auto px-4 md:px-8 py-14 md:py-16">
             <div className="bg-white rounded-3xl shadow-xl p-6 md:p-12">
-              {/* ✅ H2 mais destacados (mantido) */}
               <article
                 className="
                   prose
@@ -221,91 +223,54 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
               >
                 <h2>O que é Direito Previdenciário</h2>
                 <p>
-                  O Direito Previdenciário trata das regras e procedimentos ligados aos benefícios e serviços do sistema
-                  previdenciário, especialmente aqueles administrados pelo INSS. Na prática, envolve a análise do seu
-                  histórico contributivo, a organização de documentos e a definição de estratégia para requerimentos,
-                  revisões, recursos e, quando necessário, ações judiciais.
+                  O Direito Previdenciário abrange regras, procedimentos e estratégias voltadas à concessão, manutenção e
+                  revisão de benefícios previdenciários, tanto no <strong>Regime Geral (RGPS/INSS)</strong> quanto nos{' '}
+                  <strong>Regimes Próprios (RPPS)</strong>. Na prática, isso envolve analisar o histórico contributivo ou
+                  funcional, organizar documentos, construir a prova necessária e conduzir o caso na esfera{' '}
+                  <strong>administrativa</strong> ou <strong>judicial</strong>.
+                </p>
+
+                <h2 id="especialista">Dr. Alan Sousa – Advogado Previdenciário</h2>
+                <p>
+                  O <strong>Dr. Alan Sousa</strong> atua de forma dedicada ao <strong>Direito Previdenciário</strong>, com foco
+                  na defesa dos direitos de segurados do <strong>RGPS</strong> e do <strong>RPPS</strong>, incluindo demandas
+                  relacionadas ao <strong>IGEPPS</strong> e ao <strong>BELÉMPREV</strong>. Cada atendimento é conduzido com{' '}
+                  <strong>análise técnica individualizada</strong> e acompanhamento especializado, respeitando a realidade e as
+                  particularidades de cada caso.
+                </p>
+                <p>
+                  Atualmente, é <strong>pós-graduando em Direito Previdenciário</strong> pela <strong>Faculdade Brasília</strong>{' '}
+                  e pelo <strong>ePREV</strong>, realizando duas especializações na área, com aprofundamento teórico e prático
+                  voltado à <strong>legislação previdenciária</strong>, à análise estratégica e à aplicação atualizada da{' '}
+                  <strong>jurisprudência</strong>.
                 </p>
 
                 <h2>Como o escritório pode ajudar</h2>
                 <p>
-                  Atuamos com orientação completa — do planejamento até o acompanhamento do processo — priorizando uma
-                  análise individualizada do caso, com linguagem clara e decisões estratégicas bem fundamentadas.
+                  O acompanhamento previdenciário exige estratégia, prova bem construída e condução segura do procedimento.
+                  Nossa atuação é pautada pela <strong>ética</strong>, <strong>transparência</strong> e{' '}
+                  <strong>orientação clara</strong>, buscando medidas jurídicas fundamentadas e adequadas à realidade de cada
+                  situação — seja no INSS, no RPPS ou no Judiciário.
                 </p>
 
-                <h2 id="especialista">Seu especialista em Direito Previdenciário</h2>
+                <h2>Atuação no RPPS (Regime Próprio)</h2>
                 <p>
-                  O <strong>Dr. Alan Sousa</strong> é o profissional do escritório designado especificamente para atuação
-                  em <strong>Direito Previdenciário</strong>. Com experiência técnica, responsável e estratégica, ele atua
-                  com acompanhamento e representação junto aos <strong>Regimes Próprios de Previdência Social (RPPS)</strong>{' '}
-                  e ao <strong>Regime Geral de Previdência Social (RGPS)</strong>, nas esferas{' '}
-                  <strong>Municipal, Estadual e Federal</strong>.
-                </p>
-
-                <div className="not-prose my-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 border border-gray-200">
-                  <div className="flex flex-col md:flex-row gap-8 items-start">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Dr. Alan Sousa</h3>
-                      <p className="text-gray-700 mb-4 leading-relaxed">
-                        Especialista em Direito Previdenciário, com dedicação exclusiva para atender demandas de
-                        planejamento previdenciário, concessão e revisão de benefícios, aposentadorias e ações judiciais
-                        junto ao INSS e aos Regimes Próprios. Atendimento técnico, humanizado e focado em estratégia para
-                        seu caso.
-                      </p>
-                      <a
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-xl transition"
-                      >
-                        ➜ Falar direto com Dr. Alan no WhatsApp
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <h3>Regime Próprio de Previdência Social (RPPS)</h3>
-                <p>
-                  O <strong>Regime Próprio de Previdência Social (RPPS)</strong> é o regime previdenciário aplicável aos{' '}
-                  <strong>servidores públicos efetivos</strong>, instituído por cada ente federativo. Nesse contexto, o
-                  escritório atua em demandas previdenciárias relacionadas:
+                  O <strong>RPPS</strong> é o regime previdenciário aplicável a <strong>servidores públicos efetivos</strong>,
+                  instituído por cada ente federativo. Atuamos com orientação e acompanhamento em demandas previdenciárias
+                  relacionadas ao RPPS, incluindo casos envolvendo o <strong>BELÉMPREV</strong> e o <strong>IGEPPS</strong>,
+                  além de outros regimes próprios conforme a legislação aplicável.
                 </p>
                 <ul>
-                  <li>
-                    À Previdência Social do Município de Belém (<strong>BELÉMPREV</strong>);
-                  </li>
-                  <li>
-                    À Previdência Social do Estado do Pará, inclusive junto ao{' '}
-                    <strong>IGPREV</strong> (Gestão Previdenciária do Estado do Pará);
-                  </li>
-                  <li>
-                    Aos demais <strong>Regimes Próprios</strong> municipais e estaduais do Estado do Pará e de todo o
-                    Brasil, conforme a legislação aplicável em cada ente federativo.
-                  </li>
-                </ul>
-                <p>
-                  A atuação envolve requerimentos administrativos, análises técnicas, revisões e acompanhamento de
-                  processos previdenciários relacionados a benefícios e aposentadorias no âmbito do RPPS.
-                </p>
-
-                <h3>Regime Geral de Previdência Social (RGPS)</h3>
-                <p>
-                  O <strong>Regime Geral de Previdência Social (RGPS)</strong> é o regime administrado pelo{' '}
-                  <strong>Instituto Nacional do Seguro Social (INSS)</strong>, destinado aos trabalhadores da iniciativa
-                  privada, contribuintes individuais, facultativos e demais segurados previstos em lei.
-                </p>
-                <p>No âmbito do RGPS, o escritório presta assessoria e acompanhamento jurídico em matérias relacionadas a:</p>
-                <ul>
-                  <li>Concessão e revisão de benefícios;</li>
-                  <li>
-                    Aposentadorias, inclusive a <strong>aposentadoria especial</strong>, conforme a atividade exercida;
-                  </li>
-                  <li>Atuação administrativa e judicial em demandas previdenciárias federais.</li>
+                  <li>Requerimentos e acompanhamento administrativo;</li>
+                  <li>Análises técnicas e revisões de benefício/aposentadoria;</li>
+                  <li>Atuação judicial quando necessário, conforme a estratégia do caso.</li>
                 </ul>
 
+                <h2>Atuação no RGPS (INSS)</h2>
                 <p>
-                  Nossa atuação é pautada por uma condução <strong>técnica, ética e individualizada</strong>, observando
-                  as normas específicas de cada regime previdenciário e a realidade funcional de cada segurado.
+                  O <strong>RGPS</strong> é administrado pelo <strong>INSS</strong> e se aplica, em regra, aos trabalhadores da
+                  iniciativa privada, contribuintes individuais, facultativos e demais segurados previstos em lei. Nessa área,
+                  atuamos de forma administrativa e judicial para garantir o acesso e a manutenção de benefícios.
                 </p>
 
                 <h2>Principais serviços em Direito Previdenciário</h2>
@@ -316,52 +281,58 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Planejamento previdenciário:</strong> estudo do CNIS e dos vínculos, simulações, análise de
-                          regras e orientações para o melhor momento e forma de requerer.
+                          <strong>Aposentadorias:</strong> orientação e atuação na concessão e revisão, inclusive análise de regras
+                          aplicáveis e melhor estratégia.
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Aposentadorias:</strong> concessão, revisão e restabelecimento (por idade, regras de transição,
-                          especial, incapacidade permanente e demais hipóteses conforme o caso).
+                          <strong>Planejamento previdenciário:</strong> simulações, análise do histórico contributivo/funcional e
+                          organização estratégica para requerer no momento certo.
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Benefícios por incapacidade:</strong> auxílio por incapacidade temporária e aposentadoria por
-                          incapacidade permanente, com apoio na organização de laudos e documentação médica.
+                          <strong>Auxílio por incapacidade temporária (auxílio-doença):</strong> orientação documental e atuação em
+                          requerimentos, recursos e medidas judiciais quando necessário.
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Pensão por morte:</strong> análise de requisitos, documentos necessários e acompanhamento do pedido.
+                          <strong>BPC/LOAS:</strong> Benefício de Prestação Continuada para <strong>pessoa com deficiência</strong> e{' '}
+                          <strong>idoso</strong>, com análise de requisitos, provas e acompanhamento do procedimento.
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>BPC/LOAS:</strong> orientação completa, protocolo, recursos e acompanhamento.
+                          <strong>Salário-maternidade:</strong> suporte completo na análise de requisitos e condução do pedido.
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Reconhecimento e averbação de tempo:</strong> vínculos, contribuições, atividade rural e tempo especial.
+                          <strong>Pensão por morte:</strong> análise documental, orientação e acompanhamento em todas as etapas.
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Recursos administrativos:</strong> revisão de indeferimento, cumprimento de exigências e estratégia recursal.
+                          <strong>Revisões de benefícios:</strong> avaliação de cálculos, regras aplicáveis e medidas cabíveis.
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-green-600 font-bold text-xl">→</span>
+                        <div>
+                          <strong>Recursos e ações judiciais:</strong> atuação estratégica na esfera administrativa e judicial.
                         </div>
                       </li>
                     </ul>
                   </div>
 
-                  {/* ✅ areaImage sem cortar (mantido) */}
                   <div className="md:col-span-1">
                     <figure className="not-prose sticky top-20">
                       <div className="relative w-full overflow-hidden rounded-3xl border border-gray-200 shadow-lg bg-gray-50">
@@ -379,20 +350,33 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                         </div>
 
                         <figcaption className="px-5 py-4 text-sm text-gray-600 bg-white border-t border-gray-200">
-                          Atendimento previdenciário com foco em estratégia, documentação e resultado.
+                          Atuação previdenciária com análise técnica individualizada, transparência e acompanhamento especializado.
                         </figcaption>
                       </div>
                     </figure>
                   </div>
                 </div>
 
-                <h2 id="como-funciona">Como funciona o atendimento em Direito Previdenciário</h2>
+                <h2 id="como-funciona">Como funciona o atendimento</h2>
                 <p>
-                  O atendimento em Direito Previdenciário segue um processo estruturado e bem definido, garantindo que cada
-                  etapa seja cumprida com precisão e estratégia.
+                  O atendimento é conduzido com foco em clareza, estratégia e documentação adequada. Em linhas gerais, seguimos:
                 </p>
+                <ol>
+                  <li>
+                    <strong>Entendimento do objetivo:</strong> identificar o benefício ou a demanda e o melhor caminho (RGPS/RPPS).
+                  </li>
+                  <li>
+                    <strong>Análise técnica individualizada:</strong> histórico contributivo/funcional, provas e riscos.
+                  </li>
+                  <li>
+                    <strong>Estratégia e documentação:</strong> orientação clara do que reunir e como fortalecer o caso.
+                  </li>
+                  <li>
+                    <strong>Atuação administrativa e/ou judicial:</strong> requerimentos, recursos e ações, conforme necessário.
+                  </li>
+                </ol>
 
-                <h2>Perguntas frequentes sobre Direito Previdenciário</h2>
+                <h2>Perguntas frequentes</h2>
                 <div className="not-prose space-y-3">
                   {faq.map((item) => (
                     <details key={item.q} className="rounded-2xl border border-gray-200 p-5">
@@ -423,7 +407,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
         </main>
 
         <Footer menuData={menu} />
-        <WhatsAppButton />
+        <WhatsAppButton2 />
       </div>
     </>
   );
