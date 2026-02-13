@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <h3 className="text-lg font-semibold mb-2">My Dress Belém</h3>
             <p className="text-sm text-white">
-              Ed. Angra - Travessa São Pedro, 842, sala 301 - Batista Campos
+              Avenida Roberto Camelier, 1642, Condor
               <br />
               Belém - PA
             </p>

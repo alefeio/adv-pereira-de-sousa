@@ -133,9 +133,9 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
 export default function Home({ banners, menu, testimonials, faqs, colecoes }: HomePageProps) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    const address = "Ed. Angra dos reis, Travessa São Pedro, 842, sala 301 Batista Campos - Belém - PA";
+    const address = "Avenida Roberto Camelier, 1642, Condor - Belém - PA";
 
-    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.59968470487!2d-48.48705352528751!3d-1.4552427985449557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a488e36783856d%3A0x8e8e7b7f193c727d!2sTravessa%20S%C3%A3o%20Pedro%2C%20842%20-%20Batista%20Campos%2C%20Bel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr";
+    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5013049950685!2d-48.485495425034!3d-1.4722054985139539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48e74638471c9%3A0xd430aea868c5d121!2sAv.%20Roberto%20Camelier%2C%201642%20-%20Jurunas%2C%20Bel%C3%A9m%20-%20PA%2C%2066033-683!5e0!3m2!1spt-BR!2sbr!4v1770955846387!5m2!1spt-BR!2sbr";
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -147,7 +147,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Travessa São Pedro, 842, sala 301 – Batista Campos",
+            "streetAddress": "Avenida Roberto Camelier, 1642, Condor",
             "addressLocality": "Belém",
             "addressRegion": "PA",
             "postalCode": "66030-465",
@@ -358,11 +358,16 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                                 Nossa Localização
                             </h1>
 
+                            {/* Endereço */}
+                            <p className="text-gray-600 text-lg mb-10">
+                                {address}
+                            </p>
+
                             {/* MAPA */}
                             <div className="relative w-full max-w-4xl mx-auto shadow-2xl rounded-3xl overflow-hidden border border-gray-200 bg-white">
                                 <div className="w-full" style={{ paddingBottom: '56.25%' }}>
                                     <iframe
-                                        title="Localização do Escritório Pereira de Sousa Advocacia"
+                                        title="Localização do Escritório Pereira de Sousa Associados"
                                         src={mapEmbedUrl}
                                         width="100%"
                                         height="100%"
@@ -370,7 +375,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                                         allowFullScreen
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
-                                    />
+                                    ></iframe>
                                 </div>
                             </div>
 

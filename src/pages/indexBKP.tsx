@@ -121,7 +121,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
         "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png", // Manter ou alterar a URL da imagem se precisar
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Ed. Angra - Travessa São Pedro, 842, sala 301 - Batista Campos", // Endereço atualizado
+            "streetAddress": "Avenida Roberto Camelier, 1642, Condor", // Endereço atualizado
             "addressLocality": "Belém",
             "addressRegion": "PA",
             "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.

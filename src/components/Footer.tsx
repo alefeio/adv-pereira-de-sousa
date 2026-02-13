@@ -251,9 +251,8 @@ const Footer = ({ menuData }: MenuProps) => {
                         <div className="flex items-start mb-4">
                             <FaMapMarkerAlt size={20} className="text-[#fec655] mr-3 mt-1 flex-shrink-0" />
                             <p className="text-white text-sm">
-                                Ed. Angra dos reis<br />
-                                Tv. São Pedro, 842, sala 301<br />
-                                Batista Campos - Belém/PA
+                                Avenida Roberto Camelier, 1642<br />
+                                Condor - Belém/PA
                             </p>
                         </div>
 
