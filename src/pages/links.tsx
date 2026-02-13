@@ -16,8 +16,8 @@ import { FaWhatsapp } from "react-icons/fa";
 const BRAND = {
   name: "Pereira de Sousa Advogados",
   legalName: "Pereira de Sousa Advogados",
-  domain: "https://adv-pereira-de-sousa.vercel.app",
-  pageUrl: "https://adv-pereira-de-sousa.vercel.app/links",
+  domain: "https://pereiradesousa.adv.br",
+  pageUrl: "https://pereiradesousa.adv.br/links",
   phoneDisplay: "(91) 98395-7965",
   phoneE164: "+5591986284970",
   whatsappNumber: "5591986284970", // sem +, sem espaços
