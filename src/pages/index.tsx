@@ -132,6 +132,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
 
 export default function Home({ banners, menu, testimonials, faqs, colecoes }: HomePageProps) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const ogImage = `${baseUrl}/images/logo.jpg`;
 
     const address = "Avenida Roberto Camelier, 1642, Condor - Belém - PA";
 
@@ -169,9 +170,7 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
         <>
             <Head>
                 {/* Title */}
-                <title>
-                    Pereira de Sousa Advocacia | Escritório de Advocacia em Belém-PA
-                </title>
+                <title>Pereira de Sousa Advocacia | Escritório de Advocacia em Belém-PA</title>
 
                 {/* Description */}
                 <meta
@@ -185,62 +184,54 @@ export default function Home({ banners, menu, testimonials, faqs, colecoes }: Ho
                 {/* Canonical */}
                 <link rel="canonical" href="https://www.pereiradesousa.adv.br/" />
 
-                {/* Keywords (apoio semântico) */}
+                {/* Keywords */}
                 <meta
                     name="keywords"
                     content="
-      Pereira de Sousa Advocacia,
-      escritório de advocacia em Belém,
-      advogado Belém PA,
-      direito empresarial,
-      direito civil,
-      direito de família e sucessões,
-      direito previdenciário,
-      direito trabalhista,
-      direito penal,
-      direito bancário,
-      direito digital,
-      direito agrário,
-      direito da saúde,
-      direito TEA
-    "
+            Pereira de Sousa Advocacia,
+            escritório de advocacia em Belém,
+            advogado Belém PA,
+            direito empresarial,
+            direito civil,
+            direito de família e sucessões,
+            direito previdenciário,
+            direito trabalhista,
+            direito penal,
+            direito bancário,
+            direito digital,
+            direito agrário,
+            direito da saúde,
+            direito TEA
+          "
                 />
 
                 {/* Open Graph */}
                 <meta property="og:locale" content="pt_BR" />
                 <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Pereira de Sousa Advocacia | Soluções Jurídicas Estratégicas"
-                />
+                <meta property="og:title" content="Pereira de Sousa Advocacia | Soluções Jurídicas Estratégicas" />
                 <meta
                     property="og:description"
                     content="Escritório de advocacia em Belém-PA com atuação estratégica, ética e humanizada. Soluções jurídicas completas para pessoas e empresas."
                 />
-                <meta
-                    property="og:url"
-                    content="https://www.pereiradesousa.adv.br/"
-                />
-                <meta
-                    property="og:image"
-                    content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png"
-                />
+                <meta property="og:url" content="https://www.pereiradesousa.adv.br/" />
+
+                {/* ✅ AQUI: LOGO CERTA */}
+                <meta property="og:image" content={ogImage} />
+                <meta property="og:image:secure_url" content={ogImage} />
                 <meta property="og:image:alt" content="Pereira de Sousa Advocacia" />
+                <meta property="og:image:type" content="image/jpeg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta
-                    name="twitter:title"
-                    content="Pereira de Sousa Advocacia"
-                />
+                <meta name="twitter:title" content="Pereira de Sousa Advocacia" />
                 <meta
                     name="twitter:description"
                     content="Escritório de advocacia em Belém-PA com atuação estratégica em Direito Empresarial, Civil, Família, Previdenciário, Trabalhista e mais."
                 />
-                <meta
-                    name="twitter:image"
-                    content="https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png"
-                />
+                {/* ✅ AQUI: LOGO CERTA */}
+                <meta name="twitter:image" content={ogImage} />
 
                 {/* Theme */}
                 <meta name="theme-color" content="#0f172a" />

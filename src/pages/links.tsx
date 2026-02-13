@@ -17,7 +17,7 @@ const BRAND = {
   name: "Pereira de Sousa Advogados",
   legalName: "Pereira de Sousa Advogados",
   domain: "https://pereiradesousa.adv.br",
-  pageUrl: "https://pereiradesousa.adv.br/links",
+  pageUrl: "https://pereiradesousa.adv.br",
   phoneDisplay: "(91) 98395-7965",
   phoneE164: "+5591986284970",
   whatsappNumber: "5591986284970", // sem +, sem espaços
@@ -32,7 +32,7 @@ const BRAND = {
   googleMaps:
     "https://www.google.com/maps/search/?api=1&query=Bel%C3%A9m%2C%20PA",
   logo: "https://res.cloudinary.com/dfh7fwtec/image/upload/v1768800952/dresses/yaiptstgtqs7a0brs9mh.jpg",
-  ogImage: "/images/og/links.jpg", // ✅ opcional (crie depois). Se não existir, troque por uma imagem que exista.
+  ogImage: "https://res.cloudinary.com/dfh7fwtec/image/upload/v1768800952/dresses/yaiptstgtqs7a0brs9mh.jpg", // ✅ opcional (crie depois). Se não existir, troque por uma imagem que exista.
 };
 
 function buildWhatsAppLink(message: string) {
