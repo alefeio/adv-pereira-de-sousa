@@ -121,7 +121,7 @@ export default function Atuacao({ menu }: HomePageProps) {
         "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png", // Manter ou alterar a URL da imagem se precisar
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Avenida Roberto Camelier, 1642, Condor", // Endereço atualizado
+            "streetAddress": "Avenida Roberto Camelier, 1642, sala 03, CEP 66033-683, Condor", // Endereço atualizado
             "addressLocality": "Belém",
             "addressRegion": "PA",
             "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.

@@ -120,7 +120,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
 
 export default function PageContato({ menu, faqs }: HomePageProps) {
     // Endereço exato fornecido na imagem
-    const address = "Avenida Roberto Camelier, 1642, Condor - Belém - PA";
+    const address = "Avenida Roberto Camelier, 1642, sala 03, CEP 66033-683, Condor - Belém - PA";
     
     // O link abaixo é um exemplo de embed HTML que você pode obter do Google Maps
     // A latitude/longitude está aproximada para o centro de Belém, PA
@@ -133,7 +133,7 @@ export default function PageContato({ menu, faqs }: HomePageProps) {
         "image": "https://res.cloudinary.com/dpnexaukz/image/upload/v1761676888/dresses/zkpnvv4q8mmmoknbvhhc.png", // Manter ou alterar a URL da imagem se precisar
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Avenida Roberto Camelier, 1642, Condor", // Endereço atualizado
+            "streetAddress": "Avenida Roberto Camelier, 1642, sala 03, CEP 66033-683, Condor", // Endereço atualizado
             "addressLocality": "Belém",
             "addressRegion": "PA",
             "postalCode": "66030-465", // CEP de referência. Confirme o CEP correto para 2564.

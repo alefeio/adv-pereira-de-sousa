@@ -56,7 +56,7 @@ const ContactSection: React.FC = () => {
                     <h4 className="font-bold text-white text-2xl mb-6">Nossa Localização</h4>
                     <address className="text-[#fec655] font-semibold not-italic text-center text-xl mb-6">
                         <MdLocationOn className="inline text-3xl mr-2 align-middle" />
-                        Avenida Roberto Camelier, 1642, Condor - Belém - PA
+                        Avenida Roberto Camelier, 1642, sala 03, CEP 66033-683, Condor - Belém - PA
                     </address>
                     <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg border-2 border-gray-700">
                         <iframe

@@ -16,7 +16,7 @@ interface BannerItem {
 const STATIC_SLIDES: BannerItem[] = [
     {
         id: 'static-sobre-1',
-        url: '/images/bg-areas1.jpg',
+        url: '/images/alan-direito.jpg',
         title: 'Sobre Nós',
     },
 ];

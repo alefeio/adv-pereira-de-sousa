@@ -79,7 +79,7 @@ const fallbackPosts: BlogPost[] = [
     },
 ];
 
-const Footer = ({ menuData }: MenuProps) => {
+const Footer2 = ({ menuData }: MenuProps) => {
     // Garantir que menuData não é nulo antes de desestruturar
     const logoUrl = menuData?.logoUrl;
     // Embora os links de navegação não apareçam na imagem, mantemos a prop.
@@ -165,33 +165,33 @@ const Footer = ({ menuData }: MenuProps) => {
                         <div className="space-y-3">
                             {/* Instagram */}
                             <a
-                                href="https://www.instagram.com/pereiradesousaescritorio"
+                                href="https://www.instagram.com/alansousainss/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center text-white hover:text-[#fec655] transition-colors text-sm"
                             >
                                 <FaInstagram size={16} className="text-[#fec655] mr-3 flex-shrink-0" />
-                                @pereiradesousaescritorio
+                                @alansousainss
                             </a>
 
                             {/* WhatsApp */}
                             <a
-                                href="https://wa.me/5591986284970"
+                                href="https://wa.me/5591992047151"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center text-white hover:text-[#fec655] transition-colors text-sm"
                             >
                                 <FaWhatsapp size={16} className="text-[#fec655] mr-3 flex-shrink-0" />
-                                +55 91 98628-4970
+                                +55 91 99204-7151
                             </a>
 
                             {/* Email */}
                             <a
-                                href="mailto:escritório@pereiradesousa.adv.br"
+                                href="mailto:advogadoalansousa@gmail.com"
                                 className="flex items-center text-white hover:text-[#fec655] transition-colors text-sm"
                             >
                                 <MdEmail size={16} className="text-[#fec655] mr-3 flex-shrink-0" />
-                                escritório@pereiradesousa.adv.br
+                                advogadoalansousa@gmail.com 
                             </a>
                         </div>
                     </div>
@@ -267,4 +267,4 @@ const Footer = ({ menuData }: MenuProps) => {
     );
 };
 
-export default Footer;
+export default Footer2;

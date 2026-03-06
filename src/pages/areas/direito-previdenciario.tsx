@@ -10,6 +10,7 @@ import WhatsAppButton from 'components/WhatsAppButton';
 import { MenuData, LinkItem } from '../../types/index';
 import { Analytics } from '@vercel/analytics/next';
 import WhatsAppButton2 from 'components/WhatsAppButton2';
+import Footer2 from 'components/Footer2';
 
 const prisma =
   (globalThis as any).prisma ||
@@ -173,10 +174,11 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                 Direito Previdenciário
               </h1>
               <p className="max-w-3xl text-gray-200 text-base md:text-lg">
-                Atuação dedicada na defesa dos direitos de segurados do <strong>RGPS (INSS)</strong> e do{' '}
-                <strong>RPPS</strong>, incluindo demandas relacionadas ao <strong>BELÉMPREV</strong> e ao{' '}
-                <strong>IGEPPS</strong>, com análise técnica individualizada, orientação clara e acompanhamento especializado
-                em cada caso.
+                Advogado com atuação dedicada ao Direito Previdenciário, na defesa dos direitos de segurados do{' '}
+                <strong>Regime Geral de Previdência Social (RGPS)</strong> e do{' '}
+                <strong>Regime Próprio de Previdência Social (RPPS)</strong>, incluindo demandas relacionadas ao{' '}
+                <strong>IGEPPS</strong> e ao <strong>BELÉMPREV</strong>, com análise técnica individualizada e
+                acompanhamento especializado em cada caso.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
@@ -232,25 +234,29 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
 
                 <h2 id="especialista">Dr. Alan Sousa – Advogado Previdenciário</h2>
                 <p>
-                  O <strong>Dr. Alan Sousa</strong> atua de forma dedicada ao <strong>Direito Previdenciário</strong>, com foco
-                  na defesa dos direitos de segurados do <strong>RGPS</strong> e do <strong>RPPS</strong>, incluindo demandas
-                  relacionadas ao <strong>IGEPPS</strong> e ao <strong>BELÉMPREV</strong>. Cada atendimento é conduzido com{' '}
-                  <strong>análise técnica individualizada</strong> e acompanhamento especializado, respeitando a realidade e as
-                  particularidades de cada caso.
+                  Advogado com atuação dedicada ao <strong>Direito Previdenciário</strong>, na defesa dos direitos de
+                  segurados do <strong>Regime Geral de Previdência Social (RGPS)</strong> e do{' '}
+                  <strong>Regime Próprio de Previdência Social (RPPS)</strong>, incluindo demandas relacionadas ao{' '}
+                  <strong>IGEPPS</strong> e ao <strong>BELÉMPREV</strong>, com análise técnica individualizada e
+                  acompanhamento especializado em cada caso.
                 </p>
                 <p>
-                  Atualmente, é <strong>pós-graduando em Direito Previdenciário</strong> pela <strong>Faculdade Brasília</strong>{' '}
-                  e pelo <strong>ePREV</strong>, realizando duas especializações na área, com aprofundamento teórico e prático
-                  voltado à <strong>legislação previdenciária</strong>, à análise estratégica e à aplicação atualizada da{' '}
-                  <strong>jurisprudência</strong>.
+                  Atualmente é <strong>pós-graduando em Direito Previdenciário</strong> pela{' '}
+                  <strong>Faculdade Brasília</strong> e pelo <strong>ePREV</strong>, realizando duas especializações na
+                  área, com aprofundamento teórico e prático voltado à legislação previdenciária, à análise estratégica
+                  de casos e à aplicação atualizada da jurisprudência.
                 </p>
-
-                <h2>Como o escritório pode ajudar</h2>
                 <p>
-                  O acompanhamento previdenciário exige estratégia, prova bem construída e condução segura do procedimento.
-                  Nossa atuação é pautada pela <strong>ética</strong>, <strong>transparência</strong> e{' '}
-                  <strong>orientação clara</strong>, buscando medidas jurídicas fundamentadas e adequadas à realidade de cada
-                  situação — seja no INSS, no RPPS ou no Judiciário.
+                  Possui atuação tanto na <strong>esfera administrativa</strong> quanto <strong>judicial</strong>, com
+                  dedicação aos serviços de aposentadorias, planejamento previdenciário, auxílio por incapacidade
+                  temporária (auxílio-doença), <strong>Benefício de Prestação Continuada – BPC/LOAS</strong> para pessoa
+                  com deficiência e idoso, salário-maternidade, pensão por morte, revisões de benefícios, entre outras
+                  demandas previdenciárias.
+                </p>
+                <p>
+                  Seu trabalho é pautado na <strong>ética</strong>, na <strong>transparência</strong> e na{' '}
+                  <strong>orientação clara</strong> ao cliente, buscando medidas jurídicas fundamentadas e adequadas à
+                  realidade de cada situação.
                 </p>
 
                 <h2>Atuação no RPPS (Regime Próprio)</h2>
@@ -406,7 +412,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
           </section>
         </main>
 
-        <Footer menuData={menu} />
+        <Footer2 menuData={menu} />
         <WhatsAppButton2 />
       </div>
     </>
