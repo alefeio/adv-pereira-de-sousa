@@ -18,12 +18,14 @@ const OFFICE = {
     "Av. Roberto Camelier, 1642, sala 03, CEP 66033-683 — Condor, Belém/PA",
 };
 
+/** Foto usada no card e no preview ao compartilhar (WhatsApp / redes) — URL absoluta em og:image */
+const SHARE_PHOTO_PATH = "/images/alan.jpg";
+
 /** Mesmos dados da página /areas/direito-previdenciario */
 const ALAN = {
   displayName: "Dr. Alan Sousa",
   role: "Advogado Previdenciário",
-  /** heroImage em direito-previdenciario.tsx */
-  photo: "/images/alan.jpg",
+  photo: SHARE_PHOTO_PATH,
   phoneDisplay: "(91) 98395-7965",
   phoneE164: "+5591983957965",
   whatsappNumber: "5591983957965",
@@ -37,9 +39,15 @@ function buildWhatsAppLink(message: string) {
   return `https://wa.me/${ALAN.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
+function absoluteUrl(base: string, path: string) {
+  return `${base.replace(/\/$/, "")}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export default function AlanSousaLinksPage() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://pereiradesousa.adv.br";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || OFFICE.domain;
   const canonicalUrl = `${baseUrl.replace(/\/$/, "")}/alan-sousa`;
+  /** Obrigatório URL absoluta https para og:image (WhatsApp / Facebook) */
+  const shareImageUrl = absoluteUrl(baseUrl, SHARE_PHOTO_PATH);
 
   const title = "Dr. Alan Sousa | Advogado Previdenciário em Belém — Links";
   const description =
@@ -57,7 +65,7 @@ export default function AlanSousaLinksPage() {
     honorificPrefix: "Dr.",
     jobTitle: ALAN.role,
     description,
-    image: `${baseUrl.replace(/\/$/, "")}${ALAN.photo}`,
+    image: shareImageUrl,
     url: canonicalUrl,
     telephone: ALAN.phoneE164,
     worksFor: {
@@ -164,12 +172,23 @@ export default function AlanSousaLinksPage() {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={`${baseUrl.replace(/\/$/, "")}${ALAN.photo}`} />
+        {/* Preview no WhatsApp: imagem absoluta + secure_url + alt (recomendado por crawlers) */}
+        <meta property="og:image" content={shareImageUrl} />
+        <meta property="og:image:secure_url" content={shareImageUrl} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta
+          property="og:image:alt"
+          content="Dr. Alan Sousa — Advogado Previdenciário em Belém, Pereira de Sousa Advogados"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={`${baseUrl.replace(/\/$/, "")}${ALAN.photo}`} />
+        <meta name="twitter:image" content={shareImageUrl} />
+        <meta
+          name="twitter:image:alt"
+          content="Dr. Alan Sousa — Advogado Previdenciário em Belém, Pereira de Sousa Advogados"
+        />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
