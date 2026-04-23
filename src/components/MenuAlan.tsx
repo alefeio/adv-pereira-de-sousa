@@ -62,8 +62,9 @@ export function MenuAlan({ menuData }: MenuProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-40 bg-black shadow-lg transition-all duration-300 ${isScrolled ? "py-3" : "py-6"
-        }`}
+      className={`fixed top-0 left-0 w-full z-40 shadow-lg transition-all duration-300 ${
+        isScrolled ? "bg-black py-3" : "bg-black/50 backdrop-blur-sm py-3 md:py-4"
+      }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8">
         {/* Logo */}

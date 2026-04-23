@@ -174,11 +174,9 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                 Direito Previdenciário
               </h1>
               <p className="max-w-3xl text-gray-200 text-base md:text-lg">
-                Advogado com atuação dedicada ao Direito Previdenciário, na defesa dos direitos de segurados do{' '}
-                <strong>Regime Geral de Previdência Social (RGPS)</strong> e do{' '}
-                <strong>Regime Próprio de Previdência Social (RPPS)</strong>, incluindo demandas relacionadas ao{' '}
-                <strong>IGEPPS</strong> e ao <strong>BELÉMPREV</strong>, com análise técnica individualizada e
-                acompanhamento especializado em cada caso.
+                <strong>Atuação em Direito Previdenciário</strong> com foco na defesa dos seus direitos junto ao{' '}
+                <strong>INSS</strong> (RGPS), com atendimento especializado e acompanhamento completo em todas as etapas
+                do seu benefício — do requerimento administrativo à atuação judicial, quando necessário.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
@@ -223,14 +221,42 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                   prose-h2:mb-4
                 "
               >
-                <h2>O que é Direito Previdenciário</h2>
+                <h2>Atuação em Direito Previdenciário junto ao INSS</h2>
                 <p>
-                  O Direito Previdenciário abrange regras, procedimentos e estratégias voltadas à concessão, manutenção e
-                  revisão de benefícios previdenciários, tanto no <strong>Regime Geral (RGPS/INSS)</strong> quanto nos{' '}
-                  <strong>Regimes Próprios (RPPS)</strong>. Na prática, isso envolve analisar o histórico contributivo ou
-                  funcional, organizar documentos, construir a prova necessária e conduzir o caso na esfera{' '}
-                  <strong>administrativa</strong> ou <strong>judicial</strong>.
+                  Atuação dedicada em <strong>Direito Previdenciário</strong> junto ao <strong>INSS</strong>, com
+                  atendimento humanizado e especializado para solicitar, revisar, restabelecer e acompanhar benefícios
+                  previdenciários em todas as etapas.
                 </p>
+                <p>
+                  Se você precisa <strong>solicitar</strong>, <strong>revisar</strong> ou <strong>restabelecer</strong> um
+                  benefício, conte com orientação jurídica segura e objetiva, com estratégia e documentação adequada para
+                  reduzir riscos de indeferimento e acelerar o melhor caminho para o seu caso.
+                </p>
+
+                <div className="not-prose my-8 rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-7">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-2">
+                    Precisa de ajuda com benefício do INSS?
+                  </h3>
+                  <p className="text-gray-700 mb-5">
+                    Fale agora pelo WhatsApp e receba orientação inicial sobre documentos, requisitos e estratégia.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-2xl transition text-center flex-1"
+                    >
+                      Falar no WhatsApp
+                    </a>
+                    <a
+                      href="#como-funciona"
+                      className="bg-black/5 text-gray-900 font-semibold px-8 py-4 rounded-2xl hover:bg-black/10 transition text-center flex-1"
+                    >
+                      Ver como funciona
+                    </a>
+                  </div>
+                </div>
 
                 <h2 id="especialista">Dr. Alan Sousa – Advogado Previdenciário</h2>
                 <p>
@@ -287,8 +313,8 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
-                          <strong>Aposentadorias:</strong> orientação e atuação na concessão e revisão, inclusive análise de regras
-                          aplicáveis e melhor estratégia.
+                          <strong>Aposentadorias:</strong> por idade, por tempo de contribuição e regras de transição, com análise
+                          de requisitos, documentos e melhor estratégia.
                         </div>
                       </li>
                       <li className="flex gap-3">
@@ -296,6 +322,13 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                         <div>
                           <strong>Planejamento previdenciário:</strong> simulações, análise do histórico contributivo/funcional e
                           organização estratégica para requerer no momento certo.
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-green-600 font-bold text-xl">→</span>
+                        <div>
+                          <strong>Auxílio-acidente:</strong> orientação sobre requisitos, documentação e medidas cabíveis para
+                          concessão ou restabelecimento.
                         </div>
                       </li>
                       <li className="flex gap-3">
@@ -310,12 +343,26 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                         <div>
                           <strong>BPC/LOAS:</strong> Benefício de Prestação Continuada para <strong>pessoa com deficiência</strong> e{' '}
                           <strong>idoso</strong>, com análise de requisitos, provas e acompanhamento do procedimento.
+                          <div className="mt-2 text-sm text-gray-600">
+                            <div>
+                              <strong>Para idosos:</strong> 65 anos ou mais.
+                            </div>
+                            <div>
+                              <strong>Para pessoas com deficiência:</strong> avaliação de impedimentos e provas necessárias.
+                            </div>
+                          </div>
                         </div>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-green-600 font-bold text-xl">→</span>
                         <div>
                           <strong>Salário-maternidade:</strong> suporte completo na análise de requisitos e condução do pedido.
+                        </div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-green-600 font-bold text-xl">→</span>
+                        <div>
+                          <strong>Seguro-defeso:</strong> análise de requisitos e acompanhamento do pedido, conforme o caso.
                         </div>
                       </li>
                       <li className="flex gap-3">
@@ -337,6 +384,25 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                         </div>
                       </li>
                     </ul>
+
+                    <div className="mt-8 rounded-3xl border border-gray-200 bg-white p-6 md:p-7 shadow-sm">
+                      <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-2">
+                        Atuação do requerimento à ação judicial
+                      </h3>
+                      <p className="text-gray-700 mb-5">
+                        Atuamos desde o <strong>requerimento administrativo no INSS</strong> até a <strong>atuação judicial</strong>,
+                        buscando sempre o melhor resultado e garantindo que você receba corretamente o benefício a que tem direito,
+                        com segurança e respaldo legal.
+                      </p>
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center rounded-2xl bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 transition"
+                      >
+                        Falar com especialista no WhatsApp
+                      </a>
+                    </div>
                   </div>
 
                   <div className="md:col-span-1">

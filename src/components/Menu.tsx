@@ -59,8 +59,8 @@ export function Menu({ menuData }: MenuProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-40 bg-black shadow-lg transition-all duration-300 ${
-        isScrolled ? "py-3" : "py-6 md:py-8"
+      className={`fixed top-0 left-0 w-full z-40 shadow-lg transition-all duration-300 ${
+        isScrolled ? "bg-black py-3" : "bg-black py-3 md:py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8">
