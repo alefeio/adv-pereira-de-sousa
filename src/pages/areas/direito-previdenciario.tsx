@@ -9,7 +9,7 @@ import { MenuAlan as MenuComponent } from 'components/MenuAlan';
 import Footer from 'components/Footer';
 import WhatsAppButton from 'components/WhatsAppButton';
 import { MenuData, LinkItem } from '../../types/index';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next"
 import WhatsAppButton2 from 'components/WhatsAppButton2';
 import Footer2 from 'components/Footer2';
 
