@@ -73,7 +73,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
   const areaImage = '/images/areas/direito-previdenciario.jpg';
 
   const whatsappLink =
-    'https://wa.me/5591983957965?text=Olá!%20Quero%20falar%20sobre%20um%20caso%20de%20Direito%20Previdenciário.';
+    'https://wa.me/5591992047151?text=Olá!%20Quero%20falar%20sobre%20um%20caso%20de%20Direito%20Previdenciário.';
 
   const handleWhatsappCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -208,9 +208,9 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                 Direito Previdenciário
               </h1>
               <p className="max-w-3xl text-gray-200 text-base md:text-lg">
-                <strong>Atuação em Direito Previdenciário</strong> com foco na defesa dos seus direitos junto ao{' '}
-                <strong>INSS</strong> (RGPS), com atendimento especializado e acompanhamento completo em todas as etapas
-                do seu benefício — do requerimento administrativo à atuação judicial, quando necessário.
+                <strong>Atuação dedicada em Direito Previdenciário junto ao INSS</strong>, oferecendo atendimento humanizado
+                e especializado, com acompanhamento completo em todas as etapas do benefício — do requerimento
+                administrativo à atuação judicial.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
@@ -254,16 +254,36 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                   prose-h2:mb-4
                 "
               >
-                <h2>Atuação em Direito Previdenciário junto ao INSS</h2>
+                <h2>Atuação dedicada em Direito Previdenciário junto ao INSS</h2>
                 <p>
-                  Atuação dedicada em <strong>Direito Previdenciário</strong> junto ao <strong>INSS</strong>, com
-                  atendimento humanizado e especializado para solicitar, revisar, restabelecer e acompanhar benefícios
-                  previdenciários em todas as etapas.
+                  Atuação dedicada em <strong>Direito Previdenciário</strong> junto ao <strong>INSS</strong>, oferecendo
+                  atendimento humanizado e especializado em demandas relacionadas a:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Aposentadoria rural e urbana</strong>;
+                  </li>
+                  <li>
+                    <strong>Salário-maternidade</strong> e <strong>seguro-defeso</strong>;
+                  </li>
+                  <li>
+                    <strong>Auxílio-doença</strong> (benefício por incapacidade temporária);
+                  </li>
+                  <li>
+                    <strong>Auxílio-acidente</strong> e <strong>pensão por morte</strong>;
+                  </li>
+                  <li>
+                    <strong>Benefício de Prestação Continuada – BPC/LOAS</strong> (para <strong>idosos</strong> e{' '}
+                    <strong>pessoas com deficiência</strong>).
+                  </li>
+                </ul>
+                <p>
+                  Também prestamos assessoria em <strong>Regimes Próprios de Previdência (RPPS)</strong> para{' '}
+                  <strong>servidores públicos</strong>, incluindo análise de direitos, concessão e revisão de benefícios.
                 </p>
                 <p>
-                  Se você precisa <strong>solicitar</strong>, <strong>revisar</strong> ou <strong>restabelecer</strong> um
-                  benefício, conte com orientação jurídica segura e objetiva, com estratégia e documentação adequada para
-                  reduzir riscos de indeferimento e acelerar o melhor caminho para o seu caso.
+                  Atuação em <strong>processos administrativos</strong> e <strong>judiciais</strong>, buscando sempre o melhor
+                  resultado para o cliente, com orientação clara e estratégia adequada à realidade de cada caso.
                 </p>
 
                 <div className="not-prose my-8 rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-7">
@@ -292,11 +312,10 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
 
                 <h2 id="especialista">Dr. Alan Sousa – Advogado Previdenciário</h2>
                 <p>
-                  Advogado com atuação dedicada ao <strong>Direito Previdenciário</strong>, na defesa dos direitos de
-                  segurados do <strong>Regime Geral de Previdência Social (RGPS)</strong> e do{' '}
-                  <strong>Regime Próprio de Previdência Social (RPPS)</strong>, incluindo demandas relacionadas ao{' '}
-                  <strong>IGEPPS</strong> e ao <strong>BELÉMPREV</strong>, com análise técnica individualizada e
-                  acompanhamento especializado em cada caso.
+                  Advogado com atuação dedicada ao <strong>Direito Previdenciário</strong>, com foco em demandas junto ao{' '}
+                  <strong>INSS</strong> e atendimento especializado em benefícios como <strong>aposentadoria rural e urbana</strong>,{' '}
+                  <strong>salário-maternidade</strong>, <strong>seguro-defeso</strong>, <strong>auxílio-doença</strong>,{' '}
+                  <strong>auxílio-acidente</strong>, <strong>pensão por morte</strong> e <strong>BPC/LOAS</strong>.
                 </p>
                 <p>
                   Atualmente é <strong>pós-graduando em Direito Previdenciário</strong> pela{' '}
@@ -306,10 +325,8 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                 </p>
                 <p>
                   Possui atuação tanto na <strong>esfera administrativa</strong> quanto <strong>judicial</strong>, com
-                  dedicação aos serviços de aposentadorias, planejamento previdenciário, auxílio por incapacidade
-                  temporária (auxílio-doença), <strong>Benefício de Prestação Continuada – BPC/LOAS</strong> para pessoa
-                  com deficiência e idoso, salário-maternidade, pensão por morte, revisões de benefícios, entre outras
-                  demandas previdenciárias.
+                  dedicação às demandas previdenciárias mais recorrentes, atuando do requerimento administrativo à atuação
+                  judicial, quando necessário.
                 </p>
                 <p>
                   Seu trabalho é pautado na <strong>ética</strong>, na <strong>transparência</strong> e na{' '}
