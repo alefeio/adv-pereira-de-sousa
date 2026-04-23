@@ -4,6 +4,7 @@ import { PrismaClient } from '@prisma/client';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Script from 'next/script';
 import { MenuAlan as MenuComponent } from 'components/MenuAlan';
 import Footer from 'components/Footer';
 import WhatsAppButton from 'components/WhatsAppButton';
@@ -73,6 +74,19 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
 
   const whatsappLink =
     'https://wa.me/5591983957965?text=Olá!%20Quero%20falar%20sobre%20um%20caso%20de%20Direito%20Previdenciário.';
+
+  const handleWhatsappCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    // Prioriza o snippet de conversão do Google Ads, com fallback para navegação direta.
+    const w = window as any;
+    if (typeof w.gtag_report_conversion === 'function') {
+      w.gtag_report_conversion(whatsappLink);
+      return;
+    }
+
+    window.location.href = whatsappLink;
+  };
 
   const faq = [
     {
@@ -147,6 +161,26 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
+
+        {/* Event snippet for Clique Wpp conversion */}
+        <Script id="google-ads-wpp-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-18048116303/xVBJCKj7q6EcEM_MgZ5D',
+                  'value': 1.0,
+                  'currency': 'BRL',
+                  'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
       </Head>
 
       <div className="min-h-screen bg-black text-white">
@@ -182,8 +216,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
               <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
                 <a
                   href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={handleWhatsappCtaClick}
                   className="bg-green-500 hover:bg-green-600 text-white font-bold px-7 py-4 rounded-2xl transition text-center text-lg"
                 >
                   🎯 Agendar Análise Gratuita
@@ -243,8 +276,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href={whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      onClick={handleWhatsappCtaClick}
                       className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-2xl transition text-center flex-1"
                     >
                       Falar no WhatsApp
@@ -396,8 +428,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                       </p>
                       <a
                         href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        onClick={handleWhatsappCtaClick}
                         className="inline-flex w-full items-center justify-center rounded-2xl bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 transition"
                       >
                         Falar com especialista no WhatsApp
@@ -461,8 +492,7 @@ export default function DireitoPrevidenciarioPage({ menu }: AreaPageProps) {
                 <div className="not-prose mt-8 flex flex-col sm:flex-row gap-3">
                   <a
                     href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={handleWhatsappCtaClick}
                     className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-2xl transition text-center flex-1"
                   >
                     Agendar Análise Gratuita
